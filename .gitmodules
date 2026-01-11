@@ -1,0 +1,3 @@
+[submodule "public/notas"]
+	path = public/notas
+	url = https://github.com/benjamalegni/notas
