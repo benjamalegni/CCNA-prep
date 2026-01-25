@@ -1,2 +1,0 @@
-
-"smart_sources:intro-hacking/concepts/XSS.md": {"path":"intro-hacking/concepts/XSS.md","last_embed":{"hash":null},"embeddings":{},"last_read":{"hash":"1uy9n1h","at":1768374330718},"class_name":"SmartSource","last_import":{"mtime":1768291618305,"size":2405,"at":1768374330719,"hash":"1uy9n1h"},"blocks":{"#":[1,16],"##{1}":[7,7],"##{2}":[8,8],"##{3}":[9,14],"##{4}":[15,16]},"outlinks":[{"title":"https://github.com/globocom/secDevLabs","target":"https://github.com/globocom/secDevLabs","line":15}],"task_lines":[]},

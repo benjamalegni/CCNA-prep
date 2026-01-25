@@ -1,6 +1,0 @@
-[[UML]]
-
-[[casos de uso]]
-
-
-
