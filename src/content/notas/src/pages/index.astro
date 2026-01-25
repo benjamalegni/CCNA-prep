@@ -1,0 +1,83 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import { getCollection } from 'astro:content';
+import LanguageSelector from '../components/LanguageSelector';
+
+
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1>Hello, CCNA Preparator!</h1>
+			<p class="welcome-text">
+				Welcome to my personal CCNA Prep website. This website
+				serves as a collection of resources for anyone looking to prepare for the CCNA exam.
+			</p>
+			<p>
+				Feel free to explore the website and use the resources available.
+			</p>
+			<div class="language-selector">
+				<p class="language-selector-title">Start by selecting your language:</p>
+				<LanguageSelector client:load />
+			</div>
+		</main>
+		<Footer />
+	</body>
+	<style>
+		.welcome-text {
+		}
+
+		.language-selector {
+			background-color:;
+			display: flex;
+			flex-direction: column;
+			gap: 1rem;
+			padding: 1rem;
+			border-radius: 0.2rem;
+			border: 1px solid #000;
+		}
+		:global(html[data-theme='dark']) .language-selector {
+			background-color:;
+			border-radius: 0.2rem;
+			border: 1px solid var(--accent);
+			box-shadow: 0 0 10px 0 var(--accent);
+		}
+
+		.language-selector-title {
+			font-size: 1.5rem;
+			font-weight: 600;
+		}
+
+		:global(.button) {
+			width: 75%;
+			color: black;
+			font-weight: 600;
+			margin: auto;
+			transition: background-color 0.2s;
+		}
+
+		:global(.button:hover) {
+			background-color: var(--accent);
+			transition: color 0.2s;
+			color: white !important;
+		}
+
+		:global(html[data-theme='dark'] .button) {
+			color: white;
+		}
+
+		:global(html[data-theme='dark'] .button:hover) {
+			background-color: var(--accent);
+			color: black !important;
+		}
+	</style>
+</html>

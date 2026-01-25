@@ -1,0 +1,234 @@
+{
+  "main": {
+    "id": "ba6e5ad525ddaa21",
+    "type": "split",
+    "children": [
+      {
+        "id": "891a85ef4d63fb64",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b529e4de4bab291f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "CCNA/index.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "index"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "ac72a647285ea50c",
+    "type": "split",
+    "children": [
+      {
+        "id": "f3be4f294e72a258",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "cbf7ee09442adf83",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "15b4d8e70e41f418",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "f65320e8b602e54c",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 332.5
+  },
+  "right": {
+    "id": "59e601f64e0ae900",
+    "type": "split",
+    "children": [
+      {
+        "id": "ed54a8c2efd913f6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "758f70dda6293c2d",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "2025/arqui1/sistemas de e-s.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for sistemas de e-s"
+            }
+          },
+          {
+            "id": "0bac028273328f5f",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "ingreso/Math exam 6a5af62f52d24413a1842503ed7882c9.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Math exam 6a5af62f52d24413a1842503ed7882c9"
+            }
+          },
+          {
+            "id": "877ed628de9d4fbc",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "64274bafe148ee53",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "CCNA/notes/0. networking hoy en dia.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of 0. networking hoy en dia"
+            }
+          },
+          {
+            "id": "6d4856cc7998c1fa",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 217.5,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "bases:Create new base": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "obsidian-git:Open Git source control": false
+    }
+  },
+  "active": "b529e4de4bab291f",
+  "lastOpenFiles": [
+    "CCNA/notes/0. networking hoy en dia.md",
+    "CCNA/notes/1. network devices.md",
+    "CCNA/notes/2. interfaces and cables.md",
+    "intro-hacking/contents/enumeracion de servicios comunes y gestores de contenido.md",
+    "CCNA/notes/resources/SFP.md",
+    "CCNA/notes/resources/DSL.md",
+    "CCNA/notes/5. ethernet LAN switching.md",
+    "CCNA/notes/resources/UTP cable.md",
+    "2024/redes1/ethernet/bridge y switch.md",
+    "intro-hacking/contents/OWASP top 10.md",
+    "intro-hacking/concepts/RFI.md",
+    "intro-hacking/concepts/LFI.md",
+    "intro-hacking/media/Pasted image 20260117154138.png",
+    "intro-hacking/media/Pasted image 20260117153757.png",
+    "intro-hacking/media/Pasted image 20260117152120.png",
+    "intro-hacking/media",
+    "intro-hacking/concepts/XXE.md",
+    "intro-hacking/concepts/XSS.md",
+    "intro-hacking/contents/reconocimiento.md",
+    "CCNA/notes/resources/ping.md",
+    "CCNA/media/Pasted image 20260116205416.png",
+    "CCNA/notes/resources/ARP.md",
+    "intro-hacking/contents/conceptos basicos de enumeracion y explotacion.md",
+    "CCNA/media/Pasted image 20260115182702.png",
+    "CCNA/media/Pasted image 20260115181550.png",
+    "CCNA/CCNA 200-301 Course Files-20260104T112104Z-3-001/CCNA 200-301 Course Files/Day 04 Lab - Basic Device Security.pkt~",
+    "CCNA/notes/4. intro to the CLI.md",
+    "CCNA/index.md",
+    "CCNA/notes/3. TCP-IP.md",
+    "2025/redes II/nivelred/OSPF.md",
+    "2025/redes II/nivelred/algoritmos de ruteo.md",
+    "CCNA/media/Pasted image 20260109183150.png",
+    "tasks.md",
+    "CCNA/notes/resources/payload.md",
+    "CCNA/media/Pasted image 20260109181541.png",
+    "CCNA/media/Pasted image 20260109182557.png",
+    "CCNA/media/Pasted image 20260109182134.png",
+    "CCNA/notes/resources/auto MDI-X.md",
+    "CCNA/CCNA 200-301 Course Files-20260104T112104Z-3-001/CCNA 200-301 Course Files/Day 02 Lab - Connecting Devices.pkt~",
+    "CCNA/CCNA 200-301 Course Files-20260104T112104Z-3-001/CCNA 200-301 Course Files/Day 01 Lab - Packet Tracer Introduction.pkt~",
+    "finnish-A1/2025-11-04-Note-14-22.pdf",
+    "finnish-A1/2025-10-31-Note-09-08.pdf",
+    "CCNA/notes/resources",
+    "CCNA/media",
+    "CCNA/notes",
+    "CCNA/CCNA 200-301 Course Files-20260104T112104Z-3-001/CCNA 200-301 Course Files/Day 34 Lab - Standard ACLs.pkt",
+    "Untitled.canvas"
+  ]
+}
