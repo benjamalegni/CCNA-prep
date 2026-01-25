@@ -1,0 +1,182 @@
+{
+  "main": {
+    "id": "fd75499028948d4e",
+    "type": "split",
+    "children": [
+      {
+        "id": "6160d80fbad99fca",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3f98b3a23dd4c0be",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Ejecucion dinamica vs estatica b6fab4c702454d939872a1ca276d012b.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Ejecucion dinamica vs estatica b6fab4c702454d939872a1ca276d012b"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "fea0cc8b7c847185",
+    "type": "split",
+    "children": [
+      {
+        "id": "1a18bcc179b4e6c1",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9f42b892abe05667",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "c09306d789bdfa03",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "3660f99c524da601",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "e241bad2bb2bf822",
+    "type": "split",
+    "children": [
+      {
+        "id": "30c3346da0252642",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2d95bcc52456ca69",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Comparable y comparator 8d0c13daa7db42caae4cab7659c93886.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Comparable y comparator 8d0c13daa7db42caae4cab7659c93886"
+            }
+          },
+          {
+            "id": "d96cd0610119563d",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Comparable y comparator 8d0c13daa7db42caae4cab7659c93886.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Comparable y comparator 8d0c13daa7db42caae4cab7659c93886"
+            }
+          },
+          {
+            "id": "9fcc5a6a80fd65b4",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "e75433a166772baf",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Comparable y comparator 8d0c13daa7db42caae4cab7659c93886.md"
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Comparable y comparator 8d0c13daa7db42caae4cab7659c93886"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "3f98b3a23dd4c0be",
+  "lastOpenFiles": [
+    "Comportamiento y estado f8acf296212041e38ff60f8f1f00a682.md",
+    "Clase Abstracta e976f86c1b144509ba01cd537b24c220.md",
+    "Herencia ac62eae83de84503906496e155769446/Untitled.png",
+    "ejercicio Procesador 61aeebf9722045c4a7aa32f20839c60c/Untitled 3.png",
+    "ejercicio Procesador 61aeebf9722045c4a7aa32f20839c60c/Untitled 2.png",
+    "ejercicio Procesador 61aeebf9722045c4a7aa32f20839c60c/Untitled 1.png",
+    "ejercicio Procesador 61aeebf9722045c4a7aa32f20839c60c/Untitled.png",
+    "Comparable y comparator 8d0c13daa7db42caae4cab7659c93886.md",
+    "Ejecucion dinamica vs estatica b6fab4c702454d939872a1ca276d012b.md",
+    "Herencia ac62eae83de84503906496e155769446.md",
+    "Repaso 762d52bf309141eda972f1948f470061.md",
+    "Intro 69c30306ebd942b5b267f84da0d02816.md",
+    "ejercicio Procesador 61aeebf9722045c4a7aa32f20839c60c.md"
+  ]
+}
