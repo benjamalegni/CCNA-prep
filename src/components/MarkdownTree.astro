@@ -1,25 +1,173 @@
 ---
-const { Content } = Astro.props;
-const markdownTree = await Astro.glob('../../content/notas/CCNA/notes/**/*.md');
+import TreeNode from './TreeNode.astro';
 
-const props = {
-
-    pageParam: 
+interface Heading {
+	slug: string;
+	depth: number;
+	text: string;
 }
+
+interface Props {
+	content: any; // El componente markdown
+	module?: any; // El módulo importado (opcional, para acceder a metadata)
+}
+
+const { content, module: pageModule } = Astro.props as Props;
+
+// Obtener headings del contenido
+// En Astro, cuando importas un archivo markdown, los headings están en la metadata
+let headings: Heading[] = [];
+
+// Intentar obtener headings de diferentes formas
+if (pageModule && pageModule.headings) {
+	headings = pageModule.headings;
+} else if (pageModule && pageModule.metadata?.headings) {
+	headings = pageModule.metadata.headings;
+} else if (content && typeof content === 'object') {
+	// Si content tiene headings directamente
+	if (Array.isArray(content.headings)) {
+		headings = content.headings;
+	}
+	// Si content es un componente de Astro, puede tener metadata
+	else if (content.$$metadata?.headings) {
+		headings = content.$$metadata.headings;
+	}
+	// Si content tiene getHeadings (método de Astro)
+	else if (typeof content.getHeadings === 'function') {
+		headings = content.getHeadings();
+	}
+}
+
+// Función para generar un slug a partir del texto del heading
+function generateSlug(text: string): string {
+	return text
+		.toLowerCase()
+		.trim()
+		.replace(/[^\w\s-]/g, '')
+		.replace(/[\s_-]+/g, '-')
+		.replace(/^-+|-+$/g, '');
+}
+
+// Construir el árbol jerárquico de headings
+interface TreeNode {
+	heading: Heading;
+	children: TreeNode[];
+}
+
+function buildTree(headings: Heading[]): TreeNode[] {
+	const tree: TreeNode[] = [];
+	const stack: TreeNode[] = [];
+
+	headings.forEach((heading) => {
+		const node: TreeNode = {
+			heading: {
+				...heading,
+				slug: heading.slug || generateSlug(heading.text),
+			},
+			children: [],
+		};
+
+		// Encontrar el padre correcto en el stack
+		while (stack.length > 0 && stack[stack.length - 1].heading.depth >= heading.depth) {
+			stack.pop();
+		}
+
+		if (stack.length === 0) {
+			// Es un nodo raíz
+			tree.push(node);
+		} else {
+			// Es un hijo del último nodo en el stack
+			stack[stack.length - 1].children.push(node);
+		}
+
+		stack.push(node);
+	});
+
+	return tree;
+}
+
+const tree = buildTree(headings);
 ---
 
 <div class="markdown-tree">
-    <ul>
-        <li>
-            <a href="/ccna">CCNA</a>
-        </li>
-    </ul>
+	{tree.length > 0 ? (
+		<ul>
+			{tree.map((node) => (
+				<TreeNode node={node} />
+			))}
+		</ul>
+	) : (
+		<p class="empty">No headings found</p>
+	)}
 </div>
 
 <style>
 	.markdown-tree {
-		display: flex;
-		flex-direction: column;
-		gap: 1rem;
+		position: sticky;
+		top: 2rem;
+		align-self: start;
+		max-width: 300px;
+		min-width: 200px;
+		padding: 1rem;
+		background: rgb(var(--bg-secondary));
+		border-radius: var(--radius);
+		max-height: calc(100vh - 4rem);
+		overflow-y: auto;
+	}
+
+	.markdown-tree ul {
+		list-style: none;
+		padding-left: 1rem;
+		margin: 0.5rem 0;
+	}
+
+	.markdown-tree li {
+		margin: 0.25rem 0;
+	}
+
+	.markdown-tree a {
+		color: rgb(var(--text-secondary));
+		text-decoration: none;
+		display: block;
+		padding: 0.25rem 0.5rem;
+		border-radius: 4px;
+		transition: background-color 0.2s, color 0.2s;
+		font-size: 0.9rem;
+	}
+
+	.markdown-tree a:hover {
+		background-color: rgba(var(--text-muted), 0.1);
+		color: var(--accent);
+	}
+
+	.markdown-tree li[data-depth="1"] > a {
+		font-weight: 600;
+		font-size: 1rem;
+	}
+
+	.markdown-tree li[data-depth="2"] {
+		margin-left: 0.5rem;
+	}
+
+	.markdown-tree li[data-depth="3"] {
+		margin-left: 1rem;
+	}
+
+	.markdown-tree .empty {
+		color: rgb(var(--text-muted));
+		font-style: italic;
+		margin: 0;
+	}
+
+	:global([data-theme='dark']) .markdown-tree {
+		background: rgb(var(--bg-secondary));
+	}
+
+	:global([data-theme='dark']) .markdown-tree a {
+		color: rgb(var(--text-secondary));
+	}
+
+	:global([data-theme='dark']) .markdown-tree a:hover {
+		background-color: rgba(var(--text-muted), 0.2);
 	}
 </style>

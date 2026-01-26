@@ -25,6 +25,9 @@ if (pageParam) {
 }
 
 const pageContent = module.default;
+// Los headings están disponibles en la metadata del módulo cuando se renderiza
+// Por ahora, pasamos el módulo completo para que MarkdownTree pueda extraer los headings
+const pageModule = module;
 ---
 
 <!doctype html>
@@ -36,7 +39,7 @@ const pageContent = module.default;
 		<Header />
 		<main>
 			<Content Content={pageContent} />
-			<MarkdownTree />
+			<MarkdownTree content={pageContent} module={pageModule}/>
 		</main>
 		<Footer />
 	</body>
