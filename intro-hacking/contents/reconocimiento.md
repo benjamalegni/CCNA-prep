@@ -147,6 +147,8 @@ wfuzz \-c \-t 200 \--hc=404,403,301 \-w /usr/share/dirbuster/wordlists/directory
 
 para buscar productos/identificadores en un rango determinado  
 wfuzz \-c \-t 200 \--hw=6515 \-z range,1-20000 [https://www.mi.com/shop/buy/detail?product\_id=FUZZ](https://www.mi.com/shop/buy/detail?product_id=FUZZ)
+para buscar puertos abiertos con *fuzzing*
+wfuzz -c -t 200 -z range,1-65535 "http://192.168.101.1:FUZZ"
 
 ffuf es lo mismo que wfuzz pero escrito en go y mas rapido
 
