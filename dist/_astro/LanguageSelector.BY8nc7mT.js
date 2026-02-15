@@ -1,0 +1,1 @@
+import{j as e,n}from"./router.Bnv8wA-m.js";function t(a){switch(a){case"es":n("/ccna");break;default:n("/ccna");break}}function c(){return e.jsxs(e.Fragment,{children:[e.jsx("select",{children:e.jsx("option",{value:"es",children:"Spanish"})}),e.jsx("button",{className:"button",type:"button",onClick:()=>t("es"),children:"Begin the CCNA learning journey!"})]})}export{c as default};

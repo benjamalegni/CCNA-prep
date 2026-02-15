@@ -10,6 +10,7 @@ import react from '@astrojs/react';
 
 import netlify from '@astrojs/netlify';
 
+
 // https://astro.build/config
 export default defineConfig({
   site: 'https://ccnaprep.netlify.app',
@@ -18,7 +19,7 @@ export default defineConfig({
 
   markdown: {
       remarkPlugins: [remarkObsidianLinks],
-	},
+    },
 
   vite: {
       plugins: [tailwindcss()],
@@ -27,7 +28,7 @@ export default defineConfig({
               '@': new URL('./src', import.meta.url).pathname,
           },
       },
-	},
+    },
 
   adapter: netlify(),
 });
