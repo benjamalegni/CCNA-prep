@@ -2,15 +2,15 @@
 ===
 [[1. network devices]]
 ===
-[[2. interfaces and cables]]
+[[2. intro a CISCO IOS CLI]]
+==
+[[3. protocolos y modelos]]
 ===
-[[3. TCP-IP]]
+[[3.1 TCP-IP]]
 ===
-[[4. intro to the CLI]]
+[[4. physical layer - interfaces and cables]]
 ===
-[[5. ethernet LAN switching]]
+[[7. ethernet LAN switching]]
 ===
-[[6. direcciones IP]]
-===
-[[7. protocolos y modelos]]
+[[12. direccionamiento IP]]
 ===
