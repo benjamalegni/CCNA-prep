@@ -1,4 +1,0 @@
-- [x] enumeracion de servicios comunes y gestores de contenido
-- [ ] conceptos basicos de enumeracion y explotacion 3/1
-- [ ] crear calendario interactivo que sea facil para crear reuniones compartidas y que tenga los juegos de linkedin
-- [ ] crear pagina con astro de mis notas de CCNA con los labs de jeremy's IT lab
