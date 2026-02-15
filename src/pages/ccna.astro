@@ -3,13 +3,20 @@ import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import Content from '../components/Content.astro';
 import BaseHead from '../components/BaseHead.astro';
-import MarkdownTree from '@/components/MarkdownTree.astro';
 
 const pageParam = Astro.url.searchParams.get('page') ?? '';
 
 const notes = import.meta.glob('../content/notas/CCNA/notes/**/*.md');
+const pageSlugs = Object.keys(notes)
+	.map((route) =>
+		route
+			.replace('../content/notas/CCNA/notes/', '')
+			.replace(/\.md$/, ''),
+	)
+	.sort((a, b) => a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' }));
 
 let module;
+let currentSlug: string | null = null;
 
 if (pageParam) {
 	const decodedFilename = decodeURIComponent(pageParam);
@@ -17,6 +24,7 @@ if (pageParam) {
 
 	if (notes[route]) {
 		module = await notes[route]!();
+		currentSlug = decodedFilename;
 	} else {
 		module = await import('../content/notas/CCNA/index.md');
 	}
@@ -24,10 +32,7 @@ if (pageParam) {
 	module = await import('../content/notas/CCNA/index.md');
 }
 
-const pageContent = module.default;
-// Los headings están disponibles en la metadata del módulo cuando se renderiza
-// Por ahora, pasamos el módulo completo para que MarkdownTree pueda extraer los headings
-const pageModule = module;
+const pageContent = (module as { default: unknown }).default;
 ---
 
 <!doctype html>
@@ -38,8 +43,8 @@ const pageModule = module;
 	<body>
 		<Header />
 		<main>
-			<Content Content={pageContent} />
-			<MarkdownTree content={pageContent} module={pageModule}/>
+			<Content Content={pageContent} pageSlugs={pageSlugs} currentSlug={currentSlug} title={`${decodeURIComponent(pageParam)}`}/>
+			<!-- <MarkdownTree headings={headings} /> -->
 		</main>
 		<Footer />
 	</body>

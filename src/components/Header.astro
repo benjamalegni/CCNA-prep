@@ -1,16 +1,15 @@
 ---
 import { SITE_TITLE } from '../consts';
-import HeaderLink from './HeaderLink.astro';
+import HeaderLink from '../components/UI/HeaderLink.astro';
 import ThemeToggle from './UI/ThemeToggle.astro';
 ---
 
 <header>
 	<nav>
-		<h2><a href="/">{SITE_TITLE}</a></h2>
+		<h2><a class="header-title" href="/">{SITE_TITLE}</a></h2>
 		<div class="internal-links">
 			<HeaderLink href="/">Home</HeaderLink>
-			<HeaderLink href="/blog">Blog</HeaderLink>
-			<HeaderLink href="/about">About</HeaderLink>
+			<HeaderLink href="/ccna">Notes</HeaderLink>
 		</div>
 		<div class="header-actions">
 			<ThemeToggle />
@@ -34,6 +33,10 @@ import ThemeToggle from './UI/ThemeToggle.astro';
 		padding: 0 1em;
 		background: rgb(var(--bg-header));
 		box-shadow: 0 2px 8px rgba(12, 12, 12, 20%);
+	}
+
+	.header-title {
+		text-decoration: underline;
 	}
 
 	:global(html[data-theme='dark']) header {

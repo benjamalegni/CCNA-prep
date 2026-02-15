@@ -4,7 +4,7 @@ import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
-import { remarkObsidianLinks } from './src/utils/remark-obsidian-links.js';
+import { remarkObsidianLinks } from './src/utils/remark-obsidian-links.ts';
 
 import react from '@astrojs/react';
 
