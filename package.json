@@ -3,6 +3,7 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
+    "prebuild": "mkdir -p public/ccna-media && cp -a src/content/notas/CCNA/media/. public/ccna-media/",
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
@@ -10,6 +11,7 @@
   },
   "dependencies": {
     "@astrojs/mdx": "^4.3.13",
+    "@astrojs/netlify": "^6.6.4",
     "@astrojs/react": "^4.4.2",
     "@astrojs/sitemap": "^3.7.0",
     "@tailwindcss/vite": "^4.1.18",
