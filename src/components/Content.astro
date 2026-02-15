@@ -19,6 +19,7 @@ const currentSlug = props.currentSlug ?? null;
 	<article class="content">
 		<PageContent />
 	</article>
+	<Buttons client:load pages={pageSlugs} currentSlug={currentSlug} />
 
 </container>
 
