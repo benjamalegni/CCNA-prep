@@ -320,3 +320,39 @@ hr {
     @apply bg-background text-foreground;
 	}
 }
+
+.language-selector {
+	display: flex;
+	flex-direction: column;
+	gap: 0.75rem;
+}
+
+.notification {
+	color: var(--accent);
+	font-weight: 600;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0;
+	max-height: 0;
+	overflow: hidden;
+	opacity: 0;
+	background-color: rgb(var(--bg-primary));
+	transform: translateY(-20px);
+	transition: max-height 400ms ease, padding 400ms ease, opacity 400ms ease, transform 400ms linear;
+	pointer-events: none;
+	box-shadow: 2px 2px 0px var(--accent);
+}
+
+
+.notification--visible {
+	max-height: 80px;
+	padding: 0.5rem 0.8rem;
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.notification p {
+	margin: 0;
+}
