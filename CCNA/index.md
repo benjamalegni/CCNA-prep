@@ -12,5 +12,5 @@
 ===
 [[7. ethernet LAN switching]]
 ===
-[[12. direccionamiento IP]]
+[[8. direccionamiento IP]]
 ===
