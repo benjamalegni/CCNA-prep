@@ -43,3 +43,7 @@
 	[[SSRF]]
 	[[SSTI]]
 	[[CSTI]]
+	[[padding oracle]]
+	[[type juggling]]
+	[[no-sql injection]]
+	[[LDAP injection]]
