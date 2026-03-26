@@ -1,0 +1,11 @@
+on:
+  schedule:
+    - cron: '* * * * 1'
+
+jobs:
+  update_notas:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Update notas
+        run:
+          git subtree pull --prefix src/content/notas https://github.com/benjamalegni/notas main --squash
