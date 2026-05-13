@@ -123,7 +123,7 @@ una manera rapida de asignar valores a los vectores son los aggregates
 indican la direccion y si el puerto puede leerse o escribirse dentro de la entidad
 - **IN** una senal que entra a la entidad y no sale. La senal puede ser leida pero no escrita
 - **OUT** una senal que sale de la entidad y no es usada internamente. la senal no puede ser leida dentro de la entidad
-- **BUFFER** una senal que sale de la entidad y tambien es realimentada dentro de la netidad. esta senal puede ser leida
+- **BUFFER** una senal que sale de la entidad y tambien es realimentada dentro de la entidad. esta senal puede ser leida
 - **INOUT** una senal que es bidireccional entrada/salida de la entidad
 
 #### descripcion de entidad: ejemplo

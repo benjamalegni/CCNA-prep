@@ -56,7 +56,7 @@ target address: direccion de destino de salto
 
 ### repaso
  - 5 modos de direccionamiento
-	 - mediante registros
+	- mediante registros
 		 - tipo-R ej: add, sub, and...
 	- inmediato
 		- tipo-I: ej: addi, subi, andi...
