@@ -93,7 +93,7 @@ lineas de datos:
 
 transaccion:
 - master envia el comando (y la direccion)
-- slave recive o envia los datos
+- slave recibe o envia los datos
 - dos tipos de transacciones:
 	- entrada entrada de datos desde e/s a la memoria
 	- salida: salida de datos desde la memoria al dispositivo de e/s

