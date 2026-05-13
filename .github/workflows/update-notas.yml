@@ -1,0 +1,29 @@
+name: Update notas
+
+on:
+  schedule:
+    - cron: '0 * * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update_notas:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.ref_name }}
+
+      - name: Configure git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Update notas
+        run: git subtree pull --prefix src/content/notas https://github.com/benjamalegni/notas master --squash
+
+      - name: Push changes
+        run: git push origin HEAD:${{ github.ref_name }}
