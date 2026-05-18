@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2026/CALSOF/index.md",
+                "file": "2026/CALSOF/classes/testing II.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "index"
+              "title": "testing II"
             }
           }
         ]
@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 261.50499725341797
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "59e601f64e0ae900",
@@ -166,8 +167,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 364.5,
-    "collapsed": true
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -183,7 +183,12 @@
   },
   "active": "bc5a49ded3d0e597",
   "lastOpenFiles": [
+    "Pasted image 20260518180641.png",
+    "2026/CALSOF/index.md",
     "DUIA/todo.md",
+    "DUIA/intro-IA/index.md",
+    "tasks.md",
+    "2026/CALSOF/classes/testing II.md",
     "DUIA/media/Pasted image 20260516165730.png",
     "DUIA/media/Pasted image 20260516165635.png",
     "DUIA/media/Pasted image 20260516165245.png",
@@ -203,7 +208,6 @@
     "DUIA/intro-IA/apuntes/algoritmos geneticos.md",
     "DUIA/intro-IA/apuntes/algoritmos geneticos - perspectiva practica.md",
     "CCNA/notes/10. configuracion basica de router.md",
-    "2026/CALSOF/classes/testing II.md",
     "2026/CALSOF/activities/tp4.md",
     "2026/CALSOF/activities",
     "italelem/21 aprile.md",
@@ -214,7 +218,6 @@
     "DUIA/intro-IA/actividades/aprendizaje automatico - notas de mis respuestas.md",
     "DUIA/intro-IA/actividades/actividad de introduccion.md",
     "DUIA/intro-IA/actividades/TP 2.a.md",
-    "DUIA/intro-IA/index.md",
     "DUIA/intro-IA/apuntes",
     "DUIA/intro-IA/actividades",
     "DUIA/intro-IA",
@@ -222,9 +225,7 @@
     "2026/CALSOF/classes/testing.md",
     "2026/CALSOF/classes/test doubles.md",
     "Untitled.base",
-    "2026/CALSOF/index.md",
     "2026/CALSOF/index.md~",
-    "tasks.md",
     "Untitled.md",
     "CCNA/index.md",
     "DUIA/intro-IA/Untitled",
