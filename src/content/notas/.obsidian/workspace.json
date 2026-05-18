@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "ba835676c84099cc",
+        "id": "854fff7c8505e21e",
         "type": "tabs",
         "children": [
           {
-            "id": "02aa1ae642826102",
+            "id": "bc5a49ded3d0e597",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CCNA/notes/9. resolucion de red.md",
+                "file": "2026/CALSOF/index.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "9. resolucion de red"
+              "title": "index"
             }
           }
         ]
@@ -78,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 349.5,
-    "collapsed": true
+    "width": 261.50499725341797
   },
   "right": {
     "id": "59e601f64e0ae900",
@@ -143,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DUIA/intro-IA/apuntes/pre-procesamiento de datos - perspectiva practica.md",
+                "file": "DUIA/intro-IA/apuntes/reinforcement learning.md",
                 "followCursor": true,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of pre-procesamiento de datos - perspectiva practica"
+              "title": "Outline of reinforcement learning"
             }
           },
           {
@@ -167,7 +166,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
+    "width": 364.5,
     "collapsed": true
   },
   "left-ribbon": {
@@ -182,54 +181,53 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "02aa1ae642826102",
+  "active": "bc5a49ded3d0e597",
   "lastOpenFiles": [
-    "DUIA/intro-IA/apuntes/pre-procesamiento de datos - perspectiva practica.md",
-    "DUIA/intro-IA/apuntes/pre-procesamiento de texto - perspectiva practica.md",
-    "DUIA/intro-IA/index.md",
-    "DUIA/intro-IA/actividades/TP 2.a.md",
-    "DUIA/intro-IA/actividades/actividad de introduccion.md",
+    "DUIA/todo.md",
+    "DUIA/media/Pasted image 20260516165730.png",
+    "DUIA/media/Pasted image 20260516165635.png",
+    "DUIA/media/Pasted image 20260516165245.png",
+    "DUIA/media/Pasted image 20260516165131.png",
+    "DUIA/media/Pasted image 20260516164934.png",
+    "DUIA/media/Pasted image 20260516164856.png",
+    "DUIA/media/Pasted image 20260516164756.png",
+    "DUIA/media/Pasted image 20260516151054.png",
+    "DUIA/media/Pasted image 20260516144845.png",
+    "DUIA/media/Pasted image 20260516144657.png",
+    "DUIA/media",
+    "DUIA/intro-IA/apuntes/tecnicas de planning.md",
+    "DUIA/intro-IA/apuntes/tecnicas de clasificacion.md",
+    "DUIA/intro-IA/apuntes/reinforcement learning.md",
+    "DUIA/intro-IA/apuntes/notas de python-pandas.md",
+    "DUIA/intro-IA/apuntes/modelos de clasificacion - perspectiva practica.md",
+    "DUIA/intro-IA/apuntes/algoritmos geneticos.md",
+    "DUIA/intro-IA/apuntes/algoritmos geneticos - perspectiva practica.md",
+    "CCNA/notes/10. configuracion basica de router.md",
+    "2026/CALSOF/classes/testing II.md",
+    "2026/CALSOF/activities/tp4.md",
+    "2026/CALSOF/activities",
     "italelem/21 aprile.md",
-    "tasks.md",
+    "italelem/2026-05-05-Note-18-33.xopp",
+    "DUIA/intro-IA/apuntes/pre-procesamiento de texto - perspectiva practica.md",
+    "DUIA/intro-IA/apuntes/pre-procesamiento de datos - perspectiva practica.md",
     "DUIA/intro-IA/apuntes/aprendizaje automatico.md",
     "DUIA/intro-IA/actividades/aprendizaje automatico - notas de mis respuestas.md",
-    "DUIA/intro-IA/Untitled",
-    "2026/CALSOF/media/Pasted image 20260509082157.png",
-    "2026/CALSOF/media/Pasted image 20260509081534.png",
-    "2026/CALSOF/media/Pasted image 20260509080643.png",
-    "2026/CALSOF/media/Pasted image 20260509080632.png",
-    "2026/CALSOF/media/Pasted image 20260509080546.png",
-    "2026/CALSOF/media/Pasted image 20260509075037.png",
-    "2026/CALSOF/media/Pasted image 20260509074838.png",
-    "2026/CALSOF/media/Pasted image 20260509074816.png",
-    "2026/CALSOF/media/Pasted image 20260509074108.png",
-    "2026/CALSOF/media/Pasted image 20260509072601.png",
+    "DUIA/intro-IA/actividades/actividad de introduccion.md",
+    "DUIA/intro-IA/actividades/TP 2.a.md",
+    "DUIA/intro-IA/index.md",
     "DUIA/intro-IA/apuntes",
-    "2026/CALSOF/classes/testing.md",
-    "2026/CALSOF/index.md",
-    "2026/CALSOF/classes/test doubles.md",
-    "2026/CALSOF/classes/code smells.md",
     "DUIA/intro-IA/actividades",
-    "finnish-A1/2025-11-04-Note-14-22.pdf",
-    "finnish-A1/2025-10-31-Note-09-08.pdf",
-    "Untitled.base",
     "DUIA/intro-IA",
     "DUIA",
-    "conflict-files-obsidian-git.md",
-    "CCNA/notes/9. resolucion de red.md",
-    "italelem/2026-05-05-Note-18-33.xopp",
+    "2026/CALSOF/classes/testing.md",
+    "2026/CALSOF/classes/test doubles.md",
+    "Untitled.base",
+    "2026/CALSOF/index.md",
+    "2026/CALSOF/index.md~",
+    "tasks.md",
+    "Untitled.md",
     "CCNA/index.md",
-    "CCNA/notes/8. network layer.md",
-    "2026/ALIN/apuntes.md",
-    "2026/CALSOF/classes/software evolution and maintenance.md",
-    "CCNA/CCNA 200-301 Course Files-20260104T112104Z-3-001/CCNA 200-301 Course Files 1.md",
-    "CCNA/CCNA 200-301 Course Files-20260104T112104Z-3-001/CCNA 200-301 Course Files.md",
-    "2025/redes II/IPv6/Configuracion de Direcciones IPv6.md",
-    "2025/redes II/IPv6/Direcciones IPv6.md",
-    "2025/redes II/IPv6/Direccionamiento IPv4.md",
-    "2025/redes II/IPv6/Identificador de interfaz y asignacion de direcciones.md",
-    "2026/CALSOF/classes/principios solid.md",
-    "2026/CALSOF/media",
+    "DUIA/intro-IA/Untitled",
     "Untitled.canvas"
   ]
 }

@@ -3,7 +3,8 @@
 - [ ] crear calendario interactivo que sea facil para crear reuniones compartidas y que tenga los juegos de linkedin
 - [x] crear pagina con astro de mis notas de CCNA con los labs de jeremy's IT lab
 - [ ] crear instagram clone (que los links se vean parecidos) para que gente ponga su cuenta y password
-
+- [ ] pasar proyectos de cubepath a servidor propio (incluyendo komanda)
+- [ ] 
 # contenidos del final AyDA1
 - especificar TDA, con operaciones y especificarlas
 	- ejemplo TDA cuadricula generico
