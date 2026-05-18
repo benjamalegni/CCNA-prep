@@ -14,3 +14,7 @@
 ===
 [[8. network layer]]
 ===
+[[9. resolucion de red]]
+===
+[[10. configuracion basica de router]]
+===

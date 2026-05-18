@@ -9,7 +9,7 @@
 	- Evolución
 - Indican deuda técnica
 
-### cuando usar code smells
+### como detectar code smells
 - Métodos demasiado largos 
 - Clases con muchas responsabilidades 
 - Cantidad de parámetros excesivos 

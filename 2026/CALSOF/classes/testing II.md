@@ -1,0 +1,1 @@
+regression testing: es la practica de re-ejecutar tests existentes para detectar que un cambio no rompio funcionalidad previamente correcta
