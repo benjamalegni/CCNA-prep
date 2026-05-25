@@ -144,3 +144,159 @@ espectativa/realidad, como me voy adaptando
 ver que ajusto para la proxima semana, que me gusto que no me gusto 
 calculo mensual y de fechas de conseguir resultados viene del semanal. entonces despues de la primer semana puedo hacer el calculo y tener las fechas limites
 juntarme con equipos que me motiven a desarrollar habilidades. que puedo aprender de ellos
+
+# carrera
+
+## Estado actual
+
+| Punto | Estado |
+|---|---|
+| Carrera actual | Ingeniería de Sistemas, UNICEN, plan 2023 |
+| Materias con final/promoción/equivalencia | 11 |
+| Materias curriculares del grado | 37 + PPS/Proyecto Integrador |
+| Pendientes curriculares | 26 + PPS/PI |
+| Atraso vs plan ideal | aprox. 1,5 a 2 años |
+| Objetivo corto | cerrar título intermedio |
+| Objetivo internacional | usar intermedio para continuar bachelor en Europa y luego máster |
+
+## Título Intermedio AUDeS
+
+| Te falta para el intermedio | Estado |
+|---|---|
+| AyDA I | Regularizada, falta final |
+| AyDA II | Regularizada, falta final |
+| Arquitectura de Computadoras I | En curso |
+| Base de Datos I | En curso |
+| Sistemas Operativos | Falta cursar/aprobar o rendir libre, si la cátedra lo permite |
+| Programación Web | Falta cursar/aprobar o rendir libre, si la cátedra lo permite |
+| 60 hs electivas | Hay que gestionarlas |
+
+Cuello de botella principal:
+
+```text
+AyDA II + Arquitectura I -> Sistemas Operativos -> Programación Web
+```
+
+Si esa cadena se atrasa, se atrasa el título intermedio.
+
+## Cronograma académico recomendado
+
+Fechas aproximadas. El día exacto depende de SIU/cátedra.
+
+| Fecha objetivo                | Acción                                                                                         |
+| ----------------------------- | ---------------------------------------------------------------------------------------------- |
+| Mayo-julio 2026               | Terminar cursadas actuales: Álgebra Lineal, Arquitectura I, Base de Datos I, Calidad, Redes II |
+| Julio 2026                    | Rendir AyDA I                                                                                  |
+| Agosto 2026                   | Rendir AyDA II                                                                                 |
+| Agosto-noviembre 2026         | Cursar Cálculo II, Probabilidad, Base de Datos II, Lenguajes y Paradigmas                      |
+| Septiembre 2026               | Rendir Ingeniería de Software I                                                                |
+| Octubre 2026                  | Rendir Arquitectura I                                                                          |
+| Noviembre/diciembre 2026      | Rendir Base de Datos I                                                                         |
+| Diciembre 2026 / febrero 2027 | Rendir Álgebra Lineal, Cálculo II, Probabilidad                                                |
+| Marzo-julio 2027              | Cursar Sistemas Operativos, Organización, Teoría de la Información                             |
+| Julio/agosto 2027             | Rendir Sistemas Operativos                                                                     |
+| Agosto-noviembre 2027         | Cursar Programación Web                                                                        |
+| Diciembre 2027                | Rendir Programación Web y cerrar electivas                                                     |
+| Diciembre 2027 / febrero 2028 | Título intermedio terminado                                                                    |
+
+## Estimación de finalización
+
+| Camino | Fecha probable | Edad aproximada |
+|---|---:|---:|
+| Título intermedio UNICEN | dic 2027 / feb 2028 | 23 |
+| Grado completo en Argentina | 2029 / 2030 | 25-26 |
+| Intermedio + bachelor europeo con créditos reconocidos | 2029 / 2030 | 24-25 |
+| Intermedio + bachelor europeo + máster europeo | 2031 / 2032 | 26-27 |
+| Empezar bachelor europeo casi desde cero | 2030 / 2031 | 25-26 |
+| Bachelor de cero + máster europeo | 2032 / 2033 | 27-28 |
+
+## Argentina vs Europa
+
+| Opción                                   | Pros                                                             | Contras                                                    |
+| ---------------------------------------- | ---------------------------------------------------------------- | ---------------------------------------------------------- |
+| Terminar Ingeniería en Argentina         | Credencial segura, menor costo, acceso más claro a máster        | Más lento, menos red europea, más burocracia internacional |
+| Intermedio + terminar bachelor en Europa | Título europeo, ECTS, red local, internships, mejor inserción UE | Incertidumbre de equivalencias, costo de vida, idioma      |
+| Intermedio + máster directo en Europa    | Sería ideal si ocurre                                            | Poco probable; normalmente piden bachelor completo         |
+| Empezar Europa de cero                   | Ruta limpia y estándar                                           | Perdés años ya invertidos salvo que te reconozcan créditos |
+
+## Veredicto estratégico
+
+| Pregunta | Respuesta |
+|---|---|
+| ¿Conviene abandonar UNICEN ahora? | No |
+| ¿Conviene cerrar el intermedio? | Sí, es la mejor jugada |
+| ¿Conviene esperar sí o sí al grado argentino? | No necesariamente |
+| ¿Tiene más valor internacional estudiar en Europa? | Para carrera europea, sí |
+| ¿El grado argentino vale afuera? | Sí, pero requiere más evaluación y no te da red local |
+| ¿Tu ciudadanía italiana cambia la ecuación? | Mucho: reduce fricción migratoria y laboral |
+
+## Regla de decisión para Europa
+
+| Reconocimiento europeo | Decisión sugerida |
+|---|---|
+| 90+ ECTS reconocidos | Ir a Europa tiene mucho sentido |
+| 60-90 ECTS | Probablemente conviene, según costo/país |
+| 30-60 ECTS | Evaluar caso por caso |
+| Casi nada reconocido | Seguir Ingeniería en Argentina o buscar otra universidad |
+| Entrada directa a máster | Excelente, pero no plan base |
+
+## Materias libres/rápidas
+
+| Conviene intentar rápido/libre | Motivo                                   |
+| ------------------------------ | ---------------------------------------- |
+| Probabilidad y Estadística     | Desbloquea varias materias fuertes       |
+| Organización                   | Más rendible si la cátedra permite libre |
+| Ética                          | Buena candidata para acelerar            |
+| Formulación TICs               | Posible acelerar con buena preparación   |
+| Sistemas Operativos            | Atajo enorme, pero riesgoso              |
+
+Evitaría rendir libre de entrada: Compiladores, IA, Base de Datos II, Programación Web, Arquitectura II, salvo que tengas muy buen material y la cátedra lo permita.
+
+## Plan sintetizado
+
+### 2026
+
+- Matar finales trabados: AyDA I, AyDA II, Ingeniería I, Arquitectura I, Base I.
+- Cursar materias que desbloquean 2027.
+
+### 2027
+
+- Cursar y aprobar Sistemas Operativos, si todavía no está aprobada.
+- Cursar y aprobar Programación Web, si todavía no está aprobada.
+- Completar 60 hs electivas.
+- Cerrar título intermedio.
+
+### 2027/2028
+
+- Aplicar a Europa con título intermedio, analítico, programas y traducciones.
+- Buscar bachelor completion / advanced entry / riconoscimento crediti.
+
+### 2029-2030
+
+- Terminar bachelor europeo si reconocen créditos suficientes.
+
+### 2031-2032
+
+- Máster europeo.
+
+## Documentos que tenés que preparar
+
+- Analítico actualizado.
+- Título intermedio cuando lo tengas.
+- Plan de estudios 2023.
+- Programas de materias aprobadas.
+- Carga horaria y contenidos mínimos.
+- Traducciones oficiales.
+- Pasaporte italiano.
+- Portfolio/proyectos.
+- Certificados laborales si querés pedir PPS reconocida o fortalecer admisión.
+
+## Conclusión
+
+La mejor ruta para tu objetivo internacional parece ser:
+
+```text
+Cerrar intermedio UNICEN -> Europa -> terminar bachelor -> máster
+```
+
+No descartaría el grado argentino, pero lo usaría como plan B si Europa te reconoce pocos créditos. Fuentes principales usadas: plan 2023 y plan interactivo de Exactas UNICEN, reglamento PPS/PI, sistema ECTS europeo y reconocimiento académico UE.

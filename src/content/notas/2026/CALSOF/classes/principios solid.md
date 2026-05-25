@@ -231,7 +231,7 @@ void processTransfer (Withdrawable from, Depositable to, double amount) {
 // Interfaz gorda — mezcla responsabilidades de distintos actores
 interface Worker {
 	void work();        // relevante para todos
-	void eat();         // solo relevante para hunanos
+	void eat();         // solo relevante para humanos
 	void sleep();       // solo relevante para humanos
 	void requestLeave(); // solo relevante para empleados con contrato
 	void receiveBonus(); // solo relevante para empleados
@@ -254,7 +254,7 @@ ISP - refactor
 // Interfaces segregadas por dominio
 interface Workable  { void work(); }
 interface Feedable {void eat(); void sleep(); }
-interface Enmployable  { void requestLeave(); void receiveBonus(); }
+interface Employable  { void requestLeave(); void receiveBonus(); }
 
 // Combinaciones naturales mediante miltiples interfaces
 class HumanEmployee implements Workable, Feedable, Employable {

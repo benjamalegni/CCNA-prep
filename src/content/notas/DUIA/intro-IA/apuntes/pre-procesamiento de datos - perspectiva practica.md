@@ -185,11 +185,10 @@ permiten estructurar una secuencia de transformers con un predictor final (opcio
 
 # Creamos el pipeline
 
->>> pipe = make pipeline (
-	SimpleImputer (missing values=np.nan, strategy='mean')
-	ColumnTransformer (transformers= [(num', StandardScaler(),
-	[1,2,31), remainder='passthrough')
-)
+>>> pipe = make_pipeline (
+	SimpleImputer(missing values=np.nan, strategy='mean')
+	ColumnTransformer (transformers= [(num, StandardScaler(),
+									[1,2,31], remainder='passthrough')]
 
 >>> df = pipe.fit_transform(df)
 ```
