@@ -32,6 +32,9 @@ class ClimaServiceStub implements ClimaService {
 	}
 }
 
+// o se puede usar ClimaServiceStub climaStub = (ciudad) -> "Soleado";
+// luego lo uso para var saludador = new SaludadorMeteorologico(climaStub)
+
 // Test con Stub
 @Test
 
@@ -39,7 +42,7 @@ void deberiaGenerarSaludo() {
 	ClimaService stub = new ClimaServiceStub();
 	var saludador = new SaludadorMeteorologico(stub);
 	String res = saludador.saludar("Buenos Aires");
-	assertEquals (“Buen dia. Hoy esta Soleado", res);
+	assertEquals('Buen dia. Hoy esta Soleado", res);
 	// 8 Solo verificamos el resultado final
 
 }

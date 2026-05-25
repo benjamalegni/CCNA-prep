@@ -138,7 +138,7 @@ luego se compara el modelo con los datos de testing y se conoce el accuracy
 #### preguntas
 - como funciona naive bayes => se basa en predicciones
 - cross_validate y cross_val_score, parte los datos primero en distintos folds
-	- elige un conjunto de training y separa un conjunto se los folds (creo que no parte 2 veces)
+	- elige un conjunto de training y separa un conjunto de los folds (creo que no parte 2 veces)
 	- luego hace los fits del modelo con alguno de los folds
 	- luego se analizan los resultados de las predicciones con distintas metricas
 training, validation y testing
@@ -147,3 +147,11 @@ training, validation y testing
 
 tp 4. 
 a. definir clases categoricas (no intentar con parametros como el largo del cuerpo del pinguino)
+
+consultas
+tengo que transformar los datos de X_test tambien para poder usar predict? con transformar solo X_train tengo errores
+accuracy 0.99 muy alta, me parece raro
+
+acomodar pipeline
+y usar cross validation
+usar no random state para ver como varia el accuracy

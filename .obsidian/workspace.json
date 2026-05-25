@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "854fff7c8505e21e",
+        "id": "a8bd654070d0dd1b",
         "type": "tabs",
         "children": [
           {
-            "id": "bc5a49ded3d0e597",
+            "id": "41fcc9324a838dd3",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2026/CALSOF/classes/testing II.md",
+                "file": "2025/BD1/tema 4/Consultas SQL.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "testing II"
+              "title": "Consultas SQL"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "radvd",
+                "query": "arp -d",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -167,7 +167,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 461.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -181,54 +182,54 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "bc5a49ded3d0e597",
+  "active": "41fcc9324a838dd3",
   "lastOpenFiles": [
-    "Pasted image 20260518180641.png",
-    "2026/CALSOF/index.md",
-    "DUIA/todo.md",
-    "DUIA/intro-IA/index.md",
-    "tasks.md",
-    "2026/CALSOF/classes/testing II.md",
-    "DUIA/media/Pasted image 20260516165730.png",
-    "DUIA/media/Pasted image 20260516165635.png",
-    "DUIA/media/Pasted image 20260516165245.png",
-    "DUIA/media/Pasted image 20260516165131.png",
-    "DUIA/media/Pasted image 20260516164934.png",
-    "DUIA/media/Pasted image 20260516164856.png",
-    "DUIA/media/Pasted image 20260516164756.png",
-    "DUIA/media/Pasted image 20260516151054.png",
-    "DUIA/media/Pasted image 20260516144845.png",
-    "DUIA/media/Pasted image 20260516144657.png",
-    "DUIA/media",
-    "DUIA/intro-IA/apuntes/tecnicas de planning.md",
-    "DUIA/intro-IA/apuntes/tecnicas de clasificacion.md",
-    "DUIA/intro-IA/apuntes/reinforcement learning.md",
-    "DUIA/intro-IA/apuntes/notas de python-pandas.md",
-    "DUIA/intro-IA/apuntes/modelos de clasificacion - perspectiva practica.md",
-    "DUIA/intro-IA/apuntes/algoritmos geneticos.md",
-    "DUIA/intro-IA/apuntes/algoritmos geneticos - perspectiva practica.md",
+    "2025/BD1/bases de datos.md",
+    "2025/BD1/SQL queries.md",
+    "2025/BD1/tema 4/Consultas SQL.md",
+    "CCNA/notes/11. direccionamiento IPv4.md",
     "CCNA/notes/10. configuracion basica de router.md",
-    "2026/CALSOF/activities/tp4.md",
-    "2026/CALSOF/activities",
-    "italelem/21 aprile.md",
-    "italelem/2026-05-05-Note-18-33.xopp",
-    "DUIA/intro-IA/apuntes/pre-procesamiento de texto - perspectiva practica.md",
-    "DUIA/intro-IA/apuntes/pre-procesamiento de datos - perspectiva practica.md",
-    "DUIA/intro-IA/apuntes/aprendizaje automatico.md",
+    "CCNA/notes/8. network layer.md",
+    "CCNA/notes/9. resolucion de red.md",
+    "CCNA/notes/2. intro a CISCO IOS CLI.md",
+    "CCNA/index.md",
+    "tasks.md",
+    "DUIA/intro-IA/apuntes/modelos de clasificacion - perspectiva practica.md",
+    "DUIA/intro-IA/apuntes/algoritmos geneticos - perspectiva practica.md",
+    "DUIA/intro-IA/index.md",
     "DUIA/intro-IA/actividades/aprendizaje automatico - notas de mis respuestas.md",
-    "DUIA/intro-IA/actividades/actividad de introduccion.md",
-    "DUIA/intro-IA/actividades/TP 2.a.md",
+    "DUIA/intro-IA/apuntes/reinforcement learning.md",
+    "DUIA/intro-IA/apuntes/tecnicas de clasificacion.md",
+    "DUIA/intro-IA/apuntes/aprendizaje automatico.md",
+    "DUIA/intro-IA/apuntes/notas de python-pandas.md",
+    "DUIA/intro-IA/apuntes/pre-procesamiento de texto - perspectiva practica.md",
+    "DUIA/intro-IA/apuntes/algoritmos geneticos.md",
+    "DUIA/intro-IA/apuntes/pre-procesamiento de datos - perspectiva practica.md",
+    "DUIA/todo.md",
+    "2026/CALSOF/classes/testing II.md",
+    "2026/CALSOF/classes/code smells.md",
+    "2026/CALSOF/classes/test doubles.md",
+    "2026/CALSOF/index.md",
+    "2026/CALSOF/media/Pasted image 20260517123252.png",
+    "2026/CALSOF/media/Pasted image 20260517125128.png",
+    "italelem/2026-05-19-Note-18-56.xopp",
+    "italelem/2026-05-14-Note-18-54.xopp",
+    "2026/CALSOF/media/Pasted image 20260519011708.png",
+    "2026/CALSOF/media/Pasted image 20260519010352.png",
+    "2026/CALSOF/media/Pasted image 20260519010328.png",
+    "2026/CALSOF/media/Pasted image 20260519002552.png",
+    "2026/CALSOF/media/Pasted image 20260518181343.png",
+    "2026/CALSOF/media/Pasted image 20260518181129.png",
+    "2026/CALSOF/media/Pasted image 20260518180641.png",
+    "DUIA/media/Pasted image 20260516165730.png",
+    "DUIA/media",
+    "2026/CALSOF/activities",
+    "italelem/2026-05-05-Note-18-33.xopp",
     "DUIA/intro-IA/apuntes",
     "DUIA/intro-IA/actividades",
     "DUIA/intro-IA",
     "DUIA",
-    "2026/CALSOF/classes/testing.md",
-    "2026/CALSOF/classes/test doubles.md",
     "Untitled.base",
-    "2026/CALSOF/index.md~",
-    "Untitled.md",
-    "CCNA/index.md",
-    "DUIA/intro-IA/Untitled",
     "Untitled.canvas"
   ]
 }
