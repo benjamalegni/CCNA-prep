@@ -145,6 +145,21 @@ ver que ajusto para la proxima semana, que me gusto que no me gusto 
 calculo mensual y de fechas de conseguir resultados viene del semanal. entonces despues de la primer semana puedo hacer el calculo y tener las fechas limites
 juntarme con equipos que me motiven a desarrollar habilidades. que puedo aprender de ellos
 
+# aplicar
+1. seguir con el armado de los esquemas de preguntas opcionales (ia)
+	- deteccion de tipos de mails
+- tratar de calcular cuanto costaria el flujo de personalizacion con ia en tokens
+	- pensar cada campo
+2. epica: empezar a idear el flujo de creacion de puestos de trabajo (orientado a las empresas)
+3. seguir creciendo la pool de trabajos con variedad de roles
+
+armar excel con empresas qeu voy viendo para agregar y aquellas que son posible agregar o no
+
+ir pensando la idea de roomix para buscar empleos
+- buscando gente honestamente
+
+fijarme el query especifico para request filtrando solo argentina
+
 # carrera
 
 ## Estado actual
