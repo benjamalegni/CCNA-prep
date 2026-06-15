@@ -270,3 +270,34 @@ procedimiento:
 - usarlas para enriquecer y mejorar el diseno
 
 -> normalizacion
+
+## Clausura de dependencias funcionales
+Dado un conjunto de dependencias funcionales DF, su clausura se denota DF+.
+DF+ es el conjunto de todas las dependencias funcionales que pueden inferirse lógicamente a partir de DF.
+## Axiomas de Armstrong
+Reflexividad: si X ⊆ Y, entonces Y -> X.
+Aumentación: si X -> Y, entonces XW -> YW.
+Transitividad: si X -> Y e Y -> Z, entonces X -> Z.
+Reglas derivadas:
+Descomposición: si X -> YZ, entonces X -> Y y X -> Z.
+Unión: si X -> Y y X -> Z, entonces X -> YZ.
+Seudotransitividad: si X -> Y y WY -> Z, entonces WX -> Z.
+## Clausura de atributos
+Dado un conjunto de atributos X y un conjunto DF, la clausura de X se denota X+.
+X+ contiene todos los atributos que pueden ser determinados funcionalmente por X usando las dependencias de DF.
+## Algoritmo de Ullman
+Entrada: una relación R, un conjunto DF de dependencias funcionales elementales y un conjunto X de atributos.
+1. Inicializar X+ = X.
+2. Repetir hasta que no se agreguen más atributos:
+   Para cada dependencia Y -> Z en DF, si Y está contenido en X+, agregar Z a X+.
+3. El resultado es X+.
+## Recubrimiento minimal
+No conviene guardar todas las dependencias de DF+, porque cada dependencia funcional es una restricción que debe verificarse ante actualizaciones.
+Un recubrimiento minimal es un conjunto de dependencias funcionales equivalente a DF, pero sin dependencias redundantes.
+Dos conjuntos son equivalentes si generan la misma clausura.
+## Superclave usando clausura
+Un conjunto de atributos SK es superclave de R si:
+SK -> esq(R)
+Equivalente:
+SK+ = esq(R)
+Es decir, SK determina todos los atributos de la relación.

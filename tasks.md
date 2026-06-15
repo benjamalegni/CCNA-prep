@@ -315,3 +315,41 @@ Cerrar intermedio UNICEN -> Europa -> terminar bachelor -> máster
 ```
 
 No descartaría el grado argentino, pero lo usaría como plan B si Europa te reconoce pocos créditos. Fuentes principales usadas: plan 2023 y plan interactivo de Exactas UNICEN, reglamento PPS/PI, sistema ECTS europeo y reconocimiento académico UE.
+
+
+# calsof
+repasar bien los refactorings y con que code smells re relacionan
+
+test doubles
+- stub devuelve los datos preparados para que el test avance
+- mock: sirve para verificar interacciones
+- fake: implementacion simple pero funcional, ej base de datos en memoria
+- dummy: objeto que solo se pasa porque la firma (parametro) lo exige, pero no se usa
+- spy: objeto real parcialmente observado o intervenido
+
+no se puede hacer thenReturn en metodos void, se usa verify(), doThrow()...
+
+No confundas assertEquals(...) con verify(...): si querés comprobar un resultado, usás assert; si querés comprobar que se llamó a una dependencia, usás verify.
+
+principios solid:
+explicar bien la violacion concreta, estudiar casos de ejemplo para reconocerlos bien
+- consecuencias de la violacion
+- refactor concreto
+
+code smells:
+- long method
+- god class
+- feature envy
+- data class
+- lazy class
+
+***Code smell	Refactoring principal***
+Long Method	Extract Method
+God Class / Large Class	Extract Class
+Feature Envy	Move Method
+Data Class	Move Method hacia la clase de datos
+
+inline son lo opuesto de extract:
+extract method/class: separa algo porque esta haciendo demasiado
+inline method/class: elimina una separacion porque no aporta nada
+

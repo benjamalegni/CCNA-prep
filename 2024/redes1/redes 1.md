@@ -43,7 +43,7 @@
 
 # nivel 2
 
-[[intro]]
+[[2024/redes1/nivel 2/intro]]
 
 [[nivel 2/delimitacion de bloques]]
 

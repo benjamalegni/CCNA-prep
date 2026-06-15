@@ -10,6 +10,10 @@
 ===
 [[4. physical layer - interfaces and cables]]
 ===
+[[5. binary lab]]
+===
+[[6. data link layer]]
+===
 [[7. ethernet LAN switching]]
 ===
 [[8. network layer]]
@@ -18,3 +22,7 @@
 ===
 [[10. configuracion basica de router]]
 ===
+[[11. direccionamiento IPv4]]
+===
+
+
