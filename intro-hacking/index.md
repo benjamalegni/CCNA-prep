@@ -47,3 +47,5 @@
 	[[type juggling]]
 	[[no-sql injection]]
 	[[LDAP injection]]
+	[[inyecciones LaTex]]
+	[[abuso de]]

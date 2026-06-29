@@ -126,6 +126,13 @@ va a estar ordenado de mayor a menor
 se usa con descriptores geneticos
 ### t-SNE
 intenta mostrar una muestra que tenga una misma distancia que en las muestras originales
+preserva relaciones locales: puntos cercanos en el espacio original deberian quedar cercanos en la proyeccion
+es util para visualizar clusters, pero no tanto para interpretar distancias globales
 
 ### UMAP
-
+parecido a t-SNE, sirve para proyectar datos de muchas dimensiones a 2D o 3D para visualizarlos
+intenta preservar tanto estructura local como parte de la estructura global de los datos
+es mas rapido que t-SNE y suele escalar mejor con datasets grandes
+hiperparametros importantes:
+- n_neighbors: controla que tan local o global es la estructura que intenta conservar
+- min_dist: controla que tan separados quedan los puntos en la proyeccion

@@ -25,8 +25,16 @@ raiz del error cuadratico medio:
 - es la raiz cuadrada del MSE
 
 coeficiente de determinacion (R^2)
+- indica que porcentaje de la variabilidad de la variable objetivo queda explicado por el modelo
+- R^2 = 1 implica ajuste perfecto
+- R^2 = 0 implica que el modelo no mejora a predecir siempre la media
+- puede ser negativo si el modelo es peor que predecir la media
 
 coeficiente de correlacion de Perason (r)
+- mide la fuerza y direccion de una relacion lineal entre dos variables
+- r cerca de 1: relacion lineal positiva fuerte
+- r cerca de -1: relacion lineal negativa fuerte
+- r cerca de 0: no hay relacion lineal clara
 
 ### modelos de regresion
 si tenemos 2 soluciones de distinta complejidad pero dan el mismo resultado, siempre es conveniente quedarse con el mas simple

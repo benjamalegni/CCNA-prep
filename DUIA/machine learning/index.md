@@ -2,3 +2,5 @@
 [[modelado de datos]]
 [[regresion]]
 [[clasificacion 1]]
+[[clasificacion 2]]
+[[deteccion de anomalias y clustering]]
