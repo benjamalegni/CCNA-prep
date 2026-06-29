@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "e10fa4fbb2e08b4b",
+        "id": "0ad58bf730ff4855",
         "type": "tabs",
         "children": [
           {
-            "id": "a1274dda2286fde0",
+            "id": "6fb9a4036717cd07",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "tasks.md",
+                "file": "CCNA/index.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "tasks"
+              "title": "index"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "arp -d",
+                "query": "proxy",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -78,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 234.5,
-    "collapsed": true
+    "width": 275.51103591918945
   },
   "right": {
     "id": "59e601f64e0ae900",
@@ -143,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DUIA/machine learning/apuntes/modelado de datos.md",
+                "file": "DUIA/intro-IA/apuntes/reinforcement learning.md",
                 "followCursor": true,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of modelado de datos"
+              "title": "Outline of reinforcement learning"
             }
           },
           {
@@ -163,12 +162,11 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -182,53 +180,54 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "a1274dda2286fde0",
+  "active": "6fb9a4036717cd07",
   "lastOpenFiles": [
-    "italelem/2026-05-28-Note-18-55.xopp~",
-    "DUIA/machine learning/apuntes/clasificacion 1.md",
-    "Pasted image 20260606105706.png",
-    "Pasted image 20260606104312.png",
-    "Pasted image 20260606104005.png",
-    "DUIA/media/Pasted image 20260606111643.png",
-    "DUIA/media/Pasted image 20260606110012.png",
-    "DUIA/media/Pasted image 20260606105706.png",
-    "DUIA/media/Pasted image 20260606104721.png",
-    "DUIA/media/Pasted image 20260606104312.png",
-    "DUIA/media/Pasted image 20260606104005.png",
-    "DUIA/media/Pasted image 20260605200126.png",
-    "DUIA/machine learning/index.md",
-    "DUIA/machine learning/apuntes/regresion.md",
-    "italelem/21 aprile.md",
-    "2025/redes II/aplicaciones/procesos que se comunican y sockets.md",
-    "2025/redes II/Redes II.md",
-    "DUIA/machine learning/apuntes/modelado de datos.md",
-    "DUIA/intro-IA/index.md",
-    "italelem/2026-05-28-Note-18-55.xopp",
-    "DUIA/machine learning/apuntes/intro.md",
-    "DUIA/machine learning/apuntes",
-    "DUIA/machine learning",
-    "DUIA/intro-IA/apuntes/modelos de clasificacion - perspectiva practica.md",
-    "DUIA/intro-IA/apuntes/tecnicas de clasificacion.md",
-    "DUIA/todo.md",
-    "DUIA/intro-IA/apuntes/pre-procesamiento de texto - perspectiva practica.md",
+    "CCNA/notes/13. ICMP.md",
+    "CCNA/index.md",
+    "CCNA/notes/12. direccionamiento IPv6.md",
     "tasks.md",
-    "Untitled.md",
-    "conflict-files-obsidian-git.md",
-    "2025/BD1/bases de datos.md",
-    "2025/BD1/SQL queries.md",
-    "2025/BD1/tema 4/Consultas SQL.md",
-    "CCNA/notes/11. direccionamiento IPv4.md",
-    "CCNA/notes/8. network layer.md",
-    "CCNA/notes/9. resolucion de red.md",
-    "CCNA/notes/2. intro a CISCO IOS CLI.md",
-    "2026/CALSOF/classes/testing II.md",
-    "2026/CALSOF/classes/code smells.md",
-    "italelem/2026-05-19-Note-18-56.xopp",
-    "italelem/2026-05-14-Note-18-54.xopp",
-    "DUIA/media",
-    "2026/CALSOF/activities",
-    "italelem/2026-05-05-Note-18-33.xopp",
-    "DUIA/intro-IA/apuntes",
+    "italelem/25 june.md",
+    "Pasted image 20260625175534.png",
+    "italelem/21 aprile.md",
+    "GPMC/foundations of project management/apuntes/embarking a career in project management.md",
+    "intro-hacking/contents/OWASP top 10.md",
+    "intro-hacking/concepts/deserialization attack.md",
+    "intro-hacking/concepts/log poisoning.md",
+    "intro-hacking/concepts/abuso de apis.md",
+    "intro-hacking/concepts/inyecciones LaTex.md",
+    "intro-hacking/index.md",
+    "GPMC/foundations of project management",
+    "finnish-A1/2025-10-31-Note-09-08.pdf",
+    "finnish-A1/2025-11-04-Note-14-22.pdf",
+    "GPMC/foundations of project management/apuntes",
+    "GPMC",
+    "CCNA/media/Pasted image 20260624151155.png",
+    "CCNA/media/Pasted image 20260624145804.png",
+    "CCNA/media/Pasted image 20260624143628.png",
+    "CCNA/media/Pasted image 20260624142102.png",
+    "CCNA/media/Pasted image 20260620195641.png",
+    "CCNA/media/Pasted image 20260620193743.png",
+    "CCNA/media/Pasted image 20260620192625.png",
+    "Pasted image 20260624151155.png",
+    "Pasted image 20260624145804.png",
+    "2025/arqui1/exams/Parcial 2025 (TEMA1).pdf",
+    "2026/CALSOF/resumen-audible-calsof-examen.mp3",
+    "hack4u-recorder/package-lock.json",
+    "hack4u-recorder/node_modules/playwright-core/lib/vite/traceViewer/manifest.webmanifest",
+    "hack4u-recorder/node_modules/playwright-core/ThirdPartyNotices.txt",
+    "hack4u-recorder/node_modules/playwright-core/lib/tools/cli-client/skill/references/video-recording.md",
+    "hack4u-recorder/node_modules/playwright-core/lib/tools/cli-client/skill/references/tracing.md",
+    "hack4u-recorder/node_modules/playwright-core/lib/tools/cli-client/skill/references/test-generation.md",
+    "hack4u-recorder/node_modules/playwright-core/lib/tools/cli-client/skill/references/storage-state.md",
+    "hack4u-recorder/node_modules/playwright-core/lib/tools/cli-client/skill/references/spec-driven-testing.md",
+    "hack4u-recorder/node_modules/playwright-core/lib/tools/trace/SKILL.md",
+    "hack4u-recorder/node_modules/playwright-core/lib/tools/cli-client/skill/SKILL.md",
+    "hack4u-recorder/node_modules/playwright-core/lib/tools/cli-client/skill/references/session-management.md",
+    "hack4u-recorder/node_modules/playwright-core/lib/tools/cli-client/skill/references/running-code.md",
+    "hack4u-recorder/node_modules/playwright-core/README.md",
+    "hack4u-recorder/node_modules/playwright-core/lib/tools/cli-client/skill/references/request-mocking.md",
+    "hack4u-recorder/node_modules/playwright-core/lib/tools/cli-client/skill/references/playwright-tests.md",
+    "hack4u-recorder/node_modules/playwright-core/lib/tools/cli-client/skill/references/element-attributes.md",
     "Untitled.canvas"
   ]
 }

@@ -1,72 +1,4 @@
 - [x] enumeracion de servicios comunes y gestores de contenido
-- [x] conceptos basicos de enumeracion y explotacion 3/1
-- [ ] crear calendario interactivo que sea facil para crear reuniones compartidas y que tenga los juegos de linkedin
-- [x] crear pagina con astro de mis notas de CCNA con los labs de jeremy's IT lab
-- [ ] crear instagram clone (que los links se vean parecidos) para que gente ponga su cuenta y password
-- [ ] pasar proyectos de cubepath a servidor propio (incluyendo komanda)
-- [ ] 
-# contenidos del final AyDA1
-- especificar TDA, con operaciones y especificarlas
-	- ejemplo TDA cuadricula generico
-- clasificar operaciones en constructoras, observadoras, y transformadoras
-- clases de c++
-	- inicializacion de atributos en la definicion del constructor
-- header de c++
-- algoritmos divide y conquista (y otras tecnicas de diseno)
-- greedy
-	- greedy optimo
-- programacion dinamica
-	- aprender multiplicacion encadenada de matrices
-	- top-down
-	- bottom-up
-- complejidad temporal, ***teorema maestro***
-	- si el tiempo de ejecucion de un algoritmo es O(n^2) en el peor caso, es posible que sea O(n^3) sobre algunas entradas? **no***
-	- si el tiempo de ejecucion de un algoritmo es O(n^2) en el peor caso, es posible que sea O(n)sobre algunas entradas? **si***
-	- si el tiempo de ejecucion de un algoritmo es theta(n^2) en el peor caso, es posible que sea O(n)sobre algunas entradas? **no, porque en la notacion asintotica $\theta$ (theta), el mejor caso debera ser igual al peor de los casos***
-	- aprender lo 3 tipos de notaciones asintoticas
-- seguimiento de codigo
-- multiplicacion de cadena de matrices
-
-realice un seguimineto de algoritmo propuesto para multiplicar 4 matrices M1 x M2 x M3 x M4, donde
-M1 es de tamano 5x3
-M2 es de tamano 3x2
-M3 es de tamano 2x6
-M4 es de tamano 6x4
-debe quedar claro el orden de la multiplicacion que minimice el numero de operaciones y como se obtiene
-
-#### notas relevantes:
-- se le pone const en la declaracion (en el header) y en la implementacion en archivos cpp a aquellas operaciones observadoras que no cambien ningun valor
-``` cpp
-class MyClass {
-public:
-    void getValue() const; // Declaration
-};
-
-void MyClass::getValue() const { // Definition
-    // Function body
-}
-```
-- en el header se declaran como:
-```cpp
-public:  
-    FilaDeClientes();  
-  
-    // operaciones transformadoras  
-    void llamarCliente(bool estaPresente);
-```
-- en el archivo cpp se van implementando como Clase::metodo(parametros){cuerpo} y no es necesario indicar cual es el tipo de dato que devuelve
-
-
-
-# arquitectura de computadoras I
-
-rendimiento/amdahl:
-- tiempo de CPU = cantidad de instrucciones * CPI * tiempo de ciclo de reloj
-
-MIPS segmentado
-- diagrama del CPU
-	- registros se escriben en flanco ascendente (primera mitad del ciclo) y se leen en flanco ascendente (en la segunda mitad de ciclo) para evitar riesgo de datos
-	- alu ops:
 		- (00) adds, lw, sw
 		- (01) sub, beq
 		- (10) determined by function field in the instruction
@@ -160,19 +92,204 @@ ir pensando la idea de roomix para buscar empleos
 
 fijarme el query especifico para request filtrando solo argentina
 
+- reducir el tiempo de payload, que sea instaneo y no termine cuando termina el autofill
+- revisar que pasa el headless
+- fijarme como funciona cuando se hacen varios requests, se hace una fila? se usa el entorno virtual para ejecutarlos en paralelo, simultaneo?
+	- load balancer?
+
+- caso de no existe un job => que el scraping notifique y actualice db
+- separar las ramas por feature asi no queda todo junto!
+
+cuando se inicia el autofilling se crea una nueva fila con el requestID (indicado por el cliente en el request)
+luego en el put de email verification se indica el requestID y se usa el verification code que nos devuelve sendgrid
+
+formato cv's en storage:
+- 4a3c509a-dedd-4781-9555-4d16d2e4a4c9/cv.pdf
+	- userid/cv.pdf
+
+se esta insertando la pregunta opcional correctamente
+lo que falta es que al volver a hacer el autofilling detecte automaticamente esa pregunta opcional y la llene
+{
+    "success": true,
+    "data": {
+        "runId": "65f88faa-e0d2-4b2a-9649-f258696b3030",
+        "applicationId": null,
+        "jobId": "0095a9b7-bda5-42e7-981a-67b776dcedf3",
+        "providerId": "mercadolibre",
+        "status": "partially_filled",
+        "queueStatus": null,
+        "statusUrl": "http://localhost:3000/jobs/scraper/autofill/runs/65f88faa-e0d2-4b2a-9649-f258696b3030",
+        "reused": false,
+        "createdAt": "2026-06-19T13:57:02.321445+00:00",
+        "queuedAt": null,
+        "atsId": "eightfold",
+        "companyId": null,
+        "attemptCount": 0,
+        "maxAttempts": 3,
+        "startedAt": "2026-06-19T13:57:09.601+00:00",
+        "finishedAt": "2026-06-19T13:58:07.47+00:00",
+        "nextRetryAt": null,
+        "missingFields": [],
+        "errorCode": "OPTIONAL_QUESTIONS_REQUIRED",
+        "errorMessage": null,
+        "fieldDiagnostics": [],
+        "missingInformation": [
+            {
+                "type": "optional_question",
+                "atsId": "eightfold",
+                "reason": "missing_answer",
+                "message": "Required question \"Phone(You authorize us to contact you via WhatsApp Business to share updates about your application.)\" was not filled.",
+                "options": null,
+                "blocking": true,
+                "required": true,
+                "valueType": "single_select",
+                "providerId": "mercadolibre",
+                "questionId": "d90ade99-fa04-4b4f-8fb0-61672e9e6e9f",
+                "controlKind": "custom_combobox",
+                "questionKey": "mercadolibre_phoneyou_authorize_us_to_contact",
+                "questionText": "Phone(You authorize us to contact you via WhatsApp Business to share updates about your application.)",
+                "validationMessage": "Enter a valid phone number and country code.",
+                "validationSummary": null,
+                "providerQuestionId": "1acc1d71-3bac-4ecf-ba51-c35db935203a",
+                "questionTextSource": "field_label",
+                "associationConfidence": 1,
+                "reusableQuestionCreated": false
+            },
+            {
+                "type": "optional_question",
+                "atsId": "eightfold",
+                "reason": "select_required",
+                "message": "Please select a value for \"Do you authorize us to contact you via WhatsApp to share updates about your application?\". Available options: \"I agree\".",
+                "options": [
+                    {
+                        "label": "I agree",
+                        "value": "1"
+                    }
+                ],
+                "blocking": true,
+                "required": true,
+                "valueType": "single_select",
+                "providerId": "mercadolibre",
+                "questionId": "2f52034d-1d98-439b-a65d-0831e1b69aae",
+                "controlKind": "checkbox",
+                "questionKey": "mercadolibre_do_you_authorize_us_to",
+                "questionText": "Do you authorize us to contact you via WhatsApp to share updates about your application?",
+                "validationMessage": "Error: Select at least one value.",
+                "validationSummary": null,
+                "providerQuestionId": "b02d1082-f719-433c-a5a0-cf7815cb6aee",
+                "questionTextSource": "field_label",
+                "associationConfidence": 1,
+                "reusableQuestionCreated": false
+            }
+        ],
+        "result": {
+            "status": "partially_filled",
+            "finalUrl": "https://mercadolibre.eightfold.ai/careers/apply?pid=41941381&locale=en_US",
+            "filledFields": [
+                "cv",
+                "linkedinUrl",
+                "phoneCountryCode",
+                "phone",
+                "email",
+                "firstName",
+                "lastName",
+                "location",
+                "country",
+                "state",
+                "privacyStatement",
+                "mercadoLibreRelationship"
+            ],
+            "missingFields": [],
+            "autofillCompleted": false,
+            "missingInformation": [
+                {
+                    "type": "optional_question",
+                    "atsId": "eightfold",
+                    "reason": "missing_answer",
+                    "message": "Required question \"Phone(You authorize us to contact you via WhatsApp Business to share updates about your application.)\" was not filled.",
+                    "options": null,
+                    "blocking": true,
+                    "required": true,
+                    "valueType": "single_select",
+                    "providerId": "mercadolibre",
+                    "questionId": "d90ade99-fa04-4b4f-8fb0-61672e9e6e9f",
+                    "controlKind": "custom_combobox",
+                    "questionKey": "mercadolibre_phoneyou_authorize_us_to_contact",
+                    "questionText": "Phone(You authorize us to contact you via WhatsApp Business to share updates about your application.)",
+                    "validationMessage": "Enter a valid phone number and country code.",
+                    "validationSummary": null,
+                    "providerQuestionId": "1acc1d71-3bac-4ecf-ba51-c35db935203a",
+                    "questionTextSource": "field_label",
+                    "associationConfidence": 1,
+                    "reusableQuestionCreated": false
+                },
+                {
+                    "type": "optional_question",
+                    "atsId": "eightfold",
+                    "reason": "select_required",
+                    "message": "Please select a value for \"Do you authorize us to contact you via WhatsApp to share updates about your application?\". Available options: \"I agree\".",
+                    "options": [
+                        {
+                            "label": "I agree",
+                            "value": "1"
+                        }
+                    ],
+                    "blocking": true,
+                    "required": true,
+                    "valueType": "single_select",
+                    "providerId": "mercadolibre",
+                    "questionId": "2f52034d-1d98-439b-a65d-0831e1b69aae",
+                    "controlKind": "checkbox",
+                    "questionKey": "mercadolibre_do_you_authorize_us_to",
+                    "questionText": "Do you authorize us to contact you via WhatsApp to share updates about your application?",
+                    "validationMessage": "Error: Select at least one value.",
+                    "validationSummary": null,
+                    "providerQuestionId": "b02d1082-f719-433c-a5a0-cf7815cb6aee",
+                    "questionTextSource": "field_label",
+                    "associationConfidence": 1,
+                    "reusableQuestionCreated": false
+                }
+            ],
+            "submissionConfirmed": false
+        }
+    },
+    "error": null
+}
+
+https://www.getonbrd.com.ar/
+
+- probar webwright solo cuando el response del autofill devuelve partially filled porque hay preguntas opcionales.
+	- NO muy muy lento
+- no se esta llenando correctamente despues de completar las preguntas opcionales, se rompe campo CV
+	- ok visto
+- question_key no es necesario => sacarlo si no se usa y usar el question_id
+	- pendiente
+- PUT de a varias preguntas en vez de una sola y volver a llamar al autofilling automaticamente con el mismo puesto
+
+
+#### aplicar que hacer!!??
+actualmente no se esta podiendo llegar a scrapear correctamente cuando hay preguntas opcionales
+tampoco quiero dejar que todo el flujo lo haga webwright o algun otro scraper con ia
+mi plan es:
+1. aunque se sepa que x postulacion tiene preguntas opcionales iniciar el scraping con patch wright normalmente
+2. si aparece algun mensaje de error y que patchright lo detecte
+3. no se cierra el scraping (queda en segundo plano) y entra el llm scraper suponiendo webwright
+4. busca los datos en la db que ya existe para responder esas preguntas y si no las hay se avisa en el response y se autoinyectan en la base de datos
+5. se repiten pasos 1 y 2, se envia correctamente la postulacion
+
 # carrera
 
 ## Estado actual
 
-| Punto | Estado |
-|---|---|
-| Carrera actual | Ingeniería de Sistemas, UNICEN, plan 2023 |
-| Materias con final/promoción/equivalencia | 11 |
-| Materias curriculares del grado | 37 + PPS/Proyecto Integrador |
-| Pendientes curriculares | 26 + PPS/PI |
-| Atraso vs plan ideal | aprox. 1,5 a 2 años |
-| Objetivo corto | cerrar título intermedio |
-| Objetivo internacional | usar intermedio para continuar bachelor en Europa y luego máster |
+| Punto                                     | Estado                                                           |
+| ----------------------------------------- | ---------------------------------------------------------------- |
+| Carrera actual                            | Ingeniería de Sistemas, UNICEN, plan 2023                        |
+| Materias con final/promoción/equivalencia | 11                                                               |
+| Materias curriculares del grado           | 37 + PPS/Proyecto Integrador                                     |
+| Pendientes curriculares                   | 26 + PPS/PI                                                      |
+| Atraso vs plan ideal                      | aprox. 1,5 a 2 años                                              |
+| Objetivo corto                            | cerrar título intermedio                                         |
+| Objetivo internacional                    | usar intermedio para continuar bachelor en Europa y luego máster |
 
 ## Título Intermedio AUDeS
 
@@ -316,6 +433,11 @@ Cerrar intermedio UNICEN -> Europa -> terminar bachelor -> máster
 
 No descartaría el grado argentino, pero lo usaría como plan B si Europa te reconoce pocos créditos. Fuentes principales usadas: plan 2023 y plan interactivo de Exactas UNICEN, reglamento PPS/PI, sistema ECTS europeo y reconocimiento académico UE.
 
+## cursos/certificaciones en curso
+ahora estoy preparando el examen CCNA para septiembre
+tambien certificacion en project management y cybersecurity de google
+luego puedo comenzar a estudiar gratis cursos associate/professional de gcp
+tener en cuenta!! security+ de comptia
 
 # calsof
 repasar bien los refactorings y con que code smells re relacionan
@@ -353,3 +475,20 @@ inline son lo opuesto de extract:
 extract method/class: separa algo porque esta haciendo demasiado
 inline method/class: elimina una separacion porque no aporta nada
 
+
+# portfolio 
+poner un planeta en mi portfolio de three js mostrando los paises que visite
+
+# chiken stop
+chicken stop: ir viendo tema marketing, packaging, ideas de receta, flujo de trabajo de cocina
+
+# komanda
+usar los creditos de azure para infra => opentofu
+- single-tenant to multi-tenant => todos con dominio en comun
+- no creo bds ni containers por cada negocio, redirigo a su pagina de acuerdo a su slug
+- tauri/electron pagina para el print worker
+
+
+# otro
+- rellenar el forms de movilidad a francia
+- responder al mail diciendo que estoy interesado por la propuesta y que quedo a la espera para las inscripciones de las clases de frances

