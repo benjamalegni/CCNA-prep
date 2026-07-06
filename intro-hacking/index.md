@@ -48,4 +48,11 @@
 	[[no-sql injection]]
 	[[LDAP injection]]
 	[[inyecciones LaTex]]
-	[[abuso de]]
+	[[abuso de apis]]
+	[[abuso de subida de archivos]]
+	[[prototype pollution]]
+	[[DNS zone transfer]]
+	[[mass-asignment attack]]
+	[[open redirect]]
+	[[enumeracion y explotacion de webdav]]
+	

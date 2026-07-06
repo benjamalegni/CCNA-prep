@@ -11,14 +11,12 @@
             "id": "6fb9a4036717cd07",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "CCNA/index.md",
-                "mode": "source",
-                "source": false
+                "file": "Pasted image 20260704111916.png"
               },
-              "icon": "lucide-file",
-              "title": "index"
+              "icon": "lucide-image",
+              "title": "Pasted image 20260704111916"
             }
           }
         ]
@@ -53,7 +51,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "proxy",
+                "query": "metricas",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -78,7 +76,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 275.51103591918945
+    "width": 370.51103591918945,
+    "collapsed": true
   },
   "right": {
     "id": "59e601f64e0ae900",
@@ -94,8 +93,8 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2025/arqui1/sistemas de e-s.md",
-                "collapseAll": false,
+                "file": "Pasted image 20260704111916.png",
+                "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
@@ -104,7 +103,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for sistemas de e-s"
+              "title": "Backlinks for Pasted image 20260704111916"
             }
           },
           {
@@ -113,12 +112,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "ingreso/Math exam 6a5af62f52d24413a1842503ed7882c9.md",
+                "file": "CCNA/notes/14. transport layer.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Math exam 6a5af62f52d24413a1842503ed7882c9"
+              "title": "Outgoing links from 14. transport layer"
             }
           },
           {
@@ -142,13 +141,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DUIA/intro-IA/apuntes/reinforcement learning.md",
+                "file": "Pasted image 20260704111916.png",
                 "followCursor": true,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of reinforcement learning"
+              "title": "Outline of Pasted image 20260704111916"
             }
           },
           {
@@ -166,7 +165,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 428.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -180,54 +179,53 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "6fb9a4036717cd07",
+  "active": "6d4856cc7998c1fa",
   "lastOpenFiles": [
-    "CCNA/notes/13. ICMP.md",
-    "CCNA/index.md",
-    "CCNA/notes/12. direccionamiento IPv6.md",
+    "Pasted image 20260704095347.png",
+    "DUIA/procesamiento de texto/apuntes/analisis sintactico.md",
+    "DUIA/procesamiento de texto/apuntes/representacion de texto.md",
+    "Pasted image 20260704111916.png",
+    "DUIA/procesamiento de texto/apuntes/pre-procesamiento.md",
+    "DUIA/todo.md",
     "tasks.md",
-    "italelem/25 june.md",
-    "Pasted image 20260625175534.png",
-    "italelem/21 aprile.md",
-    "GPMC/foundations of project management/apuntes/embarking a career in project management.md",
+    "DUIA/procesamiento de texto/index.md",
+    "DUIA/procesamiento de texto/apuntes/intro.md",
+    "DUIA/intro-IA/apuntes/tecnicas de clustering.md",
+    "preprocesamiento.md",
+    "preprocesamiento -.md",
+    "DUIA/intro-IA/apuntes/tecnicas de planning.md",
+    "CCNA/notes/14. transport layer.md",
+    "CCNA/media/Pasted image 20260703163651.png",
+    "CCNA/media/Pasted image 20260703162356.png",
+    "CCNA/media/Pasted image 20260703153943.png",
+    "CCNA/media/Pasted image 20260703153426.png",
+    "CCNA/media/Pasted image 20260703153400.png",
+    "CCNA/media/Pasted image 20260703153328.png",
+    "CCNA/media/Pasted image 20260703153211.png",
+    "CCNA/media/Pasted image 20260703153032.png",
+    "CCNA/index.md",
+    "italelem/2026-06-30-Note-18-38.xopp~",
     "intro-hacking/contents/OWASP top 10.md",
-    "intro-hacking/concepts/deserialization attack.md",
-    "intro-hacking/concepts/log poisoning.md",
-    "intro-hacking/concepts/abuso de apis.md",
-    "intro-hacking/concepts/inyecciones LaTex.md",
     "intro-hacking/index.md",
+    "intro-hacking/concepts/enumeracion y explotacion de webdav.md",
+    "intro-hacking/concepts/open redirect.md",
+    "intro-hacking/concepts/mass-asignment attack.md",
+    "CCNA/notes/13. ICMP.md",
+    "DUIA/machine learning/apuntes/intro.md",
+    "Untitled.base",
+    "DUIA/intro-IA/apuntes/pre-procesamiento de datos - perspectiva practica.md",
+    "intro-hacking/concepts/DNS zone transfer.md",
+    "intro-hacking/concepts/prototype pollution.md",
+    "Untitled.canvas",
+    "intro-hacking/concepts/abuso de subida de archivos.md",
+    "DUIA/procesamiento de texto/actividades/colab 1.md",
+    "DUIA/procesamiento de texto/actividades",
+    "DUIA/nlp/apuntes/Untitled",
+    "DUIA/procesamiento de texto/apuntes",
+    "DUIA/procesamiento de texto",
+    "GPMC/foundations of project management/apuntes/Untitled",
     "GPMC/foundations of project management",
     "finnish-A1/2025-10-31-Note-09-08.pdf",
-    "finnish-A1/2025-11-04-Note-14-22.pdf",
-    "GPMC/foundations of project management/apuntes",
-    "GPMC",
-    "CCNA/media/Pasted image 20260624151155.png",
-    "CCNA/media/Pasted image 20260624145804.png",
-    "CCNA/media/Pasted image 20260624143628.png",
-    "CCNA/media/Pasted image 20260624142102.png",
-    "CCNA/media/Pasted image 20260620195641.png",
-    "CCNA/media/Pasted image 20260620193743.png",
-    "CCNA/media/Pasted image 20260620192625.png",
-    "Pasted image 20260624151155.png",
-    "Pasted image 20260624145804.png",
-    "2025/arqui1/exams/Parcial 2025 (TEMA1).pdf",
-    "2026/CALSOF/resumen-audible-calsof-examen.mp3",
-    "hack4u-recorder/package-lock.json",
-    "hack4u-recorder/node_modules/playwright-core/lib/vite/traceViewer/manifest.webmanifest",
-    "hack4u-recorder/node_modules/playwright-core/ThirdPartyNotices.txt",
-    "hack4u-recorder/node_modules/playwright-core/lib/tools/cli-client/skill/references/video-recording.md",
-    "hack4u-recorder/node_modules/playwright-core/lib/tools/cli-client/skill/references/tracing.md",
-    "hack4u-recorder/node_modules/playwright-core/lib/tools/cli-client/skill/references/test-generation.md",
-    "hack4u-recorder/node_modules/playwright-core/lib/tools/cli-client/skill/references/storage-state.md",
-    "hack4u-recorder/node_modules/playwright-core/lib/tools/cli-client/skill/references/spec-driven-testing.md",
-    "hack4u-recorder/node_modules/playwright-core/lib/tools/trace/SKILL.md",
-    "hack4u-recorder/node_modules/playwright-core/lib/tools/cli-client/skill/SKILL.md",
-    "hack4u-recorder/node_modules/playwright-core/lib/tools/cli-client/skill/references/session-management.md",
-    "hack4u-recorder/node_modules/playwright-core/lib/tools/cli-client/skill/references/running-code.md",
-    "hack4u-recorder/node_modules/playwright-core/README.md",
-    "hack4u-recorder/node_modules/playwright-core/lib/tools/cli-client/skill/references/request-mocking.md",
-    "hack4u-recorder/node_modules/playwright-core/lib/tools/cli-client/skill/references/playwright-tests.md",
-    "hack4u-recorder/node_modules/playwright-core/lib/tools/cli-client/skill/references/element-attributes.md",
-    "Untitled.canvas"
+    "finnish-A1/2025-11-04-Note-14-22.pdf"
   ]
 }
