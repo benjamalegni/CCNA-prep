@@ -3,7 +3,7 @@
 [[1. network devices]]
 ===
 [[2. intro a CISCO IOS CLI]]
-==
+===
 [[3. protocolos y modelos]]
 ===
 [[3.1 TCP-IP]]
@@ -27,4 +27,6 @@
 [[12. direccionamiento IPv6]]
 ===
 [[13. ICMP]]
+===
+[[14. transport layer]]
 ===

@@ -2,6 +2,7 @@
 [[aprendizaje automatico]]
 [[algoritmos geneticos]]
 [[tecnicas de planning]]
+[[tecnicas de clustering]]
 [[tecnicas de clasificacion]]
 [[reinforcement learning]]
 

@@ -15,7 +15,7 @@ la libreria pandas tiene 2 estructuras principales:
 provee funcionalidad para importar y exportar archivo hacia un dataframe
 
 # analisis exploratorio de datos
-pandas tiene un metodo "describe()" que permite generar estadisticas que quesumen la tendencia central, dispersion y la forma de distribucion de un conjunto de datos, excluyendo valores NaN
+pandas tiene un metodo "describe()" que permite generar estadisticas que que sumen la tendencia central, dispersion y la forma de distribucion de un conjunto de datos, excluyendo valores NaN
 
 pairplot arma diagramas que representan pares de atributos graficamente
 

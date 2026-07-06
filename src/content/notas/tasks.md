@@ -258,10 +258,6 @@ lo que falta es que al volver a hacer el autofilling detecte automaticamente esa
 
 https://www.getonbrd.com.ar/
 
-- probar webwright solo cuando el response del autofill devuelve partially filled porque hay preguntas opcionales.
-	- NO muy muy lento
-- no se esta llenando correctamente despues de completar las preguntas opcionales, se rompe campo CV
-	- ok visto
 - question_key no es necesario => sacarlo si no se usa y usar el question_id
 	- pendiente
 - PUT de a varias preguntas en vez de una sola y volver a llamar al autofilling automaticamente con el mismo puesto
@@ -487,8 +483,39 @@ usar los creditos de azure para infra => opentofu
 - single-tenant to multi-tenant => todos con dominio en comun
 - no creo bds ni containers por cada negocio, redirigo a su pagina de acuerdo a su slug
 - tauri/electron pagina para el print worker
+- pensar en hablarle a mateo fontaine para desarrollar el proyecto juntos
+- implementar modelo impresoras conectadas por wifi al red local, 1 pc necesaria que envie paquetes tcp 9100 pero sin conexion directa a una computadora/rpi requerida
+- strapi? no es facil subir menus facilmente
+- edicion 
+
+# notas specs aplicar
+003-US1: cuando el usuario decide postularse a una posicion, pasa a una cola
+003-AS: cuando hay un error al procesar una autopostulacion, mostrar "en curso", no mostrar error
+003-US2: mostrar las postulaciones del dia que se diga "tus postulaciones recientes", en un panel vertical deslizable, que se pueda subir y bajar.
+003-US3: la informacion que deberia mostar esta bien: logo de la empresa, skills, ubicacion, etc. no mostrar el cv que se va a usar en esta pantalla
+003-US3: borrar AC 4 y 5
+003-US4: borrarla? no se pueden guardar tarjetas en modo "swipe"?
+003-US5: borrar
+003-US6: muere
+003-US7: modificar de acuerdo al figma
+
+terminado:
+008 eliminar spec - deprecada
+009 ampliar spec con registro
+y que quede bien definida la de 9 auth
+
+spec 007 US2 AS4 - cuando el usuario tenga que completar algo se le redirigira a la pestana de preguntas, pero tiene que estar en la spec 5, no en esta
+
+AS7 eliminar
+AS8 eliminar
 
 
-# otro
-- rellenar el forms de movilidad a francia
-- responder al mail diciendo que estoy interesado por la propuesta y que quedo a la espera para las inscripciones de las clases de frances
+fijarme que esta haciendo lo de llm scrapping, si no se esta usando eliminarlo
+
+mirar front performance
+investigar ssr para react native/expo
+lazy loading a la mayoria de cosas
+
+permitir usar la app sin terminar el onboarding, sumar a la 010spec
+
+la grasa de los portales (de las capitales) => aplicar

