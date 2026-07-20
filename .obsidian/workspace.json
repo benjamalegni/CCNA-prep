@@ -11,12 +11,14 @@
             "id": "6fb9a4036717cd07",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "Pasted image 20260704111916.png"
+                "file": "CCNA/notes/15. application layer.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-image",
-              "title": "Pasted image 20260704111916"
+              "icon": "lucide-file",
+              "title": "15. application layer"
             }
           }
         ]
@@ -51,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "metricas",
+                "query": "analisis semantico",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -76,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 370.51103591918945,
-    "collapsed": true
+    "width": 307.51103591918945
   },
   "right": {
     "id": "59e601f64e0ae900",
@@ -165,7 +166,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 428.5
+    "width": 391.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -179,53 +180,54 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "6d4856cc7998c1fa",
+  "active": "6fb9a4036717cd07",
   "lastOpenFiles": [
-    "Pasted image 20260704095347.png",
+    "tasks.md",
+    "CCNA/index.md",
+    "CCNA/notes/15. application layer.md",
+    "CCNA/notes/14. transport layer.md",
+    "DUIA/procesamiento de texto/apuntes/LLM.md",
+    "DUIA/media/Pasted image 20260718111242.png",
+    "DUIA/media/Pasted image 20260718105814.png",
+    "DUIA/media/Pasted image 20260718103623.png",
+    "DUIA/media/Pasted image 20260704111916.png",
+    "DUIA/media/Pasted image 20260704095347.png",
+    "Pasted image 20260718111242.png",
+    "Pasted image 20260718105814.png",
+    "Pasted image 20260718103623.png",
+    "DUIA/procesamiento de texto/index.md",
+    "DUIA/procesamiento de texto/apuntes/clasificacion de texto.md",
+    "DUIA/procesamiento de texto/apuntes/analisis semantico.md",
     "DUIA/procesamiento de texto/apuntes/analisis sintactico.md",
+    "italelem/25 june.md",
+    "italelem/21 aprile.md",
     "DUIA/procesamiento de texto/apuntes/representacion de texto.md",
+    "DUIA/procesamiento de texto/apuntes/feature selection.md",
+    "2025/BD1/tema 2/modelo de datos II.md",
+    "DUIA/procesamiento de texto/apuntes/intro.md",
+    "DUIA/procesamiento de texto/apuntes/fairness.md",
+    "algorithms/finalfeb26.cpp~",
     "Pasted image 20260704111916.png",
+    "Pasted image 20260704095347.png",
     "DUIA/procesamiento de texto/apuntes/pre-procesamiento.md",
     "DUIA/todo.md",
-    "tasks.md",
-    "DUIA/procesamiento de texto/index.md",
-    "DUIA/procesamiento de texto/apuntes/intro.md",
     "DUIA/intro-IA/apuntes/tecnicas de clustering.md",
     "preprocesamiento.md",
     "preprocesamiento -.md",
     "DUIA/intro-IA/apuntes/tecnicas de planning.md",
-    "CCNA/notes/14. transport layer.md",
-    "CCNA/media/Pasted image 20260703163651.png",
-    "CCNA/media/Pasted image 20260703162356.png",
-    "CCNA/media/Pasted image 20260703153943.png",
-    "CCNA/media/Pasted image 20260703153426.png",
-    "CCNA/media/Pasted image 20260703153400.png",
-    "CCNA/media/Pasted image 20260703153328.png",
-    "CCNA/media/Pasted image 20260703153211.png",
-    "CCNA/media/Pasted image 20260703153032.png",
-    "CCNA/index.md",
     "italelem/2026-06-30-Note-18-38.xopp~",
     "intro-hacking/contents/OWASP top 10.md",
     "intro-hacking/index.md",
     "intro-hacking/concepts/enumeracion y explotacion de webdav.md",
     "intro-hacking/concepts/open redirect.md",
-    "intro-hacking/concepts/mass-asignment attack.md",
-    "CCNA/notes/13. ICMP.md",
-    "DUIA/machine learning/apuntes/intro.md",
     "Untitled.base",
-    "DUIA/intro-IA/apuntes/pre-procesamiento de datos - perspectiva practica.md",
-    "intro-hacking/concepts/DNS zone transfer.md",
-    "intro-hacking/concepts/prototype pollution.md",
     "Untitled.canvas",
-    "intro-hacking/concepts/abuso de subida de archivos.md",
-    "DUIA/procesamiento de texto/actividades/colab 1.md",
     "DUIA/procesamiento de texto/actividades",
     "DUIA/nlp/apuntes/Untitled",
     "DUIA/procesamiento de texto/apuntes",
     "DUIA/procesamiento de texto",
     "GPMC/foundations of project management/apuntes/Untitled",
     "GPMC/foundations of project management",
-    "finnish-A1/2025-10-31-Note-09-08.pdf",
-    "finnish-A1/2025-11-04-Note-14-22.pdf"
+    "finnish-A1/2025-10-31-Note-09-08.pdf"
   ]
 }

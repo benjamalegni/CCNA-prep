@@ -1,5 +1,3 @@
-# Representación de texto
-
 ## 1. Objetivo
 
 Los algoritmos de aprendizaje automático necesitan convertir el texto en una representación numérica. Según la técnica, una palabra, oración o documento puede representarse como:
@@ -7,7 +5,7 @@ Los algoritmos de aprendizaje automático necesitan convertir el texto en una re
 - un vector de características;
 - una fila de una matriz documento-término;
 - un grafo de unidades lingüísticas y sus relaciones;
-- un embedding denso aprendido por una red neuronal.
+- un embedding [[DUIA/procesamiento de texto/index]]denso aprendido por una red neuronal.
 
 Una representación adecuada intenta conservar la información relevante para la tarea: forma, frecuencia, orden, estructura sintáctica, significado o contexto. No existe una representación óptima para todos los problemas.
 

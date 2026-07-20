@@ -471,23 +471,28 @@ inline son lo opuesto de extract:
 extract method/class: separa algo porque esta haciendo demasiado
 inline method/class: elimina una separacion porque no aporta nada
 
-
-# portfolio 
-poner un planeta en mi portfolio de three js mostrando los paises que visite
-
 # chiken stop
 chicken stop: ir viendo tema marketing, packaging, ideas de receta, flujo de trabajo de cocina
 
 # komanda
-usar los creditos de azure para infra => opentofu
-- single-tenant to multi-tenant => todos con dominio en comun
-- no creo bds ni containers por cada negocio, redirigo a su pagina de acuerdo a su slug
-- tauri/electron pagina para el print worker
-- pensar en hablarle a mateo fontaine para desarrollar el proyecto juntos
-- implementar modelo impresoras conectadas por wifi al red local, 1 pc necesaria que envie paquetes tcp 9100 pero sin conexion directa a una computadora/rpi requerida
-- strapi? no es facil subir menus facilmente
-- edicion 
+- codigo de emparejamiento para impresoras desde el dashboard
+- dashboard analitico de analisis de ventas (metricas)
+- fichado de empleados
+- permitir agregar contenido a los productos: imagen/video, debera usar un bucket y conlleva modificacion en la db
+- permitir controlar stock
+- que cuando se agrega un pedido manualmente no se reenvie a la otra pagina
+- pensar estados de los pedidos, de la cocina que es lo que puedan cambiar unicamente, si se restringe el cambio segun tipo de usuario
 
+- si se entra a komanda.com se muestren los tenants disponibles y que haya un link a komanda business para registrar negocio
+
+- pensar si hay mejor manera para entrar al admin que desde http://tenant-mock.localhost:3000/admin
+
+
+feature 2: 
+- segregacion de accesos para empleados, ej: poder ver solo pantalla de pedidos
+
+feature 3:
+- menu como la cartaa
 # notas specs aplicar
 003-US1: cuando el usuario decide postularse a una posicion, pasa a una cola
 003-AS: cuando hay un error al procesar una autopostulacion, mostrar "en curso", no mostrar error
@@ -519,3 +524,25 @@ lazy loading a la mayoria de cosas
 permitir usar la app sin terminar el onboarding, sumar a la 010spec
 
 la grasa de los portales (de las capitales) => aplicar
+
+
+## que rendir en julio
+lenguajes formales y automatas
+ayda 1
+- mirar revision y entender varios resolucion de varios problemas
+arqui:
+- e/s
+- cache a fondo
+algebra lineal
+- mirar revision
+ing en sistemas 1
+bd1
+- entender bien diagramas der
+- repasar sintaxis
+calsof:
+- repasar test doubles
+- code smells y refactorings
+
+# web aplicar
+- en mobile que diga apli-car, no todo junto
+

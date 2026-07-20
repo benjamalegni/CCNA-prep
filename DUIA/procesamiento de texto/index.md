@@ -2,4 +2,9 @@
 [[pre-procesamiento]]
 [[representacion de texto]]
 [[analisis sintactico]]
+[[analisis semantico]]
+[[clasificacion de texto]]
+[[feature selection]]
+[[fairness]]
+[[LLM]]
 
