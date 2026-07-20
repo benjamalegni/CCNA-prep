@@ -24,7 +24,19 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="83d18950-7254-4b39-974b-ad57875ac2d3" name="Changes" comment="" />
+    <list default="true" id="83d18950-7254-4b39-974b-ad57875ac2d3" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../.obsidian/workspace.json" beforeDir="false" afterPath="$PROJECT_DIR$/../.obsidian/workspace.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCNA/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/../CCNA/index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCNA/notes/14. transport layer.md" beforeDir="false" afterPath="$PROJECT_DIR$/../CCNA/notes/14. transport layer.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DUIA/procesamiento de texto/apuntes/analisis sintactico.md" beforeDir="false" afterPath="$PROJECT_DIR$/../DUIA/procesamiento de texto/apuntes/analisis sintactico.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DUIA/procesamiento de texto/apuntes/representacion de texto.md" beforeDir="false" afterPath="$PROJECT_DIR$/../DUIA/procesamiento de texto/apuntes/representacion de texto.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DUIA/procesamiento de texto/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/../DUIA/procesamiento de texto/index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pasted image 20260704095347.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Pasted image 20260704111916.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/editor.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tasks.md" beforeDir="false" afterPath="$PROJECT_DIR$/../tasks.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,11 +46,14 @@
     <option name="formatViaClangd" value="false" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="7" />
+    <option name="cachedIndexableFilesCount" value="21" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/../algorithms/main.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/main.cpp" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MacroExpansionManager">
     <option name="directoryName" value="pVyb1ofN" />
@@ -46,6 +61,65 @@
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.000005871274801" />
+      <entry key="MS500" value="1.2953075097210296" />
+      <entry key="S2" value="8.556241245161" />
+      <entry key="S5" value="20.829841152308482" />
+      <entry key="S10" value="29.519737758077234" />
+      <entry key="S30" value="37.81806647519291" />
+      <entry key="S60" value="40.647572676275445" />
+      <entry key="M2" value="47.32262832288765" />
+      <entry key="M5" value="84.03535828630133" />
+      <entry key="M10" value="131.06751903394985" />
+      <entry key="M15" value="157.7888832380038" />
+      <entry key="M30" value="193.56485481267933" />
+      <entry key="H1" value="215.9100709721538" />
+      <entry key="H2" value="228.44282179819382" />
+      <entry key="H4" value="235.08720639887358" />
+      <entry key="D1" value="240.82867187714388" />
+      <entry key="W1" value="241.8321898043802" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="1.2952045840119907E-96" />
+      <entry key="S5" value="5.355795289922631E-39" />
+      <entry key="S10" value="9.74761908691329E-20" />
+      <entry key="S30" value="7.329686729483927E-7" />
+      <entry key="S60" value="0.0013126962480700904" />
+      <entry key="M2" value="0.05965002207312489" />
+      <entry key="M5" value="0.6163104815281049" />
+      <entry key="M10" value="1.355891719773625" />
+      <entry key="M15" value="1.765663663699443" />
+      <entry key="M30" value="2.300761027880904" />
+      <entry key="H1" value="2.6270011593256966" />
+      <entry key="H2" value="2.8072538614301537" />
+      <entry key="H4" value="2.9020119616391433" />
+      <entry key="D1" value="2.9834396862038934" />
+      <entry key="W1" value="2.997628571389763" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="0.9592692493604653" />
+      <entry key="MS500" value="1.2821631171571115" />
+      <entry key="S2" value="8.53340931842088" />
+      <entry key="S5" value="20.808299602727153" />
+      <entry key="S10" value="29.504528211681194" />
+      <entry key="S30" value="37.811568813766556" />
+      <entry key="S60" value="40.644888834233456" />
+      <entry key="M2" value="47.37255145173935" />
+      <entry key="M5" value="84.61941869877865" />
+      <entry key="M10" value="132.38694086558274" />
+      <entry key="M15" value="159.5223166982295" />
+      <entry key="M30" value="195.84414209665425" />
+      <entry key="H1" value="218.52465057350977" />
+      <entry key="H2" value="231.24339106542413" />
+      <entry key="H4" value="237.9857502964588" />
+      <entry key="D1" value="243.81151542589132" />
+      <entry key="W1" value="244.829732760484" />
+    </decayedShown>
   </component>
   <component name="ProjectApplicationVersion">
     <option name="ide" value="CLion" />
@@ -62,31 +136,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "C/C++ File.medianFromArrays.cpp.executor": "Run",
-    "C/C++ File.mostRepeatedNumber.cpp.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.MCP Project settings loaded": "true",
-    "RunOnceActivity.RadMigrateCodeStyle": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "RunOnceActivity.readMode.enableVisualFormatting": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "RunOnceActivity.west.config.association.type.startup.service": "true",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "/home/luka/CLionProjects/untitled/main.cpp",
-    "org.rust.first.attach.projects": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;C/C++ File.medianFromArrays.cpp.executor&quot;: &quot;Run&quot;,
+    &quot;C/C++ File.mostRepeatedNumber.cpp.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.RadMigrateCodeStyle&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.west.config.association.type.startup.service&quot;: &quot;true&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/luka/Documents/notas/algorithms&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;/home/luka/CLionProjects/untitled/main.cpp&quot;,
+    &quot;org.rust.first.attach.projects&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="C/C++ File.mostRepeatedNumber.cpp">
     <configuration name="medianFromArrays.cpp" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="untitled" TARGET_NAME="medianFromArrays.cpp" CONFIG_NAME="medianFromArrays.cpp">
       <option name="sourceFile" value="medianFromArrays.cpp" />
@@ -122,6 +199,9 @@
       <workItem from="1776447567898" duration="1580000" />
       <workItem from="1776547995419" duration="4128000" />
       <workItem from="1776716923040" duration="13674000" />
+      <workItem from="1783428651278" duration="3755000" />
+      <workItem from="1783532878993" duration="13869000" />
+      <workItem from="1784469566444" duration="63000" />
     </task>
     <servers />
   </component>
