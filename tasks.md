@@ -1,4 +1,4 @@
-- [x] enumeracion de servicios comunes y gestores de contenido
+d- [x] enumeracion de servicios comunes y gestores de contenido
 		- (00) adds, lw, sw
 		- (01) sub, beq
 		- (10) determined by function field in the instruction
@@ -486,7 +486,7 @@ chicken stop: ir viendo tema marketing, packaging, ideas de receta, flujo de tra
 - si se entra a komanda.com se muestren los tenants disponibles y que haya un link a komanda business para registrar negocio
 
 - pensar si hay mejor manera para entrar al admin que desde http://tenant-mock.localhost:3000/admin
-
+- la aplicacion con tauri para emparejar impresoras debera estar en otro repositorio
 
 feature 2: 
 - segregacion de accesos para empleados, ej: poder ver solo pantalla de pedidos
@@ -545,4 +545,7 @@ calsof:
 
 # web aplicar
 - en mobile que diga apli-car, no todo junto
+- mirar el backlog que hizo lucho en excel, laburar en esas cosas
+
+- tech IA: area de tecnologia, ir pensando de que hablar y que mostrar
 

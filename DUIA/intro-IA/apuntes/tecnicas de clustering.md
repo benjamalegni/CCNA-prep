@@ -1,5 +1,3 @@
-# clustering
-
 clustering o agrupamiento es el proceso de particionar un conjunto de objetos en subconjuntos o clusters con cierto significado.
 
 es una técnica de aprendizaje no supervisado:
