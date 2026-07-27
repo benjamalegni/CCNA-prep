@@ -1,18 +1,13 @@
-## 1. Objetivo
-
 Los algoritmos de aprendizaje automático necesitan convertir el texto en una representación numérica. Según la técnica, una palabra, oración o documento puede representarse como:
-
 - un vector de características;
 - una fila de una matriz documento-término;
 - un grafo de unidades lingüísticas y sus relaciones;
-- un embedding [[DUIA/procesamiento de texto/index]]denso aprendido por una red neuronal.
+- un embedding denso aprendido por una red neuronal.
 
 Una representación adecuada intenta conservar la información relevante para la tarea: forma, frecuencia, orden, estructura sintáctica, significado o contexto. No existe una representación óptima para todos los problemas.
 
-## 2. Familias de representación
-
+## Familias de representación
 ### Representaciones tradicionales
-
 Se basan principalmente en unidades léxicas y estadísticas de frecuencia.
 
 - Son simples, interpretables y eficientes.
@@ -34,7 +29,7 @@ Aprenden vectores densos de dimensión fija a partir de los datos.
 
 Modelan explícitamente relaciones entre palabras, frases, oraciones u otras unidades. Permiten conservar información de coocurrencia, orden, sintaxis o semántica que una bolsa de palabras omite.
 
-## 3. Modelos tradicionales
+## Modelos tradicionales
 
 ### One-hot encoding
 
@@ -67,10 +62,9 @@ Bag of n-grams extiende BoW al usar esas secuencias como características:
 
 Los n-gramas también pueden construirse sobre caracteres. Esto ayuda a representar información morfológica, errores ortográficos y palabras desconocidas.
 
-## 4. Ponderación de características
+## Ponderación de características
 
 La ponderación asigna un valor a cada característica de la representación. La distinción fundamental es:
-
 - **Métodos no supervisados:** calculan los pesos sin utilizar las etiquetas de clase.
 - **Métodos supervisados:** utilizan las etiquetas; la relevancia de una característica puede variar entre clases.
 
@@ -130,8 +124,7 @@ Necesitan documentos etiquetados y estiman cuánto aporta cada término para dis
 
 Estos métodos pueden usarse tanto para ponderar como para seleccionar características. Su estimación puede ser inestable cuando hay pocos ejemplos etiquetados o clases muy desbalanceadas.
 
-## 5. Representaciones basadas en grafos
-
+## Representaciones basadas en grafos
 Un **graph-of-word** representa el texto como una red. Desafía el supuesto de independencia entre tokens al modelar sus relaciones de forma explícita.
 
 ### Construcción
@@ -171,31 +164,26 @@ Estas representaciones se utilizan en extracción de palabras clave, desambiguac
 
 ![[Pasted image 20260704095347.png]]
 
-## 6. Modelos basados en deep learning
+## Modelos basados en deep learning
 
 Se apoyan en la **hipótesis distribucional**: las palabras usadas en contextos similares tienden a tener significados relacionados. En lugar de definir manualmente cada dimensión, el modelo aprende embeddings a partir de una tarea de entrenamiento.
 
 ### Word embeddings estáticos
-
 Asignan un único vector a cada palabra, independientemente del contexto.
 
 #### Word2Vec
-
 Word2Vec aprende representaciones mediante una tarea predictiva autosupervisada. Sus dos arquitecturas principales son:
-
 - **Continuous Bag of Words (CBOW):** predice la palabra objetivo a partir de las palabras de su contexto.
 - **Skip-gram:** usa una palabra objetivo para predecir las palabras que aparecen en su contexto. No predice la ubicación de la palabra.
 
 En su forma básica trata cada palabra como una unidad indivisible, ignora su morfología y no puede representar términos fuera del vocabulario.
 
 #### GloVe
-
 **Global Vectors (GloVe)** aprende embeddings a partir de estadísticas globales de coocurrencia. Optimiza los vectores para que sus productos escalares reflejen relaciones derivadas de las frecuencias de coocurrencia.
 
 A diferencia de Word2Vec, que entrena sobre ventanas locales mediante una tarea predictiva, GloVe aprovecha explícitamente una matriz global de coocurrencias.
 
 #### FastText
-
 FastText representa cada palabra mediante n-gramas de caracteres y aprende vectores para esas subunidades.
 
 - Captura información morfológica.
@@ -209,7 +197,6 @@ FastText no está entrenado con Wikipedia por definición. Existen modelos preen
 Generan una representación distinta de una palabra según la oración en la que aparece. Esto permite diferenciar, por ejemplo, los sentidos de una palabra polisémica.
 
 #### ELMo
-
 ELMo obtiene embeddings contextuales mediante modelos de lenguaje bidireccionales basados en LSTM. Combina representaciones internas de distintas capas para capturar información sintáctica y semántica.
 
 Los Transformers posteriores reemplazaron la recurrencia por atención y permiten procesar relaciones de largo alcance con mayor paralelismo.
@@ -217,18 +204,15 @@ Los Transformers posteriores reemplazaron la recurrencia por atención y permite
 ### Embeddings de oraciones y documentos
 
 #### Doc2Vec
-
 Extiende ideas de Word2Vec al aprender un vector asociado a cada documento.
 
 - **PV-DM (Distributed Memory):** usa el vector del documento junto con palabras de contexto para predecir una palabra.
 - **PV-DBOW (Distributed Bag of Words):** usa el vector del documento para predecir palabras del documento.
 
 #### Sent2Vec
-
 Aprende embeddings de palabras y n-gramas no supervisadamente y representa una oración combinándolos, normalmente mediante un promedio. A diferencia de un promedio de embeddings preentrenados, los componentes se entrenan específicamente para producir buenas representaciones oracionales.
 
 #### Smooth Inverse Frequency
-
 **Smooth Inverse Frequency (SIF)** construye un embedding de oración en dos pasos:
 
 1. Calcula el promedio ponderado de los embeddings de palabras, reduciendo el peso de las palabras muy frecuentes.
@@ -237,10 +221,9 @@ Aprende embeddings de palabras y n-gramas no supervisadamente y representa una o
 El segundo paso intenta remover información común, frecuentemente asociada con estructura y frecuencia, que aporta poco a la distinción semántica.
 
 #### InferSent
-
 InferSent es un encoder de oraciones entrenado de forma supervisada sobre tareas de inferencia en lenguaje natural. Busca producir vectores transferibles a otras tareas.
 
-## 7. Transformers
+## Transformers
 
 El Transformer procesa secuencias principalmente mediante mecanismos de atención, sin recurrencia. Sus bloques combinan:
 
@@ -309,7 +292,7 @@ Los Transformers producen un vector por token. Para obtener un único vector de 
 - una capa aprendida de *pooling*;
 - un modelo entrenado específicamente para semejanza, como un bi-encoder de oraciones.
 
-## 8. Semejanza de texto
+## Semejanza de texto
 
 La semejanza cuantifica cuán relacionados son dos textos. Se utiliza en recuperación de información, ranking, clasificación, *clustering*, detección de duplicados, desambiguación y búsqueda semántica.
 
@@ -372,7 +355,6 @@ $$
 La similitud coseno existe sin normalizar previamente los vectores. Si ambos se normalizan a norma 2 unitaria, su producto punto equivale al coseno. La normalización no impide valores negativos: estos dependen de las componentes y del ángulo entre los vectores. Con representaciones no negativas, como TF-IDF, el coseno queda habitualmente entre 0 y 1.
 
 #### Distancias Manhattan y euclidiana
-
 - **Manhattan (norma 1):** suma las diferencias absolutas por dimensión.
 - **Euclidiana (norma 2):** mide la longitud de la línea recta entre dos puntos.
 

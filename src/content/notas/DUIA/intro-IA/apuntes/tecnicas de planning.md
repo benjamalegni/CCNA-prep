@@ -1,5 +1,3 @@
-# planning
-
 los agentes inteligentes necesitan actuar en el mundo que habitan. planning se ocupa de generar un plan: un conjunto de acciones ejecutadas en un orden coherente para alcanzar ciertos objetivos.
 
 es especialmente útil cuando:
@@ -16,7 +14,6 @@ ejemplos de algoritmos y enfoques:
 - MCTS (Monte Carlo Tree Search).
 
 ## problema de planning
-
 un problema de planning recibe tres entradas:
 - una descripción formal del estado inicial del mundo.
 - una descripción de las metas u objetivos.
@@ -29,7 +26,6 @@ un plan puede verse como:
 - un conjunto parcialmente ordenado, donde solo se especifican las dependencias necesarias.
 
 ### dominios de aplicación
-
 - planificación de movimientos de robots.
 - procesos industriales y producción.
 - business process management.
@@ -43,7 +39,6 @@ un plan puede verse como:
 - computación ubicua y videojuegos.
 
 ## simplificaciones del planning clásico
-
 los lenguajes clásicos suelen asumir:
 - **tiempo atómico:** cada acción transforma un estado en otro de forma instantánea. no hay acciones simultáneas.
 - **efectos determinísticos:** una acción aplicada en un estado siempre produce el mismo resultado.
@@ -51,7 +46,6 @@ los lenguajes clásicos suelen asumir:
 - **única causa de cambio:** el mundo solo cambia por las acciones del agente; no hay otros agentes ni eventos externos.
 
 # representación STRIPS
-
 STRIPS (Stanford Research Institute Problem Solver) es un lenguaje de representación basado en lógica proposicional.
 
 el estado del mundo se representa mediante un conjunto de literales ground, es decir, predicados cuyas variables ya fueron instanciadas.
@@ -93,7 +87,6 @@ $$
 los nodos representan estados completos del mundo y los arcos representan acciones.
 
 ### progresión
-
 - comienza en el estado inicial.
 - aplica acciones cuyas precondiciones se cumplen.
 - genera estados sucesores hasta encontrar uno que satisfaga las metas.
@@ -101,7 +94,6 @@ los nodos representan estados completos del mundo y los arcos representan accion
 la pregunta es: **¿qué estado obtengo si ejecuto esta acción ahora?**
 
 ### regresión
-
 - comienza en el objetivo.
 - elige acciones capaces de producir alguno de los objetivos actuales.
 - reemplaza esos objetivos por las precondiciones de las acciones.
@@ -110,7 +102,6 @@ la pregunta es: **¿qué estado obtengo si ejecuto esta acción ahora?**
 la pregunta es: **¿qué tendría que ser verdadero antes para poder alcanzar este objetivo?**
 
 ## búsqueda en el espacio de planes
-
 los nodos representan planes parcialmente especificados. los arcos son operaciones de refinamiento, por ejemplo agregar una acción o una restricción de orden.
 
 puede trabajar con:
