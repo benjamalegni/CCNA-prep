@@ -1,4 +1,4 @@
-d- [x] enumeracion de servicios comunes y gestores de contenido
+- [x] enumeracion de servicios comunes y gestores de contenido
 		- (00) adds, lw, sw
 		- (01) sub, beq
 		- (10) determined by function field in the instruction
@@ -549,3 +549,22 @@ calsof:
 
 - tech IA: area de tecnologia, ir pensando de que hablar y que mostrar
 
+# idea ccna-prep
+ccna-prep apartado de practica de comandos de cisco iOS, donde te pidan intrucciones en lenguaje natural y tener que poner lo comandos correctos para cada cosa
+
+hacer la parte de la api de la cola de postulaciones
+pegarle a la otra rama de la api 
+
+# exactamente
+- usar auth para publicar? si
+	- opcion de anonimato al comentar
+- la idea es un blog por materia, con una idea similare a reddit o los comentarios de youtube
+- permitir subir imagenes? hay control de estas imagenes?
+
+- usar tematicas por materia, como un subreddit
+	- que el usuario pueda crear nuevas tematicas (o subtemas)
+- con temas limitados, por ahora, sin que usuarios puedan crearlos
+
+v2
+- pensar que pasa al eliminar
+- en la pantalla principal adaptar el buscador para mostrar subtemas

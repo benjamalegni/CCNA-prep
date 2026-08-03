@@ -26,14 +26,8 @@
   <component name="ChangeListManager">
     <list default="true" id="83d18950-7254-4b39-974b-ad57875ac2d3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/../.obsidian/workspace.json" beforeDir="false" afterPath="$PROJECT_DIR$/../.obsidian/workspace.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CCNA/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/../CCNA/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CCNA/notes/14. transport layer.md" beforeDir="false" afterPath="$PROJECT_DIR$/../CCNA/notes/14. transport layer.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DUIA/procesamiento de texto/apuntes/analisis sintactico.md" beforeDir="false" afterPath="$PROJECT_DIR$/../DUIA/procesamiento de texto/apuntes/analisis sintactico.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DUIA/procesamiento de texto/apuntes/representacion de texto.md" beforeDir="false" afterPath="$PROJECT_DIR$/../DUIA/procesamiento de texto/apuntes/representacion de texto.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DUIA/procesamiento de texto/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/../DUIA/procesamiento de texto/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Pasted image 20260704095347.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Pasted image 20260704111916.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/editor.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCNA/notes/15. application layer.md" beforeDir="false" afterPath="$PROJECT_DIR$/../CCNA/notes/15. application layer.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCNA/notes/16. network security fundamentals.md" beforeDir="false" afterPath="$PROJECT_DIR$/../CCNA/notes/16. network security fundamentals.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../tasks.md" beforeDir="false" afterPath="$PROJECT_DIR$/../tasks.md" afterDir="false" />
     </list>
@@ -46,7 +40,7 @@
     <option name="formatViaClangd" value="false" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="21" />
+    <option name="cachedIndexableFilesCount" value="23" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="Git.Settings">
@@ -202,6 +196,7 @@
       <workItem from="1783428651278" duration="3755000" />
       <workItem from="1783532878993" duration="13869000" />
       <workItem from="1784469566444" duration="63000" />
+      <workItem from="1784842529901" duration="260000" />
     </task>
     <servers />
   </component>

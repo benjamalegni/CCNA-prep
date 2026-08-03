@@ -1,4 +1,4 @@
-## 1. Definición
+## Definición
 
 El **análisis sintáctico** estudia cómo se combinan las palabras para formar unidades mayores y qué relaciones estructurales existen entre ellas. Su objetivo computacional es asignar a una oración una estructura compatible con la gramática del idioma.
 
