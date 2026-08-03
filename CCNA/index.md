@@ -34,3 +34,5 @@
 ===
 [[16. network security fundamentals]]
 ===
+[[17. build a small network]]
+===

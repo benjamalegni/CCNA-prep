@@ -3,7 +3,10 @@
 - [x] notas tecnicas de clustering
 - [x] notas algoritmos geneticos
 - [x] corregir/sumar info a notas de de tecnicas de clasificacion
-- [ ] meterle con los algoritmos geneticos, hacer el tp para probar
+- [x] meterle con los algoritmos geneticos, hacer el tp para probar
 
 - [x] revisar el colab de nltk (R1)
 - [ ] hacer el apunte de representacion de texto
+
+- [ ] hacer feature selection
+- [ ] hacer fairness

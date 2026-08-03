@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CCNA/index.md",
+                "file": "DUIA/procesamiento de texto/apuntes/analisis sintactico.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "index"
+              "title": "analisis sintactico"
             }
           }
         ]
@@ -41,7 +41,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -53,7 +55,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "analisis semantico",
+                "query": "interface brief",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -78,7 +80,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 352.51103591918945
+    "width": 352.51103591918945,
+    "collapsed": true
   },
   "right": {
     "id": "59e601f64e0ae900",
@@ -166,7 +169,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 391.5
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -182,20 +185,33 @@
   },
   "active": "6fb9a4036717cd07",
   "lastOpenFiles": [
-    "CCNA/notes/16. network security fundamentals.md",
-    "CCNA/index.md",
-    "CCNA/notes/15. application layer.md",
-    "CCNA/media/Pasted image 20260722113852.png",
-    "CCNA/media/Pasted image 20260722113839.png",
-    "CCNA/media/Pasted image 20260722113431.png",
-    "CCNA/media/Pasted image 20260722112257.png",
-    "CCNA/media/Pasted image 20260722111913.png",
-    "CCNA/media/Pasted image 20260722111418.png",
-    "CCNA/media/Pasted image 20260720132624.png",
-    "CCNA/media/Pasted image 20260720132311.png",
-    "CCNA/media/Pasted image 20260720130344.png",
-    "CCNA/media/Pasted image 20260720125224.png",
+    "DUIA/procesamiento de texto/index.md",
+    "CCNA/notes/17. build a small network.md",
+    "CCNA/notes/4. physical layer - interfaces and cables.md",
+    "Untitled.base",
     "tasks.md",
+    "CCNA/notes/10. configuracion basica de router.md",
+    "CCNA/index.md",
+    "CCNA/notes/16. network security fundamentals.md",
+    "CCNA/media/Pasted image 20260728064829.png",
+    "CCNA/media/Pasted image 20260723151732.png",
+    "CCNA/media/Pasted image 20260723145353.png",
+    "CCNA/media/Pasted image 20260723144255.png",
+    "CCNA/media/Pasted image 20260723144207.png",
+    "CCNA/media/Pasted image 20260723141959.png",
+    "CCNA/media/Pasted image 20260723141353.png",
+    "CCNA/media/Pasted image 20260723141344.png",
+    "CCNA/media/Pasted image 20260723141329.png",
+    "Pasted image 20260728064829.png",
+    "DUIA/procesamiento de texto/apuntes/feature selection.md",
+    "DUIA/todo.md",
+    "DUIA/procesamiento de texto/apuntes/representacion de texto.md",
+    "DUIA/procesamiento de texto/apuntes/pre-procesamiento.md",
+    "DUIA/procesamiento de texto/apuntes/clasificacion de texto.md",
+    "DUIA/procesamiento de texto/apuntes/fairness.md",
+    "DUIA/procesamiento de texto/apuntes/intro.md",
+    "DUIA/intro-IA/index.md",
+    "CCNA/notes/15. application layer.md",
     "DUIA/intro-IA/actividades/algoritmos geneticos.md",
     "DUIA/intro-IA/actividades/aprendizaje automatico - notas de mis respuestas.md",
     "DUIA/intro-IA/apuntes/tecnicas de clustering.md",
@@ -204,23 +220,9 @@
     "DUIA/intro-IA/apuntes/algoritmos geneticos - perspectiva practica.md",
     "DUIA/intro-IA/apuntes/tecnicas de planning.md",
     "DUIA/intro-IA/actividades/actividad de introduccion.md",
-    "DUIA/intro-IA/index.md",
-    "DUIA/procesamiento de texto/apuntes/representacion de texto.md",
     "DUIA/machine learning/index.md",
-    "DUIA/todo.md",
-    "DUIA/procesamiento de texto/index.md",
-    "CCNA/notes/14. transport layer.md",
-    "DUIA/procesamiento de texto/apuntes/LLM.md",
-    "DUIA/procesamiento de texto/apuntes/clasificacion de texto.md",
-    "DUIA/procesamiento de texto/apuntes/analisis semantico.md",
-    "DUIA/procesamiento de texto/apuntes/analisis sintactico.md",
-    "italelem/25 june.md",
-    "italelem/21 aprile.md",
-    "DUIA/procesamiento de texto/apuntes/feature selection.md",
-    "2025/BD1/tema 2/modelo de datos II.md",
     "algorithms/finalfeb26.cpp~",
     "italelem/2026-06-30-Note-18-38.xopp~",
-    "Untitled.base",
     "Untitled.canvas",
     "DUIA/procesamiento de texto/actividades",
     "DUIA/nlp/apuntes/Untitled",
