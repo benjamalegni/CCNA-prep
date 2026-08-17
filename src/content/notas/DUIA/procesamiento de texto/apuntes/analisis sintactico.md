@@ -11,10 +11,9 @@ El resultado puede expresarse mediante:
 - un árbol de constituyentes;
 - un árbol o grafo de dependencias.
 
-## 2. Rol dentro del pipeline
+## Rol dentro del pipeline
 
 En un pipeline tradicional de procesamiento de lenguaje natural, el análisis suele organizarse así:
-
 1. Segmentación en oraciones.
 2. Tokenización y normalización.
 3. Análisis morfológico y lematización.
@@ -34,7 +33,7 @@ La información sintáctica se utiliza en:
 - análisis de sentimiento y negación;
 - corrección gramatical.
 
-## 3. Aspectos que considera
+## Aspectos que considera
 
 El análisis sintáctico puede considerar:
 
@@ -55,8 +54,7 @@ Conviene distinguir tres niveles:
 - **Frase o sintagma:** grupo de palabras que funciona como una unidad, como un sintagma nominal.
 - **Cláusula:** estructura que normalmente contiene un predicado y sus argumentos.
 
-## 4. POS tagging
-
+## POS tagging
 El **Part-of-Speech tagging (POS tagging)** asigna a cada token una categoría gramatical según su forma y su contexto. Una misma palabra puede recibir etiquetas distintas en oraciones diferentes.
 
 ### Categorías
@@ -96,7 +94,7 @@ Ejemplo:
 El/DET banco/NOUN cerró/VERB temprano/ADV ./PUNCT
 ```
 
-## 5. Shallow parsing / chunking
+## Shallow parsing / chunking
 
 El **shallow parsing** o **chunking** identifica segmentos no recursivos sintácticamente relevantes sin construir un árbol completo. Suele reconocer:
 
@@ -120,7 +118,7 @@ Una variante como BILOU distingue además unidades de un solo token y el último
 
 El chunking es menos expresivo que el parsing completo, pero suele ser más rápido y suficiente para extracción de entidades, términos o patrones locales.
 
-## 6. Gramáticas y parsers
+## Gramáticas y parsers
 
 Una **gramática** define qué estructuras son válidas mediante símbolos y reglas. Un **parser** es el procedimiento que busca una o más estructuras compatibles con esas reglas para una oración concreta.
 
@@ -150,7 +148,7 @@ Entre los algoritmos clásicos se encuentran:
 
 Los parsers neuronales aprenden puntuaciones para estructuras y pueden usar representaciones contextuales. Según el formalismo, construyen árboles por transiciones o buscan la estructura de mayor puntuación en un conjunto de candidatos.
 
-## 7. Constituency parsing
+## Constituency parsing
 
 El **constituency parsing** representa la oración como una jerarquía de constituyentes.
 
@@ -173,7 +171,7 @@ Esta representación hace explícito que “El banco” forma una unidad y que �
 
 La salida depende del esquema de anotación del *treebank*. Dos corpus pueden analizar una misma construcción con etiquetas o niveles de detalle distintos.
 
-## 8. Dependency parsing
+## Dependency parsing
 
 El **dependency parsing** representa relaciones binarias entre palabras.
 
@@ -202,7 +200,7 @@ Relaciones frecuentes incluyen sujeto (`nsubj`), objeto (`obj`), determinante (`
 
 **Universal Dependencies (UD)** define pautas comunes para anotar POS, rasgos morfológicos y dependencias en numerosos idiomas. Busca facilitar la comparación entre lenguas, aunque cada *treebank* puede conservar particularidades documentadas.
 
-## 9. Ambigüedad sintáctica
+## Ambigüedad sintáctica
 
 Una oración es sintácticamente ambigua cuando admite más de una estructura válida. Algunos casos habituales son:
 
@@ -220,7 +218,7 @@ Un sistema puede devolver:
 - una distribución de probabilidades;
 - un bosque compacto que representa múltiples árboles.
 
-## 10. Evaluación y herramientas
+## Evaluación y herramientas
 
 ### Evaluación
 

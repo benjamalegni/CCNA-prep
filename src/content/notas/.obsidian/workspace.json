@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DUIA/procesamiento de texto/apuntes/analisis sintactico.md",
+                "file": "CCNA/notes/17. build a small network.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "analisis sintactico"
+              "title": "17. build a small network"
             }
           }
         ]
@@ -80,8 +80,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 352.51103591918945,
-    "collapsed": true
+    "width": 352.51103591918945
   },
   "right": {
     "id": "59e601f64e0ae900",
@@ -169,7 +168,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 301.337890625
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -185,11 +184,12 @@
   },
   "active": "6fb9a4036717cd07",
   "lastOpenFiles": [
+    "tasks.md",
+    "DUIA/procesamiento de texto/apuntes/analisis sintactico.md",
     "DUIA/procesamiento de texto/index.md",
     "CCNA/notes/17. build a small network.md",
     "CCNA/notes/4. physical layer - interfaces and cables.md",
     "Untitled.base",
-    "tasks.md",
     "CCNA/notes/10. configuracion basica de router.md",
     "CCNA/index.md",
     "CCNA/notes/16. network security fundamentals.md",
