@@ -77,20 +77,6 @@ ver que ajusto para la proxima semana, que me gusto que no me gusto 
 calculo mensual y de fechas de conseguir resultados viene del semanal. entonces despues de la primer semana puedo hacer el calculo y tener las fechas limites
 juntarme con equipos que me motiven a desarrollar habilidades. que puedo aprender de ellos
 
-
-# anotaciones importantes arqui
-- formula amdahl
-	- fraccion mejorada = (instrucciones a evaluar * cpi (del tipo de instruccion a evaluar)) / (instrucciones totales * cpi total)
-- tipos de direccionamiento con ejemplos
-- tipos de cache y como ubicarlos
-	- lru
-	- tipos de fallos en cache
-- riesgos de datos, dependencias de datos, especificar.
-- e/s
-	- polling
-	- interrupciones
-	- DMA
-- 
 # aplicar
 1. seguir con el armado de los esquemas de preguntas opcionales (ia)
 	- deteccion de tipos de mails
@@ -557,12 +543,6 @@ calsof:
 - repasar test doubles
 - code smells y refactorings
 
-# web aplicar
-- en mobile que diga apli-car, no todo junto
-- mirar el backlog que hizo lucho en excel, laburar en esas cosas
-
-- tech IA: area de tecnologia, ir pensando de que hablar y que mostrar
-
 # idea ccna-prep
 ccna-prep apartado de practica de comandos de cisco iOS, donde te pidan intrucciones en lenguaje natural y tener que poner lo comandos correctos para cada cosa
 
@@ -582,3 +562,14 @@ pegarle a la otra rama de la api
 v2
 - pensar que pasa al eliminar
 - en la pantalla principal adaptar el buscador para mostrar subtemas
+
+# aplicar
+el step que aparece antes de que termine step_complete_wordings, lo uso para mostrar que el cv se esta generando en segundo plano
+- despues este cv aparece cuando se esta por postular a una posicion, enviando una version personalidzada para el puesto
+
+
+mail juanmanuel.rodriguez@isistan.unicen.edu.ar
+
+duia: terminar trabajos opcionales de nlp
+hacer los workshops de nvidia y el assesments que estan buenisimos.
+cualquier duda preguntar a juan
