@@ -9,10 +9,10 @@
   --text-normal: #ffffff;
 
   /* Selection colors */
-  --text-selection: #ffffff;
+  --text-selection: #1a1a1a;
 
   /* Border color */
-  --background-modifier-border: #5c5c5c;
+  --background-modifier-border: #7a7a7a;
 
   /* Semantic heading colors */
   --text-title-h1: #a4a4a4;
@@ -43,10 +43,10 @@
 
   /* Tags */
   --tag-color: #b0b0b0;
-  --tag-background: #5c5c5c;
+  --tag-background: #7a7a7a;
 
   /* Graph */
-  --graph-line: #5c5c5c;
+  --graph-line: #7a7a7a;
   --graph-node: #8d8d8d;
   --graph-node-focused: #8d8d8d;
   --graph-node-tag: #b0b0b0;
@@ -70,7 +70,7 @@
 .cm-s-obsidian span.cm-keyword { color: #a4a4a4; }
 .cm-s-obsidian span.cm-string { color: #b6b6b6; }
 .cm-s-obsidian span.cm-number { color: #cecece; }
-.cm-s-obsidian span.cm-comment { color: #5c5c5c; }
+.cm-s-obsidian span.cm-comment { color: #7a7a7a; }
 .cm-s-obsidian span.cm-operator { color: #8d8d8d; }
 .cm-s-obsidian span.cm-def { color: #8d8d8d; }
 

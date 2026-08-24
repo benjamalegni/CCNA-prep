@@ -55,4 +55,5 @@
 	[[mass-asignment attack]]
 	[[open redirect]]
 	[[enumeracion y explotacion de webdav]]
+	[[enumeracion de servicios comunes y gestores de contenido]]
 	

@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "0ad58bf730ff4855",
+        "id": "ed2d755f6c2e36fc",
         "type": "tabs",
         "children": [
           {
-            "id": "6fb9a4036717cd07",
+            "id": "b64803bd99f68fb8",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CCNA/notes/17. build a small network.md",
+                "file": "2026/proba y estadistica/notas/probabilidad condicional.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "17. build a small network"
+              "title": "probabilidad condicional"
             }
           }
         ]
@@ -55,7 +55,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "interface brief",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -80,7 +80,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 352.51103591918945
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "59e601f64e0ae900",
@@ -168,7 +169,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 301.337890625
+    "width": 622.5438079833984
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -182,54 +183,54 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "6fb9a4036717cd07",
+  "active": "6d4856cc7998c1fa",
   "lastOpenFiles": [
+    "2026/proba y estadistica/index.md",
     "tasks.md",
+    "2026/proba y estadistica/notas/probabilidad condicional.md",
+    "2026/proba y estadistica/notas/nociones basicas de probabilidad.md",
+    "Pasted image 20260821195830.png",
+    "Pasted image 20260821191828.png",
+    "DUIA/procesamiento de texto/fundamentals of deep learning/1. introduction to deep learning.md",
+    "GPMC/foundations of project management/mod 1/2. becoming an effective project manager.md",
+    "DUIA/procesamiento de texto/fundamentals of deep learning",
+    "2026/proba y estadistica/notas",
+    "CCNA/notes/17.1 notes for exam up to now.md",
+    "CCNA/index.md",
+    "CCNA/notes/18. basic device configuration.md",
+    "intro-hacking/index.md",
+    "intro-hacking/contents/OWASP top 10.md",
+    "DUIA/procesamiento de texto/nvidia workshop/3. product deployment.md",
+    "DUIA/media/Pasted image 20260817143702.png",
+    "DUIA/media/Pasted image 20260817142414.png",
+    "DUIA/media/Pasted image 20260817141812.png",
+    "DUIA/media/Pasted image 20260817133352.png",
+    "DUIA/media/Pasted image 20260817133120.png",
+    "DUIA/media/Pasted image 20260817131246.png",
+    "DUIA/media/Pasted image 20260817131107.png",
+    "DUIA/media/Pasted image 20260817130534.png",
+    "DUIA/procesamiento de texto/nvidia workshop/2. self supervision, BERT and beyond.md",
+    "conflict-files-obsidian-git.md",
+    "CCNA/notes/2. intro a CISCO IOS CLI.md",
+    "CCNA/notes/17. build a small network.md",
+    "CCNA/notes/16. network security fundamentals.md",
+    "CCNA/notes/15. application layer.md",
+    "DUIA/procesamiento de texto/nvidia workshop/1. machine learning in NLP.md",
+    "2026/ingsoft2/resources/introduccion.md",
+    "DUIA/procesamiento de texto/nvidia workshop",
+    "2026/ingsoft2/index.md",
+    "2026/ingsoft2/resources",
+    "2026/proba y estadistica",
+    "2026/bd2",
+    "2026/calc2",
+    "2026/ingsoft2",
     "DUIA/procesamiento de texto/apuntes/analisis sintactico.md",
     "DUIA/procesamiento de texto/index.md",
-    "CCNA/notes/17. build a small network.md",
     "CCNA/notes/4. physical layer - interfaces and cables.md",
     "Untitled.base",
     "CCNA/notes/10. configuracion basica de router.md",
-    "CCNA/index.md",
-    "CCNA/notes/16. network security fundamentals.md",
-    "CCNA/media/Pasted image 20260728064829.png",
-    "CCNA/media/Pasted image 20260723151732.png",
-    "CCNA/media/Pasted image 20260723145353.png",
-    "CCNA/media/Pasted image 20260723144255.png",
-    "CCNA/media/Pasted image 20260723144207.png",
-    "CCNA/media/Pasted image 20260723141959.png",
-    "CCNA/media/Pasted image 20260723141353.png",
-    "CCNA/media/Pasted image 20260723141344.png",
-    "CCNA/media/Pasted image 20260723141329.png",
-    "Pasted image 20260728064829.png",
     "DUIA/procesamiento de texto/apuntes/feature selection.md",
-    "DUIA/todo.md",
-    "DUIA/procesamiento de texto/apuntes/representacion de texto.md",
-    "DUIA/procesamiento de texto/apuntes/pre-procesamiento.md",
-    "DUIA/procesamiento de texto/apuntes/clasificacion de texto.md",
-    "DUIA/procesamiento de texto/apuntes/fairness.md",
-    "DUIA/procesamiento de texto/apuntes/intro.md",
-    "DUIA/intro-IA/index.md",
-    "CCNA/notes/15. application layer.md",
-    "DUIA/intro-IA/actividades/algoritmos geneticos.md",
-    "DUIA/intro-IA/actividades/aprendizaje automatico - notas de mis respuestas.md",
-    "DUIA/intro-IA/apuntes/tecnicas de clustering.md",
-    "DUIA/intro-IA/apuntes/tecnicas de clasificacion.md",
-    "DUIA/intro-IA/apuntes/algoritmos geneticos.md",
-    "DUIA/intro-IA/apuntes/algoritmos geneticos - perspectiva practica.md",
-    "DUIA/intro-IA/apuntes/tecnicas de planning.md",
-    "DUIA/intro-IA/actividades/actividad de introduccion.md",
-    "DUIA/machine learning/index.md",
     "algorithms/finalfeb26.cpp~",
-    "italelem/2026-06-30-Note-18-38.xopp~",
-    "Untitled.canvas",
-    "DUIA/procesamiento de texto/actividades",
-    "DUIA/nlp/apuntes/Untitled",
-    "DUIA/procesamiento de texto/apuntes",
-    "DUIA/procesamiento de texto",
-    "GPMC/foundations of project management/apuntes/Untitled",
-    "GPMC/foundations of project management",
-    "finnish-A1/2025-10-31-Note-09-08.pdf"
+    "Untitled.canvas"
   ]
 }
