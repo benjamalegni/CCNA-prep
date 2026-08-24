@@ -1,3 +1,4 @@
+# PART 1
 [[0. networking hoy en dia]]
 ===
 [[1. network devices]]
@@ -35,4 +36,10 @@
 [[16. network security fundamentals]]
 ===
 [[17. build a small network]]
+===
+[[17.1 notes for exam up to now]]
+===
+
+# PART 2
+[[18. basic device configuration]]
 ===

