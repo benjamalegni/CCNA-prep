@@ -169,7 +169,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 622.5438079833984
+    "width": 622.5438079833984,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -180,10 +181,12 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "obsidian-git:Open Git source control": false
+      "obsidian-git:Open Git source control": false,
+      "cornell-marginalia:Toggle Active Recall Mode": false,
+      "cornell-marginalia:Alternar Visual Helper (Cornell)": false
     }
   },
-  "active": "6d4856cc7998c1fa",
+  "active": "b64803bd99f68fb8",
   "lastOpenFiles": [
     "2026/proba y estadistica/index.md",
     "tasks.md",
