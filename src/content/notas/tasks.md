@@ -577,9 +577,9 @@ v2
 - pensar que pasa al eliminar
 - en la pantalla principal adaptar el buscador para mostrar subtemas
 
-mail juanmanuel.rodriguez@isistan.unicen.edu.ar
-
-hacer los workshops de nvidia y el assesments que estan buenisimos.
-cualquier duda preguntar a juan
 
 ableton/flstudio mcp server -> que sea como suno pero con control en todos los tracks y el poder de un daw
+
+# tiktok/reels
+2."Cómo los portales detectan bots y cómo saltarse las defensas (Fingerprinting & Stealth)" - Archivo base: aplicar-api (patchright, humanization.ts, virtual-display.ts) - Hook: "¿Por qué Playwright o Puppeteer estándar fallan en portales como Eightfold o MercadoLibre?" - Concepto: Explicar variables como navigator.webdriver, canvas fingerprinting, WebGL, tiempos de tipeo humanizados (humanizeMinFormSeconds) y por qué herramientas como Patchright parchean los binarios de Chromium para no dejar huellas. 
+4. "Offline-First & Outbox Pattern: Swipes instantáneos sin internet" - Archivo base: aplicar-mobile/src/features/home/services/pendingCardActions.sync.ts - Hook: "Cómo hacer que tu app responda al instante aunque se corte el 4G." - Concepto: Explicar el patrón Outbox: guardar la acción (ej. postular a un trabajo) localmente en AsyncStorage, actualizar la UI optimistamente y encolar un worker de sincronización en background con reintentos y desduplicación. 6. "Cómo funciona una Blind SQL Injection en código real" - Hook: Mostrar tu script magento-sqli.py corriendo en terminal mientras adivina strings caracter por caracter. - Concepto: Explicar cómo los atacantes usan lógica booleana y búsqueda binaria con SLEEP() para extraer contraseñas o sesiones cuando la base de datos no devuelve errores visibles. 7. "El ataque más silencioso de tu red Wi-Fi: ARP Poisoning (y cómo mitigarlo)" - Hook: Grabar la terminal con Wireshark capturando tráfico no cifrado de tu propia red local. - Concepto: Explicar cómo el protocolo ARP no tiene autenticación por defecto (enlace con tus estudios de CCNA/Redes) y cómo herramientas de inspección como DAI (Dynamic ARP Inspection) lo resuelven en switches reales.
