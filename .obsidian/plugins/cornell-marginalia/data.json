@@ -96,5 +96,5 @@
   },
   "deleteCompletedTasks": false,
   "enableTaskNotesIntegration": false,
-  "visualHelper": false
+  "visualHelper": true
 }
