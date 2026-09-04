@@ -19,12 +19,21 @@ let module;
 let currentSlug: string | null = null;
 
 if (pageParam) {
-	const decodedFilename = decodeURIComponent(pageParam);
-	const route = `../content/notas/CCNA/notes/${decodedFilename}.md`;
+	const decodedFilename = decodeURIComponent(pageParam).trim();
+	const baseName = decodedFilename.split('/').pop() ?? decodedFilename;
+	const directRoute = `../content/notas/CCNA/notes/${decodedFilename}.md`;
 
-	if (notes[route]) {
-		module = await notes[route]!();
-		currentSlug = decodedFilename;
+	let targetRoute = notes[directRoute] ? directRoute : undefined;
+	if (!targetRoute) {
+		targetRoute = Object.keys(notes).find((r) => {
+			const slug = r.replace('../content/notas/CCNA/notes/', '').replace(/\.md$/, '');
+			return slug === decodedFilename || slug.split('/').pop() === baseName;
+		});
+	}
+
+	if (targetRoute && notes[targetRoute]) {
+		module = await notes[targetRoute]!();
+		currentSlug = targetRoute.replace('../content/notas/CCNA/notes/', '').replace(/\.md$/, '');
 	} else {
 		module = await import('../content/notas/CCNA/index.md');
 	}
@@ -33,17 +42,18 @@ if (pageParam) {
 }
 
 const pageContent = (module as { default: unknown }).default;
+const pageTitle = pageParam ? decodeURIComponent(pageParam) : 'Notas CCNA';
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
-		<BaseHead title="CCNA Notes" description="CCNA notes" />
+		<BaseHead title={pageTitle} description="Notas CCNA" />
 	</head>
 	<body>
-		<Header />
+		<Header currentLang="es" />
 		<main>
-			<Content Content={pageContent} pageSlugs={pageSlugs} currentSlug={currentSlug} title={`${decodeURIComponent(pageParam)}`}/>
+			<Content Content={pageContent} pageSlugs={pageSlugs} currentSlug={currentSlug} title={`${decodeURIComponent(pageParam)}`} lang="es"/>
 			<!-- <MarkdownTree headings={headings} /> -->
 		</main>
 		<Footer />

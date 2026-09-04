@@ -14,7 +14,13 @@ const escapeHtml = (value: string): string =>
 		.replace(/'/g, '&#39;');
 
 export const remarkObsidianLinks: Plugin<[], Root> = () => {
-	return (tree) => {
+	return (tree, file) => {
+		const filePath =
+			(file && 'path' in file && typeof file.path === 'string' ? file.path : '') ||
+			(file && 'history' in file && Array.isArray(file.history) && file.history[0] ? String(file.history[0]) : '');
+		const isEnglish = /[\\/]CCNA[\\/]en[\\/]/.test(filePath);
+		const baseRoute = isEnglish ? '/ccna/en' : '/ccna';
+
 		visit(tree, 'heading', (node: Heading) => {
 			if (node.depth === 1) {
 				node.depth = 2;
@@ -53,7 +59,7 @@ export const remarkObsidianLinks: Plugin<[], Root> = () => {
 
 					const linkNode: Link = {
 						type: 'link',
-						url: `/ccna?page=${encodedTarget}`,
+						url: `${baseRoute}?page=${encodedTarget}`,
 						children: [{ type: 'text', value: displayText }],
 					};
 

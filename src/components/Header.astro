@@ -2,6 +2,18 @@
 import { SITE_TITLE } from '../consts';
 import HeaderLink from '../components/UI/HeaderLink.astro';
 import ThemeToggle from './UI/ThemeToggle.astro';
+
+interface Props {
+	currentLang?: 'es' | 'en';
+}
+
+const { currentLang } = Astro.props;
+const pathname = Astro.url.pathname;
+const isEn = currentLang ? currentLang === 'en' : pathname.startsWith('/ccna/en');
+const search = Astro.url.search;
+const targetEs = `/ccna${search}`;
+const targetEn = `/ccna/en${search}`;
+const notesHref = isEn ? '/ccna/en' : '/ccna';
 ---
 
 <header>
@@ -9,9 +21,24 @@ import ThemeToggle from './UI/ThemeToggle.astro';
 		<h2><a class="header-title" href="/">{SITE_TITLE}</a></h2>
 		<div class="internal-links">
 			<HeaderLink href="/">Home</HeaderLink>
-			<HeaderLink href="/ccna">Notes</HeaderLink>
+			<HeaderLink href={notesHref}>Notes</HeaderLink>
 		</div>
 		<div class="header-actions">
+			<div class="lang-toggle" aria-label="Language selector">
+				{isEn ? (
+					<>
+						<a href={targetEs} class="lang-switch" title="Cambiar a Español">ES</a>
+						<span class="lang-divider">|</span>
+						<span class="lang-active">EN</span>
+					</>
+				) : (
+					<>
+						<span class="lang-active">ES</span>
+						<span class="lang-divider">|</span>
+						<a href={targetEn} class="lang-switch" title="Switch to English">EN</a>
+					</>
+				)}
+			</div>
 			<ThemeToggle />
 		</div>
 		<div class="social-links">
@@ -70,7 +97,38 @@ import ThemeToggle from './UI/ThemeToggle.astro';
 	.header-actions {
 		display: flex;
 		align-items: center;
-		gap: 0.5em;
+		gap: 0.75em;
+	}
+	.lang-toggle {
+		display: flex;
+		align-items: center;
+		gap: 0.35rem;
+		font-size: 0.85rem;
+		font-weight: 600;
+		padding: 0.2rem 0.5rem;
+		border-radius: 0.35rem;
+		border: 1px solid rgba(128, 128, 128, 0.3);
+	}
+	.lang-switch {
+		padding: 0;
+		border: none;
+		color: rgb(var(--text-primary));
+		opacity: 0.65;
+		text-decoration: none;
+		transition: opacity 0.2s, color 0.2s;
+	}
+	.lang-switch:hover {
+		opacity: 1;
+		color: var(--accent);
+		text-decoration: underline;
+	}
+	.lang-active {
+		color: var(--accent);
+		font-weight: 700;
+	}
+	.lang-divider {
+		opacity: 0.35;
+		user-select: none;
 	}
 	.social-links,
 	.social-links a {

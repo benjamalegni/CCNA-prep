@@ -7,12 +7,15 @@ import { useStore } from '../../utils/store';
 type ButtonsProps = {
 	pages: string[];
 	currentSlug: string | null;
+	lang?: 'es' | 'en';
 };
 
-export default function Buttons({ pages, currentSlug }: ButtonsProps) {
+export default function Buttons({ pages, currentSlug, lang = 'es' }: ButtonsProps) {
 	useEffect(() => {
 		useStore.getState().init(pages, currentSlug);
 	}, [pages, currentSlug]);
+
+	const basePath = lang === 'en' ? '/ccna/en' : '/ccna';
 
 	const handlePrev = () => {
 		const store = useStore.getState();
@@ -22,7 +25,7 @@ export default function Buttons({ pages, currentSlug }: ButtonsProps) {
 		}
 
 		store.setCurrentBySlug(prevSlug);
-		navigate(`/ccna?page=${encodeURIComponent(prevSlug)}`);
+		navigate(`${basePath}?page=${encodeURIComponent(prevSlug)}`);
 	};
 
 	const handleNext = () => {
@@ -33,7 +36,7 @@ export default function Buttons({ pages, currentSlug }: ButtonsProps) {
 		}
 
 		store.setCurrentBySlug(nextSlug);
-		navigate(`/ccna?page=${encodeURIComponent(nextSlug)}`);
+		navigate(`${basePath}?page=${encodeURIComponent(nextSlug)}`);
 	};
 
 	return (

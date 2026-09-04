@@ -10,4 +10,11 @@ const ccna = defineCollection({
 	}),
 });
 
-export const collections = { ccna };
+const ccna_en = defineCollection({
+	loader: glob({ base: './src/content/notas/CCNA/en/notes', pattern: '**/*.md' }),
+	schema: z.object({
+		title: z.string().optional(),
+	}),
+});
+
+export const collections = { ccna, ccna_en };

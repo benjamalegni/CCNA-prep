@@ -1,11 +1,12 @@
 import { navigate } from "astro:transitions/client";
 import { useState } from "react";
 
-function handleLanguage(language: string){
-	switch(language){
-		case "es":
-			navigate("/ccna");
+function handleLanguage(language: string) {
+	switch (language) {
+		case "en":
+			navigate("/ccna/en");
 			break;
+		case "es":
 		default:
 			navigate("/ccna");
 			break;
@@ -13,33 +14,25 @@ function handleLanguage(language: string){
 }
 
 export default function LanguageSelector() {
-
-	const [notification, setNotification] = useState(false);
+	const [language, setLanguage] = useState("es");
 
 	return (
 		<>
 			<select
-				onMouseEnter={() => setNotification(true)}
-				onMouseLeave={() => setNotification(false)}
-				onFocus={() => setNotification(true)}
-				onBlur={() => setNotification(false)}
+				value={language}
+				onChange={(e) => setLanguage(e.target.value)}
 			>
-				<option value="es">Spanish</option>
+				<option value="es">Español (Spanish)</option>
+				<option value="en">English</option>
 			</select>
 
-			<button className="button" type="button" onClick={
-				() => handleLanguage("es")
-				}>
-				Begin the CCNA learning journey!
-			</button>
-
-			<div
-				className={`notification ${notification ? "notification--visible" : ""}`}
-				role="status"
-				aria-live="polite"
+			<button
+				className="button"
+				type="button"
+				onClick={() => handleLanguage(language)}
 			>
-				<p>ⓘ For now, notes are only available in Spanish.</p>
-			</div>
+				{language === "en" ? "Begin the CCNA learning journey!" : "¡Comenzar el viaje de aprendizaje CCNA!"}
+			</button>
 		</>
 	);
 }

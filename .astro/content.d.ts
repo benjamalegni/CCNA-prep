@@ -181,6 +181,14 @@ declare module 'astro:content' {
   rendered?: RenderedContent;
   filePath?: string;
 }>;
+"ccna_en": Record<string, {
+  id: string;
+  body?: string;
+  collection: "ccna_en";
+  data: InferEntrySchema<"ccna_en">;
+  rendered?: RenderedContent;
+  filePath?: string;
+}>;
 
 	};
 
