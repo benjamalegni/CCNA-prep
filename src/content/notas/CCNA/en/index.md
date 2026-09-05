@@ -1,3 +1,4 @@
+# PART 1
 [[0. networking today]]
 ===
 [[1. network devices]]
@@ -20,3 +21,26 @@
 ===
 [[9. network resolution]]
 ===
+[[10. basic router configuration]]
+===
+[[11. IPv4 addressing]]
+===
+[[12. IPv6 addressing]]
+===
+[[13. ICMP]]
+===
+[[14. transport layer]]
+===
+[[15. application layer]]
+===
+[[16. network security fundamentals]]
+===
+[[17. build a small network]]
+===
+[[17.1 notes for exam up to now]]
+===
+
+# PART 2
+[[18. basic device configuration]]
+===
+

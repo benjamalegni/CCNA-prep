@@ -1,9 +1,9 @@
 ---
-const today = new Date();
 ---
-
 <footer>
-	&copy; {today.getFullYear()} Luka Benjamin Malegni. Notes will be updated as I complete the CCNA preparation by myself.
+  Having issues or suggestions? contact 
+  <a href="mailto:lukabenjaminmalegni@gmail.com">lukabenjaminmalegni@gmail.com </a>
+  <br/>
 	<div class="social-links">
 		<a href="https://github.com/benjamalegni/CCNA-prep" target="_blank">
 			<span class="sr-only">Go to CCNA-prep GitHub repo</span>
@@ -18,7 +18,9 @@ const today = new Date();
 </footer>
 <style>
 	footer {
-		padding: 2em 1em 6em 1em;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 		background: linear-gradient(var(--gray-gradient)) no-repeat;
 		color: rgb(var(--text-muted));
 		text-align: center;

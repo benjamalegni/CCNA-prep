@@ -3,6 +3,7 @@ import Footer from '../../components/Footer.astro';
 import Header from '../../components/Header.astro';
 import Content from '../../components/Content.astro';
 import BaseHead from '../../components/BaseHead.astro';
+import MarkdownTree from '../../components/MarkdownTree';
 
 const pageParam = Astro.url.searchParams.get('page') ?? '';
 
@@ -42,6 +43,7 @@ if (pageParam) {
 }
 
 const pageContent = (module as { default: unknown }).default;
+const headings = typeof (module as any)?.getHeadings === 'function' ? (module as any).getHeadings() : [];
 const pageTitle = pageParam ? decodeURIComponent(pageParam) : 'CCNA Notes';
 ---
 
@@ -53,13 +55,20 @@ const pageTitle = pageParam ? decodeURIComponent(pageParam) : 'CCNA Notes';
 	<body>
 		<Header currentLang="en" />
 		<main>
-			<Content
-				Content={pageContent}
-				pageSlugs={pageSlugs}
-				currentSlug={currentSlug}
-				title={`${decodeURIComponent(pageParam)}`}
-				lang="en"
-			/>
+			<div class="content-wrapper">
+				<Content
+					Content={pageContent}
+					pageSlugs={pageSlugs}
+					currentSlug={currentSlug}
+					title={`${decodeURIComponent(pageParam)}`}
+					lang="en"
+				/>
+			</div>
+			{headings.length > 0 && (
+				<aside class="sidebar-wrapper">
+					<MarkdownTree client:load headings={headings} lang="en" />
+				</aside>
+			)}
 		</main>
 		<Footer />
 	</body>
@@ -68,7 +77,39 @@ const pageTitle = pageParam ? decodeURIComponent(pageParam) : 'CCNA Notes';
 <style>
 	main {
 		display: flex;
-		flex-direction: row;
-		gap: 1rem;
+		flex-direction: column;
+		gap: 2rem;
+		width: 85%;
+		max-width: 1400px;
+		margin: auto;
+		padding: 3em 1em;
+	}
+
+	.content-wrapper {
+		flex: 1;
+		min-width: 0;
+		width: 100%;
+		order: 1;
+	}
+
+	.sidebar-wrapper {
+		order: -1;
+		width: 100%;
+	}
+
+	@media (min-width: 1024px) {
+		main {
+			flex-direction: row;
+			align-items: flex-start;
+			justify-content: space-between;
+			gap: 2.5rem;
+		}
+
+		.sidebar-wrapper {
+			order: 2;
+			width: auto;
+			position: sticky;
+			top: 2rem;
+		}
 	}
 </style>
