@@ -4,19 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "ed2d755f6c2e36fc",
+        "id": "9238eed6c556e9a0",
         "type": "tabs",
         "children": [
           {
-            "id": "b64803bd99f68fb8",
+            "id": "cce1d499680f2b0e",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "2026/arqui2/media/Pasted image 20260830233039.png"
+                "file": "DUIA/redes neuronales/apuntes/nlp transformers.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-image",
-              "title": "Pasted image 20260830233039"
+              "icon": "lucide-file",
+              "title": "nlp transformers"
             }
           }
         ]
@@ -53,7 +55,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "funcion masa",
+                "query": "kv cache",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -74,11 +76,13 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 211.90246963500977
+    "width": 226.9470100402832,
+    "collapsed": true
   },
   "right": {
     "id": "59e601f64e0ae900",
@@ -166,7 +170,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 241.63775634765625
+    "width": 241.63775634765625,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -182,13 +187,29 @@
       "cornell-marginalia:Alternar Visual Helper (Cornell)": false
     }
   },
-  "active": "cbf7ee09442adf83",
+  "active": "cce1d499680f2b0e",
   "lastOpenFiles": [
+    "Pasted image 20260905104536.png",
+    "Pasted image 20260905104520.png",
+    "DUIA/redes neuronales/apuntes/gradient descent, de la regression al perceptron.md",
+    "DUIA/redes neuronales/apuntes/nlp transformers.md",
+    "DUIA/redes neuronales/apuntes/redes neuronales densas.md",
+    "CCNA/media/Pasted image 20260904102424.png",
+    "DUIA/redes neuronales/index.md",
+    "DUIA/redes neuronales/apuntes/deep learning - CNN.md",
+    "tasks.md",
+    "CCNA/notes/19. switching concepts.md",
+    "CCNA/index.md",
+    "CCNA/notes/18. basic device configuration.md",
+    "2026/proba y estadistica/notas/probabilidad condicional.md",
+    "2026/proba y estadistica/resumen audible.mp3",
+    "2026/proba y estadistica/resumen audible.md",
+    "2026/proba y estadistica/index.md",
+    "2026/arqui2/media/Pasted image 20260830233039.png",
     "2026/arqui2/media/Pasted image 20260830233028.png",
     "2026/arqui2/notas/introduccion al paralelismo.md",
     "2026/arqui2/media",
     "2026/arqui2/media/Pasted image 20260830233117.png",
-    "2026/arqui2/media/Pasted image 20260830233039.png",
     "2026/arqui2/index.md",
     "intro-hacking/contents/OWASP top 10.md",
     "2026/arqui2/notas",
@@ -198,37 +219,22 @@
     "intro-hacking/contents/reconocimiento.md",
     "intro-hacking/contents/enumeracion de servicios comunes y gestores de contenido.md",
     "intro-hacking/concepts/XXE.md",
-    "2026/proba y estadistica/index.md",
-    "2026/proba y estadistica/notas/probabilidad condicional.md",
-    "tasks.md",
     "Untitled.base",
     "2026/proba y estadistica/notas/probabilidad conjunta.md",
     "2026/proba y estadistica/notas/nociones basicas de probabilidad.md",
     "CCNA/media/Pasted image 20260829192359.png",
-    "CCNA/notes/18. basic device configuration.md",
-    "CCNA/index.md",
-    "DUIA/redes neuronales/apuntes/redes neuronales densas.md",
     "DUIA/media/Pasted image 20260829114214.png",
     "DUIA/media/Pasted image 20260829103442.png",
     "DUIA/media/Pasted image 20260829103338.png",
     "DUIA/media/Pasted image 20260829103118.png",
-    "DUIA/media/Pasted image 20260829102045.png",
-    "DUIA/media/Pasted image 20260829101958.png",
-    "DUIA/redes neuronales/index.md",
     "2026/ingsoft2/index.md",
     "2026/arqui2",
     "2026/ingsoft2/resources/introduccion.md",
-    "DUIA/redes neuronales/apuntes/gradient descent, de la regression al perceptron.md",
     "DUIA/redes neuronales/apuntes",
     "DUIA/redes neuronales",
-    "DUIA/procesamiento de texto/fundamentals of deep learning/1. introduction to deep learning.md",
-    "GPMC/foundations of project management/mod 1/2. becoming an effective project manager.md",
     "DUIA/procesamiento de texto/fundamentals of deep learning",
     "2026/proba y estadistica/notas",
-    "CCNA/notes/17.1 notes for exam up to now.md",
-    "DUIA/procesamiento de texto/nvidia workshop/3. product deployment.md",
     "DUIA/procesamiento de texto/nvidia workshop",
-    "2026/ingsoft2/resources",
     "Untitled.canvas"
   ]
 }

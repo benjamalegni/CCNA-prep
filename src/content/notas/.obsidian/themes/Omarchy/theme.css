@@ -2,55 +2,55 @@
 
 .theme-dark, .theme-light {
   /* Core colors */
-  --background-primary: #060B1E;
-  --background-primary-alt: #060B1E;
-  --background-secondary: #060B1E;
-  --background-secondary-alt: #060B1E;
-  --text-normal: #ffcead;
+  --background-primary: #FFFCF0;
+  --background-primary-alt: #FFFCF0;
+  --background-secondary: #FFFCF0;
+  --background-secondary-alt: #FFFCF0;
+  --text-normal: #100F0F;
 
   /* Selection colors */
-  --text-selection: #252e56;
+  --text-selection: #CECDC3;
 
   /* Border color */
-  --background-modifier-border: #6d7db6;
+  --background-modifier-border: #B7B5AC;
 
   /* Semantic heading colors */
-  --text-title-h1: #ED5B5A;
-  --text-title-h2: #92a593;
-  --text-title-h3: #E9BB4F;
-  --text-title-h4: #7d82d9;
-  --text-title-h5: #c89dc1;
-  --text-title-h6: #c89dc1;
+  --text-title-h1: #D14D41;
+  --text-title-h2: #879A39;
+  --text-title-h3: #D0A215;
+  --text-title-h4: #205EA6;
+  --text-title-h5: #CE5D97;
+  --text-title-h6: #CE5D97;
 
   /* Links and accents */
-  --text-link: #7d82d9;
-  --text-accent: #7d82d9;
-  --text-accent-hover: #7d82d9;
-  --interactive-accent: #7d82d9;
-  --interactive-accent-hover: #7d82d9;
+  --text-link: #205EA6;
+  --text-accent: #205EA6;
+  --text-accent-hover: #205EA6;
+  --interactive-accent: #205EA6;
+  --interactive-accent-hover: #205EA6;
 
   /* Muted text */
-  --text-muted: color-mix(in srgb, #ffcead 70%, transparent);
-  --text-faint: color-mix(in srgb, #ffcead 55%, transparent);
+  --text-muted: color-mix(in srgb, #100F0F 70%, transparent);
+  --text-faint: color-mix(in srgb, #100F0F 55%, transparent);
 
   /* Code */
-  --code-normal: #a3bfd1;
+  --code-normal: #3AA99F;
 
   /* Errors and success */
-  --text-error: #ED5B5A;
-  --text-error-hover: #ED5B5A;
-  --text-success: #92a593;
+  --text-error: #D14D41;
+  --text-error-hover: #D14D41;
+  --text-success: #879A39;
 
   /* Tags */
-  --tag-color: #a3bfd1;
-  --tag-background: #6d7db6;
+  --tag-color: #3AA99F;
+  --tag-background: #B7B5AC;
 
   /* Graph */
-  --graph-line: #6d7db6;
-  --graph-node: #7d82d9;
-  --graph-node-focused: #7d82d9;
-  --graph-node-tag: #a3bfd1;
-  --graph-node-attachment: #92a593;
+  --graph-line: #B7B5AC;
+  --graph-node: #205EA6;
+  --graph-node-focused: #205EA6;
+  --graph-node-tag: #3AA99F;
+  --graph-node-attachment: #879A39;
 }
 
 /* Headers */
@@ -63,16 +63,16 @@
 
 /* Code blocks */
 .markdown-rendered code {
-  color: #a3bfd1;
+  color: #3AA99F;
 }
 
 /* Syntax highlighting */
-.cm-s-obsidian span.cm-keyword { color: #ED5B5A; }
-.cm-s-obsidian span.cm-string { color: #92a593; }
-.cm-s-obsidian span.cm-number { color: #E9BB4F; }
-.cm-s-obsidian span.cm-comment { color: #6d7db6; }
-.cm-s-obsidian span.cm-operator { color: #7d82d9; }
-.cm-s-obsidian span.cm-def { color: #7d82d9; }
+.cm-s-obsidian span.cm-keyword { color: #D14D41; }
+.cm-s-obsidian span.cm-string { color: #879A39; }
+.cm-s-obsidian span.cm-number { color: #D0A215; }
+.cm-s-obsidian span.cm-comment { color: #B7B5AC; }
+.cm-s-obsidian span.cm-operator { color: #205EA6; }
+.cm-s-obsidian span.cm-def { color: #205EA6; }
 
 /* Links */
 .markdown-rendered a {
@@ -81,7 +81,7 @@
 
 /* Blockquotes */
 .markdown-rendered blockquote {
-  border-left-color: #7d82d9;
+  border-left-color: #205EA6;
 }
 
 /* Active elements */
