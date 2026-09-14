@@ -1054,4 +1054,6 @@ if __name__='__main__':
 	except Exception as e:
 		log.error(str(e))
 ```
+# 25. inyecciones xpath
+son similares a la inyecciones sql
 
