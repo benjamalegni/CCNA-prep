@@ -1,6 +1,10 @@
+# mod. 1
 [[nociones basicas de probabilidad]]
 [[probabilidad condicional]]
 [[probabilidad conjunta]]
+
+# mod. 2
+[[modelos de probabilidad]]
 
 
 formulas importantes:

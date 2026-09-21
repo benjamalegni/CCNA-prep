@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2026/bd2/notas/sql avanzado.md",
+                "file": "DUIA/redes neuronales/apuntes/deep learning - CNN.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "sql avanzado"
+              "title": "deep learning - CNN"
             }
           }
         ]
@@ -169,7 +169,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 289.80224609375
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -187,26 +187,32 @@
   },
   "active": "6d4856cc7998c1fa",
   "lastOpenFiles": [
-    "Pasted image 20260914150938.png",
-    "2026/bd2/index.md",
-    "2026/bd2/notas/sql avanzado.md",
+    "Pasted image 20260916194020.png",
+    "Pasted image 20260916193845.png",
+    "Pasted image 20260916193648.png",
+    "Pasted image 20260916193549.png",
+    "Pasted image 20260916192603.png",
+    "Pasted image 20260916192515.png",
+    "Pasted image 20260916192457.png",
+    "DUIA/redes neuronales/index.md",
+    "DUIA/redes neuronales/apuntes/nlp transformers.md",
+    "2026/ingsoft2/resources/procesos de software.md",
+    "Pasted image 20260916152007.png",
+    "2026/ingsoft2/index.md",
     "CCNA/notes/21. inter-VLAN routing.md",
+    "2026/proba y estadistica/notas/modelos de probabilidad.md",
+    "2026/proba y estadistica/index.md",
+    "2026/bd2/media/Pasted image 20260914150938.png",
+    "2026/bd2/media",
+    "2026/bd2/notas/sql avanzado.md",
+    "2026/bd2/index.md",
     "2026/bd2/notas",
     "CCNA/media/Pasted image 20260913160329.png",
     "CCNA/media/Pasted image 20260913153745.png",
-    "DUIA/media/Pasted image 20260913171244.png",
-    "DUIA/media/Pasted image 20260912121305.png",
-    "DUIA/media/Pasted image 20260912121015.png",
-    "DUIA/media/Pasted image 20260912120810.png",
-    "DUIA/media/Pasted image 20260912114550.png",
-    "DUIA/media/Pasted image 20260912114255.png",
-    "DUIA/media/Pasted image 20260912114232.png",
-    "DUIA/media/Pasted image 20260912113907.png",
     "CCNA/index.md",
     "CCNA/notes/20. VLANs.md",
     "CCNA/notes/19. switching concepts.md",
     "DUIA/redes neuronales/apuntes/temas avanzados.md",
-    "DUIA/redes neuronales/index.md",
     "DUIA/redes neuronales/apuntes/trabajo de cursada notas.md",
     "DUIA/redes neuronales/apuntes/LSTM, GRU, bidireccionales.md",
     "DUIA/redes neuronales/apuntes/redes neuronales densas.md",
@@ -216,23 +222,17 @@
     "2026/arqui2/notas/rendimiento en sistemas paralelos.md",
     "2026/arqui2/index.md",
     "2026/arqui2/notas/introduccion al paralelismo.md",
-    "DUIA/redes neuronales/apuntes/nlp transformers.md",
     "DUIA/redes neuronales/apuntes/gradient descent, de la regression al perceptron.md",
     "tasks.md",
     "CCNA/notes/18. basic device configuration.md",
-    "2026/proba y estadistica/notas/probabilidad condicional.md",
     "2026/proba y estadistica/resumen audible.mp3",
-    "2026/proba y estadistica/resumen audible.md",
-    "2026/proba y estadistica/index.md",
     "2026/arqui2/media",
     "2026/arqui2/notas",
-    "intro-hacking/contents/docker intro.md",
     "Untitled.base",
     "2026/arqui2",
     "DUIA/redes neuronales/apuntes",
     "DUIA/redes neuronales",
     "DUIA/procesamiento de texto/fundamentals of deep learning",
-    "2026/proba y estadistica/notas",
     "Untitled.canvas"
   ]
 }
