@@ -123,3 +123,93 @@ dropout: apagar neuronas aleatoriamente durante el entrenamiento -> evitando ove
 en CNNs se puede aplicar:
 - en capas densas finales
 - en capas convolucionales (menos usual, pero posible)
+
+## aprendizaje en CNNs
+**batch normalization**: normaliza activaciones -> entrenamiento mas estable y rapido
+- mantiene los datos controlados y estables, la red no se confunde tanto y aprende mas rapido
+
+fuerza a cada capa a tener media +-=0 y varianza +-=1 (aprendibles)
+ventajas:
+- entrenamiento mas rapido
+- permite usar learning rate mayores
+- reduce vanishing/exploding gradients
+
+se aplica justo despues de **conv** o **dense**, antes de la activacion
+
+# arquitecturas CNN reales
+LeNet CNN (1998)
+![[Pasted image 20260916192457.png]]
+AlexNet CNN (2012)
+![[Pasted image 20260916192515.png]]
+VGG-16 (2014)
+![[Pasted image 20260916192603.png]]
+MobileNetV2 (2018)
+- red convolucional ligera y eficiente pensada para correr en celulares
+- entrenada originalmente en imagenet (1.2M imagenes, 1000 clases)
+- su clave es un bloque especial llamado residual invertido con bottleneck lineal
+- ventajas:
+	- pocos parametros -> entrena rapido
+	- buen balance entre velocidad y precision
+	- ideal como base para transfer learning
+
+# transfer learning
+es posible utilizar un implementacion open-source de una NN (code + weights) para simplificar el entrenamiento: **pre-trained NN**
+
+**las capas mas profundas de una CNN aprenden caracteristicas cada vez mas especificas de la tarea**
+
+- pesos previamente aprendidos
+- puede funcionar con datasets pequenos
+- entrenamiento mas rapido
+- mejor generalizacion
+- reutiliza features ya aprendidas
+
+### las partes del modelo reutilizadas en transfer learning
+1. feature extractor: aprende representaciones de las imagenes
+	- aprende representaciones de las imagenes
+	- convoluciones -> pooling -> convoluciones -> pooling -> ...
+2. clasificador
+	- realiza la clasificacion especifica
+	- dense -> dense -> output
+
+estrategias
+- feature extraction
+- fine-tuning parcial
+- fine-tuning total
+![[Pasted image 20260916193549.png]]
+
+
+#### transfer learning - feature extraction
+se reutiliza un modelo preentrenado como extractor de caracteristicas y solo se entrena el clasificador final
+![[Pasted image 20260916193648.png]]
+
+#### transfer learning - fine-tuning parcial
+descongelar solo algunas de las ultimas capas del modelo preentrenado
+
+permitimos que esas capas se adapten ligeramente a nuestro nuevo problema
+
+normalmente se utiliza un **learning rate** muy pequeno
+- para no destruir las representaciones que el modelo ya aprendio
+
+![[Pasted image 20260916193845.png]]
+
+#### transfer learning - fine-tuning total
+descongelar todo el modelo y continuamos con el entrenamiento utilizando los pesos preentrenados como iniciacion
+
+**no entrenamos desde cero**, los pesos w comienzan en los valores aprendidos previamente y luego se actualizan para nuestra nueva tarea
+
+puede ser util cuando:
+- tenemos mas datos disponibles
+- el nuevo dominio es diferente al original
+- queremos adaptar completamente la red
+
+![[Pasted image 20260916194020.png]]
+# data augmentation
+se usa para incrementar la cantidad de datos
+
+una de estas tecnicas en imagenes es el **mirroring**
+
+otras:
+- color shifting
+- random cropping
+- rotation
+
